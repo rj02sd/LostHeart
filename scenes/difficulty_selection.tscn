@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://dxam5mfx7a833"]
+
+[ext_resource type="Script" path="res://scripts/difficulty_selection.gd" id="1_5hh08"]
+[ext_resource type="Texture2D" uid="uid://d00aubj2tay7j" path="res://ui_art/white_square.png" id="1_epbnl"]
+[ext_resource type="FontFile" uid="uid://cx8c2qvap0bnb" path="res://fonts/century-gothic/GOTHICI.TTF" id="2_cyqqs"]
+[ext_resource type="PackedScene" uid="uid://hfpaouxmxtmv" path="res://prefabs/next.tscn" id="3_2tadm"]
+
+[node name="difficulty_selection" type="CanvasLayer"]
+script = ExtResource("1_5hh08")
+
+[node name="BG" type="TextureRect" parent="."]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.997
+offset_right = -3.0
+offset_bottom = -0.0560303
+texture = ExtResource("1_epbnl")
+
+[node name="Title" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = 0.21
+anchor_top = 0.154
+anchor_right = 0.759
+anchor_bottom = 0.293
+offset_left = -49.92
+offset_top = -3.79201
+offset_right = 76.632
+offset_bottom = -3.86401
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_cyqqs")
+theme_override_font_sizes/font_size = 70
+text = "DIFFICULTY"
+horizontal_alignment = 1
+
+[node name="Next" parent="." instance=ExtResource("3_2tadm")]
+
+[connection signal="pressed" from="Next" to="." method="_on_next_pressed"]

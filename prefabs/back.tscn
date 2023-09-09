@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cwwc0uviiic3g"]
+
+[ext_resource type="FontFile" uid="uid://vv01ikl12mma" path="res://fonts/century-gothic/Century Gothic.ttf" id="1_0oriq"]
+[ext_resource type="Script" path="res://scripts/back_button.gd" id="2_t71dw"]
+
+[node name="Back" type="Button"]
+offset_left = 456.0
+offset_top = 400.0
+offset_right = 656.0
+offset_bottom = 450.0
+theme_override_fonts/font = ExtResource("1_0oriq")
+theme_override_font_sizes/font_size = 20
+text = "BACK"
+script = ExtResource("2_t71dw")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

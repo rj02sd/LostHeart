@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://xpwv4c1vkh0v"]
+
+[ext_resource type="Texture2D" uid="uid://d00aubj2tay7j" path="res://ui_art/white_square.png" id="1_i4r68"]
+[ext_resource type="Texture2D" uid="uid://bwni51rsfluix" path="res://ui_art/dark_square.png" id="2_go8to"]
+[ext_resource type="PackedScene" uid="uid://peemv3th6t4i" path="res://prefabs/dev_ui.tscn" id="3_lflaj"]
+[ext_resource type="Texture2D" uid="uid://i5qfstqifj56" path="res://ui_art/red_square.png" id="4_le655"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p76v2"]
+size = Vector2(512, 640)
+
+[node name="level1" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="BGPlaceholder" type="Sprite2D" parent="."]
+position = Vector2(-3.05176e-05, 0)
+scale = Vector2(2.25, 1.28125)
+texture = ExtResource("1_i4r68")
+
+[node name="FloorPlaceholder" type="Sprite2D" parent="."]
+position = Vector2(-3.05176e-05, 292)
+scale = Vector2(2.25, 0.140625)
+texture = ExtResource("2_go8to")
+
+[node name="DevUI" parent="." instance=ExtResource("3_lflaj")]
+follow_viewport_enabled = true
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(-448, 192)
+scale = Vector2(0.234375, 0.1875)
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+scale = Vector2(1, 1.25)
+texture = ExtResource("4_le655")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("RectangleShape2D_p76v2")

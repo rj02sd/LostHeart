@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://dvw1m5m5c2f5k"]
+
+[ext_resource type="AudioStream" uid="uid://c1p65g8d6mybu" path="res://music/Ascension_GWJ_MainMenu_v1.mp3" id="1_n23d2"]
+[ext_resource type="Script" path="res://scripts/music_player.gd" id="2_2grnf"]
+
+[node name="Music" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_n23d2")
+script = ExtResource("2_2grnf")

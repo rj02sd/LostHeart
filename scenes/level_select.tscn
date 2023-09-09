@@ -1,0 +1,106 @@
+[gd_scene load_steps=10 format=3 uid="uid://phuoy8y3i6ht"]
+
+[ext_resource type="Script" path="res://scripts/level_select.gd" id="1_1sepy"]
+[ext_resource type="Texture2D" uid="uid://d00aubj2tay7j" path="res://ui_art/white_square.png" id="1_dx674"]
+[ext_resource type="PackedScene" uid="uid://casv5i5f2i638" path="res://levels/level1.tscn" id="2_euddx"]
+[ext_resource type="FontFile" uid="uid://cx8c2qvap0bnb" path="res://fonts/century-gothic/GOTHICI.TTF" id="2_pdf47"]
+[ext_resource type="PackedScene" uid="uid://xq47e01nhx4g" path="res://prefabs/level_button.tscn" id="3_b6wwh"]
+[ext_resource type="PackedScene" uid="uid://4yda1v6kgqrl" path="res://levels/level2.tscn" id="3_v2x40"]
+[ext_resource type="PackedScene" uid="uid://2qfqqnkj3141" path="res://levels/level3.tscn" id="4_6ql6a"]
+[ext_resource type="PackedScene" uid="uid://bir0302meucaa" path="res://levels/level4.tscn" id="5_40w46"]
+[ext_resource type="PackedScene" uid="uid://oyi26fwjbf76" path="res://levels/level5.tscn" id="6_6godw"]
+
+[node name="level_select" type="CanvasLayer"]
+script = ExtResource("1_1sepy")
+levels = Array[PackedScene]([ExtResource("2_euddx"), ExtResource("3_v2x40"), ExtResource("4_6ql6a"), ExtResource("5_40w46"), ExtResource("6_6godw")])
+
+[node name="BG" type="TextureRect" parent="."]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.997
+offset_right = -3.0
+offset_bottom = -0.0560303
+texture = ExtResource("1_dx674")
+
+[node name="Title" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = 0.21
+anchor_top = 0.154
+anchor_right = 0.759
+anchor_bottom = 0.293
+offset_left = 0.0799866
+offset_top = 0.207993
+offset_right = -0.368042
+offset_bottom = 0.135986
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_pdf47")
+theme_override_font_sizes/font_size = 70
+text = "LEVEL SELECT"
+horizontal_alignment = 1
+
+[node name="levels" type="Node" parent="."]
+
+[node name="LevelButton1" parent="levels" instance=ExtResource("3_b6wwh")]
+anchors_preset = -1
+anchor_left = 0.056
+anchor_top = 0.679
+anchor_right = 0.229
+anchor_bottom = 0.756
+offset_left = -0.512001
+offset_top = 0.00799561
+offset_right = 0.191986
+offset_bottom = 0.111969
+
+[node name="LevelButton2" parent="levels" instance=ExtResource("3_b6wwh")]
+anchors_preset = -1
+anchor_left = 0.243
+anchor_top = 0.679
+anchor_right = 0.41
+anchor_bottom = 0.756
+offset_left = -7.936
+offset_top = 0.00799561
+offset_right = -0.320068
+offset_bottom = 0.111969
+text = "LEVEL 2"
+
+[node name="LevelButton3" parent="levels" instance=ExtResource("3_b6wwh")]
+anchors_preset = -1
+anchor_left = 0.417
+anchor_top = 0.679
+anchor_right = 0.59
+anchor_bottom = 0.753
+offset_left = -0.384003
+offset_top = 0.00799561
+offset_right = 0.319946
+offset_bottom = 2.056
+text = "LEVEL 3"
+
+[node name="LevelButton4" parent="levels" instance=ExtResource("3_b6wwh")]
+anchors_preset = -1
+anchor_left = 0.597
+anchor_top = 0.679
+anchor_right = 0.771
+anchor_bottom = 0.756
+offset_left = 0.255981
+offset_top = 0.00799561
+offset_right = -0.192017
+offset_bottom = 0.111969
+text = "LEVEL 4"
+
+[node name="LevelButton5" parent="levels" instance=ExtResource("3_b6wwh")]
+anchors_preset = -1
+anchor_left = 0.778
+anchor_top = 0.679
+anchor_right = 0.951
+anchor_bottom = 0.756
+offset_left = -0.256042
+offset_top = 0.00799561
+offset_right = 0.447998
+offset_bottom = 0.111969
+text = "LEVEL 5"
+
+[connection signal="pressed" from="levels/LevelButton1" to="." method="_on_level_button_1_pressed"]
+[connection signal="pressed" from="levels/LevelButton2" to="." method="_on_level_button_2_pressed"]
+[connection signal="pressed" from="levels/LevelButton3" to="." method="_on_level_button_3_pressed"]
+[connection signal="pressed" from="levels/LevelButton4" to="." method="_on_level_button_4_pressed"]
+[connection signal="pressed" from="levels/LevelButton5" to="." method="_on_level_button_5_pressed"]
