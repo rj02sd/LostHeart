@@ -1,0 +1,65 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1694288853
+icon.svg::CompressedTexture2D::5203885266773145745::1694288794::1694288855::1::::<><>::
+README.md::TextFile::-1::1694288794::0::1::::<><>::
+::res://fonts/::1694288794
+::res://fonts/century-gothic/::1694288794
+Century Gothic.ttf::FontFile::1518882440865079456::1694288794::1694288853::1::::<><>::
+CenturyGothic.ttf::FontFile::4925003605489600154::1694288794::1694288853::1::::<><>::
+GOTHIC.TTF::FontFile::7734580262262387959::1694288794::1694288853::1::::<><>::
+GOTHICB0.TTF::FontFile::4760633357466366768::1694288794::1694288853::1::::<><>::
+GOTHICB.TTF::FontFile::2688654914880765244::1694288794::1694288853::1::::<><>::
+GOTHICBI.TTF::FontFile::7719122613921332880::1694288794::1694288853::1::::<><>::
+GOTHICI.TTF::FontFile::6455479760201408951::1694288794::1694288853::1::::<><>::
+sharefonts.net.txt::TextFile::-1::1694288794::0::1::::<><>::
+::res://levels/::1694288794
+level1.tscn::PackedScene::5798862313971535304::1694288794::0::1::::<><>::uid://d00aubj2tay7j::::res://ui_art/white_square.png<>uid://peemv3th6t4i::::res://prefabs/dev_ui.tscn<>res://scripts/player.gd<>uid://botcgg2xu8rwm::::res://prefabs/player.tscn<>uid://wy1lw2n4iv2f::::res://prefabs/bounds.tscn
+level2.tscn::PackedScene::2085205082048786045::1694288794::0::1::::<><>::uid://d00aubj2tay7j::::res://ui_art/white_square.png<>uid://bwni51rsfluix::::res://ui_art/dark_square.png<>uid://peemv3th6t4i::::res://prefabs/dev_ui.tscn<>uid://botcgg2xu8rwm::::res://prefabs/player.tscn<>uid://wy1lw2n4iv2f::::res://prefabs/bounds.tscn
+level3.tscn::PackedScene::1928461840881713996::1694288794::0::1::::<><>::uid://d00aubj2tay7j::::res://ui_art/white_square.png<>uid://bwni51rsfluix::::res://ui_art/dark_square.png<>uid://peemv3th6t4i::::res://prefabs/dev_ui.tscn<>uid://botcgg2xu8rwm::::res://prefabs/player.tscn<>uid://wy1lw2n4iv2f::::res://prefabs/bounds.tscn
+level4.tscn::PackedScene::2984595137009706664::1694288794::0::1::::<><>::uid://d00aubj2tay7j::::res://ui_art/white_square.png<>uid://bwni51rsfluix::::res://ui_art/dark_square.png<>uid://peemv3th6t4i::::res://prefabs/dev_ui.tscn<>uid://botcgg2xu8rwm::::res://prefabs/player.tscn<>uid://wy1lw2n4iv2f::::res://prefabs/bounds.tscn
+level5.tscn::PackedScene::1032724466366981003::1694288794::0::1::::<><>::uid://d00aubj2tay7j::::res://ui_art/white_square.png<>uid://bwni51rsfluix::::res://ui_art/dark_square.png<>uid://peemv3th6t4i::::res://prefabs/dev_ui.tscn<>uid://botcgg2xu8rwm::::res://prefabs/player.tscn<>uid://wy1lw2n4iv2f::::res://prefabs/bounds.tscn
+level_dev_testing.tscn::PackedScene::1646683872975055587::1694288794::0::1::::<><>::uid://d00aubj2tay7j::::res://ui_art/white_square.png<>uid://bwni51rsfluix::::res://ui_art/dark_square.png<>uid://peemv3th6t4i::::res://prefabs/dev_ui.tscn<>uid://i5qfstqifj56::::res://ui_art/red_square.png
+::res://music/::1694288794
+Ascension_GWJ_MainMenu_v1.mp3::AudioStreamMP3::6630653135175726726::1694288794::1694288855::1::::<><>::
+::res://prefabs/::1694288794
+back.tscn::PackedScene::6362579400127772358::1694288794::0::1::::<><>::uid://vv01ikl12mma::::res://fonts/century-gothic/Century Gothic.ttf<>res://scripts/back_button.gd
+bounds.tscn::PackedScene::1595299109532205279::1694288794::0::1::::<><>::uid://bwni51rsfluix::::res://ui_art/dark_square.png
+dev_ui.tscn::PackedScene::1061355610203394934::1694288794::0::1::::<><>::res://scripts/dev_ui.gd<>uid://vv01ikl12mma::::res://fonts/century-gothic/Century Gothic.ttf<>uid://dl7f7sjngjih4::::res://scenes/level_complete.tscn<>uid://c2u57meumy27d::::res://scenes/death_screen.tscn
+level_button.tscn::PackedScene::1649191635847392452::1694288794::0::1::::<><>::uid://vv01ikl12mma::::res://fonts/century-gothic/Century Gothic.ttf<>uid://bwni51rsfluix::::res://ui_art/dark_square.png
+music_player.tscn::PackedScene::8680245745011045842::1694288794::0::1::::<><>::uid://c1p65g8d6mybu::::res://music/Ascension_GWJ_MainMenu_v1.mp3<>res://scripts/music_player.gd
+next.tscn::PackedScene::502555316412990033::1694288794::0::1::::<><>::uid://vv01ikl12mma::::res://fonts/century-gothic/Century Gothic.ttf
+player.tscn::PackedScene::3408420178624531492::1694288794::0::1::::<><>::res://scripts/player.gd<>uid://i5qfstqifj56::::res://ui_art/red_square.png
+::res://scenes/::1694288794
+character_creator.tscn::PackedScene::7405367137045685659::1694288794::0::1::::<><>::res://scripts/character_creator.gd<>uid://d00aubj2tay7j::::res://ui_art/white_square.png<>uid://cx8c2qvap0bnb::::res://fonts/century-gothic/GOTHICI.TTF<>uid://hfpaouxmxtmv::::res://prefabs/next.tscn
+controls.tscn::PackedScene::2604385418449546841::1694288794::0::1::::<><>::uid://d00aubj2tay7j::::res://ui_art/white_square.png<>uid://cx8c2qvap0bnb::::res://fonts/century-gothic/GOTHICI.TTF<>uid://cwwc0uviiic3g::::res://prefabs/back.tscn
+credits.tscn::PackedScene::1101205698771908962::1694288794::0::1::::<><>::uid://d00aubj2tay7j::::res://ui_art/white_square.png<>uid://cx8c2qvap0bnb::::res://fonts/century-gothic/GOTHICI.TTF<>uid://cwwc0uviiic3g::::res://prefabs/back.tscn
+death_screen.tscn::PackedScene::6711106993267362095::1694288794::0::1::::<><>::uid://d00aubj2tay7j::::res://ui_art/white_square.png<>res://scripts/death_screen.gd<>uid://cx8c2qvap0bnb::::res://fonts/century-gothic/GOTHICI.TTF<>uid://hfpaouxmxtmv::::res://prefabs/next.tscn
+difficulty_selection.tscn::PackedScene::8774388271576432888::1694288794::0::1::::<><>::res://scripts/difficulty_selection.gd<>uid://d00aubj2tay7j::::res://ui_art/white_square.png<>uid://cx8c2qvap0bnb::::res://fonts/century-gothic/GOTHICI.TTF<>uid://hfpaouxmxtmv::::res://prefabs/next.tscn
+level_complete.tscn::PackedScene::7997761109518945331::1694288794::0::1::::<><>::res://scripts/level_complete.gd<>uid://d00aubj2tay7j::::res://ui_art/white_square.png<>uid://cx8c2qvap0bnb::::res://fonts/century-gothic/GOTHICI.TTF<>uid://hfpaouxmxtmv::::res://prefabs/next.tscn
+level_select.tscn::PackedScene::1068523952486069309::1694288794::0::1::::<><>::res://scripts/level_select.gd<>uid://d00aubj2tay7j::::res://ui_art/white_square.png<>uid://casv5i5f2i638::::res://levels/level1.tscn<>uid://cx8c2qvap0bnb::::res://fonts/century-gothic/GOTHICI.TTF<>uid://xq47e01nhx4g::::res://prefabs/level_button.tscn<>uid://4yda1v6kgqrl::::res://levels/level2.tscn<>uid://2qfqqnkj3141::::res://levels/level3.tscn<>uid://bir0302meucaa::::res://levels/level4.tscn<>uid://oyi26fwjbf76::::res://levels/level5.tscn
+menu.tscn::PackedScene::2695721344072696288::1694288794::0::1::::<><>::res://scripts/menu.gd<>uid://d00aubj2tay7j::::res://ui_art/white_square.png<>uid://cx8c2qvap0bnb::::res://fonts/century-gothic/GOTHICI.TTF<>uid://vv01ikl12mma::::res://fonts/century-gothic/Century Gothic.ttf<>uid://bddt32ryei1m0::::res://scenes/controls.tscn<>uid://pxoxxxy6b427::::res://scenes/credits.tscn<>uid://cs1n8ve01vbp::::res://scenes/tutorial.tscn
+tutorial.tscn::PackedScene::179140109909476261::1694288794::0::1::::<><>::uid://d00aubj2tay7j::::res://ui_art/white_square.png<>uid://cx8c2qvap0bnb::::res://fonts/century-gothic/GOTHICI.TTF<>uid://cwwc0uviiic3g::::res://prefabs/back.tscn
+::res://scripts/::1694288794
+back_button.gd::GDScript::-1::1694288794::0::1::::<>Button<>::
+character_creator.gd::GDScript::-1::1694288794::0::1::::<>CanvasLayer<>::
+death_screen.gd::GDScript::-1::1694288794::0::1::::<>CanvasLayer<>::
+dev_ui.gd::GDScript::-1::1694288794::0::1::::<>CanvasLayer<>::
+difficulty_selection.gd::GDScript::-1::1694288794::0::1::::<>CanvasLayer<>::
+level_complete.gd::GDScript::-1::1694288794::0::1::::<>CanvasLayer<>::
+level_select.gd::GDScript::-1::1694288794::0::1::::<>CanvasLayer<>::
+menu.gd::GDScript::-1::1694288794::0::1::::<>CanvasLayer<>::
+music_player.gd::GDScript::-1::1694288794::0::1::::<>AudioStreamPlayer2D<>::
+player.gd::GDScript::-1::1694288794::0::1::::<>CharacterBody2D<>::
+player_data.gd::GDScript::-1::1694288794::0::1::::<>Node<>::
+::res://ui_art/::1694288794
+blue_square.png::CompressedTexture2D::1924124602382906163::1694288794::1694288855::1::::<><>::
+dark_square.png::CompressedTexture2D::3957952856985623071::1694288794::1694288855::1::::<><>::
+green_square.png::CompressedTexture2D::1403857719225460276::1694288794::1694288855::1::::<><>::
+Mute.png::CompressedTexture2D::5015350987439446586::1694288794::1694288855::1::::<><>::
+Pause.png::CompressedTexture2D::1270877854611142933::1694288794::1694288855::1::::<><>::
+Play.png::CompressedTexture2D::7878776481808849082::1694288794::1694288855::1::::<><>::
+red_square.png::CompressedTexture2D::624423458089292199::1694288794::1694288855::1::::<><>::
+Restart.png::CompressedTexture2D::7035889361464506445::1694288794::1694288855::1::::<><>::
+white_square.png::CompressedTexture2D::8965628369438470649::1694288794::1694288855::1::::<><>::
+::res://user_interface/::1694288794
+interface.tscn::PackedScene::2878340908245268533::1694288794::0::1::::<><>::

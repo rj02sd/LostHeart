@@ -1,0 +1,8 @@
+res://scenes/menu.tscn
+res://scenes/tutorial.tscn
+res://scenes/level_complete.tscn
+res://scenes/difficulty_selection.tscn
+res://scenes/death_screen.tscn
+res://scenes/credits.tscn
+res://scenes/controls.tscn
+res://scenes/character_creator.tscn

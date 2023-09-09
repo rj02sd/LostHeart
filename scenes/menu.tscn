@@ -36,37 +36,57 @@ text = "ASCENSION"
 horizontal_alignment = 1
 
 [node name="Play" type="Button" parent="."]
-offset_left = 464.0
-offset_top = 256.0
-offset_right = 664.0
-offset_bottom = 306.0
+anchors_preset = -1
+anchor_left = 0.403
+anchor_top = 0.395
+anchor_right = 0.576
+anchor_bottom = 0.472
+offset_left = -0.256042
+offset_top = 0.0399933
+offset_right = 0.447937
+offset_bottom = 0.143982
 theme_override_fonts/font = ExtResource("4_x0w77")
 theme_override_font_sizes/font_size = 20
 text = "PLAY"
 
 [node name="Tutorial" type="Button" parent="."]
-offset_left = 464.0
-offset_top = 320.0
-offset_right = 664.0
-offset_bottom = 370.0
+anchors_preset = -1
+anchor_left = 0.403
+anchor_top = 0.494
+anchor_right = 0.576
+anchor_bottom = 0.571
+offset_left = -0.256042
+offset_top = -0.112
+offset_right = 0.447937
+offset_bottom = -0.00802612
 theme_override_fonts/font = ExtResource("4_x0w77")
 theme_override_font_sizes/font_size = 20
 text = "TUTORIAL"
 
 [node name="Controls" type="Button" parent="."]
-offset_left = 464.0
-offset_top = 384.0
-offset_right = 664.0
-offset_bottom = 434.0
+anchors_preset = -1
+anchor_left = 0.403
+anchor_top = 0.593
+anchor_right = 0.576
+anchor_bottom = 0.67
+offset_left = -0.256042
+offset_top = -0.264038
+offset_right = 0.447937
+offset_bottom = -0.160004
 theme_override_fonts/font = ExtResource("4_x0w77")
 theme_override_font_sizes/font_size = 20
 text = "CONTROLS"
 
 [node name="Credits" type="Button" parent="."]
-offset_left = 464.0
-offset_top = 448.0
-offset_right = 664.0
-offset_bottom = 498.0
+anchors_preset = -1
+anchor_left = 0.403
+anchor_top = 0.691
+anchor_right = 0.576
+anchor_bottom = 0.769
+offset_left = -0.256042
+offset_top = 0.231964
+offset_right = 0.447937
+offset_bottom = -0.312042
 theme_override_fonts/font = ExtResource("4_x0w77")
 theme_override_font_sizes/font_size = 20
 text = "CREDITS"
