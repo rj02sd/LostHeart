@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://g7nqrkb4tks"]
+
+[ext_resource type="Script" path="res://scripts/platform.gd" id="1_kv74t"]
+[ext_resource type="Texture2D" uid="uid://d00aubj2tay7j" path="res://ui_art/white_square.png" id="2_4a24c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gby10"]
+size = Vector2(508, 64)
+
+[node name="Platform" type="StaticBody2D"]
+script = ExtResource("1_kv74t")
+
+[node name="CollisionPolygon2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, 0)
+shape = SubResource("RectangleShape2D_gby10")
+one_way_collision = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 0.592157, 0.00784314, 1)
+scale = Vector2(1, 0.125)
+texture = ExtResource("2_4a24c")

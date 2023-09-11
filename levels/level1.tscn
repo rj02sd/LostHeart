@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://covaod3tlkn6w"]
+[gd_scene load_steps=5 format=3 uid="uid://covaod3tlkn6w"]
 
 [ext_resource type="Texture2D" uid="uid://d00aubj2tay7j" path="res://ui_art/white_square.png" id="1_ctyaw"]
 [ext_resource type="PackedScene" uid="uid://peemv3th6t4i" path="res://prefabs/dev_ui.tscn" id="3_h5bu3"]
-[ext_resource type="Script" path="res://scripts/player.gd" id="4_aprjb"]
 [ext_resource type="PackedScene" uid="uid://botcgg2xu8rwm" path="res://prefabs/player.tscn" id="4_u7k4f"]
-[ext_resource type="PackedScene" uid="uid://wy1lw2n4iv2f" path="res://prefabs/bounds.tscn" id="5_mjfsg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k2w48"]
+size = Vector2(1162, 93)
 
 [node name="level1" type="Node2D"]
 
@@ -16,10 +17,12 @@ scale = Vector2(2.25, 1.28125)
 texture = ExtResource("1_ctyaw")
 
 [node name="DevUI" parent="." instance=ExtResource("3_h5bu3")]
-follow_viewport_enabled = true
 
 [node name="Player" parent="." instance=ExtResource("4_u7k4f")]
 position = Vector2(-480, 190)
-script = ExtResource("4_aprjb")
 
-[node name="Bounds" parent="." instance=ExtResource("5_mjfsg")]
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1, 282.5)
+shape = SubResource("RectangleShape2D_k2w48")

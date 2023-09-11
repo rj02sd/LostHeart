@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://b6pwmvylt55ok"]
+
+[ext_resource type="Texture2D" uid="uid://d00aubj2tay7j" path="res://ui_art/white_square.png" id="1_8emog"]
+[ext_resource type="Script" path="res://scripts/pushbot_controller.gd" id="1_h20aj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ciod1"]
+size = Vector2(64, 96)
+
+[node name="PushbotController" type="Area2D"]
+script = ExtResource("1_h20aj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ciod1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.211765, 0.211765, 0.211765, 1)
+position = Vector2(0, -1.43051e-06)
+scale = Vector2(0.125, 0.1875)
+texture = ExtResource("1_8emog")

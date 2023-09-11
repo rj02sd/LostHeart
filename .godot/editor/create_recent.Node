@@ -1,0 +1,16 @@
+Area2D
+Sprite2D
+CollisionShape2D
+StaticBody2D
+RigidBody2D
+AnimatedSprite2D
+ProgressBar
+TextureRect
+Label
+CollisionPolygon2D
+Polygon2D
+Node
+Camera2D
+AnimationTree
+AnimationPlayer
+TileMap

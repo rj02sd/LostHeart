@@ -25,6 +25,7 @@ scale = Vector2(0.444444, 7.11111)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FloorPlaceholder/StaticBody2D"]
 position = Vector2(0, 291.5)
 shape = SubResource("RectangleShape2D_kl80i")
+debug_color = Color(0, 0.6, 0.701961, 0.0784314)
 
 [node name="Left" type="StaticBody2D" parent="."]
 position = Vector2(1.35634e-05, -2076.44)
@@ -33,11 +34,14 @@ scale = Vector2(0.444444, 7.11111)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Left"]
 position = Vector2(-1368, 286.938)
 shape = SubResource("RectangleShape2D_jnw7v")
+debug_color = Color(0, 0.6, 0.701961, 0.0784314)
 
 [node name="Right" type="StaticBody2D" parent="."]
+visible = false
 position = Vector2(1.35634e-05, -2076.44)
 scale = Vector2(0.444444, 7.11111)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Right"]
 position = Vector2(1368, 287.188)
 shape = SubResource("RectangleShape2D_nw8sm")
+debug_color = Color(0, 0.6, 0.701961, 0.0784314)

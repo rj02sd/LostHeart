@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://bir0302meucaa"]
+[gd_scene load_steps=5 format=3 uid="uid://bir0302meucaa"]
 
 [ext_resource type="Texture2D" uid="uid://d00aubj2tay7j" path="res://ui_art/white_square.png" id="1_u0neu"]
 [ext_resource type="Texture2D" uid="uid://bwni51rsfluix" path="res://ui_art/dark_square.png" id="2_rhrgp"]
 [ext_resource type="PackedScene" uid="uid://peemv3th6t4i" path="res://prefabs/dev_ui.tscn" id="3_vrdwq"]
 [ext_resource type="PackedScene" uid="uid://botcgg2xu8rwm" path="res://prefabs/player.tscn" id="4_wu1bv"]
-[ext_resource type="PackedScene" uid="uid://wy1lw2n4iv2f" path="res://prefabs/bounds.tscn" id="5_ebghw"]
 
 [node name="level4" type="Node2D"]
 
@@ -25,5 +24,3 @@ follow_viewport_enabled = true
 level_num = 4
 
 [node name="Player" parent="." instance=ExtResource("4_wu1bv")]
-
-[node name="Bounds" parent="." instance=ExtResource("5_ebghw")]
