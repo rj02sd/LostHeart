@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://ds5hhsyiyjg10"]
+[gd_scene load_steps=7 format=3 uid="uid://dl2wqoqs0xw0e"]
 
 [ext_resource type="Texture2D" uid="uid://d00aubj2tay7j" path="res://ui_art/white_square.png" id="1_7vtqt"]
 [ext_resource type="Script" path="res://scripts/guard.gd" id="1_hij17"]
@@ -6,13 +6,53 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x3dq0"]
 size = Vector2(64, 128)
 
-[node name="Guard" type="RigidBody2D"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rrubs"]
+bg_color = Color(1, 0.898039, 0.666667, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7tqyh"]
+bg_color = Color(0.176471, 0, 0.145098, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x1ikb"]
+size = Vector2(416, 128)
+
+[node name="Guard" type="RigidBody2D" groups=["Enemy"]]
+collision_mask = 3
 script = ExtResource("1_hij17")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+unique_name_in_owner = true
 shape = SubResource("RectangleShape2D_x3dq0")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="sprite" type="Sprite2D" parent="."]
+unique_name_in_owner = true
 modulate = Color(0.196078, 0.196078, 0.196078, 1)
 scale = Vector2(0.125, 0.25)
 texture = ExtResource("1_7vtqt")
+
+[node name="health" type="ProgressBar" parent="."]
+unique_name_in_owner = true
+offset_left = -32.0
+offset_top = -80.0
+offset_right = 32.0
+offset_bottom = -69.0
+theme_override_styles/background = SubResource("StyleBoxFlat_rrubs")
+theme_override_styles/fill = SubResource("StyleBoxFlat_7tqyh")
+value = 100.0
+fill_mode = 1
+show_percentage = false
+
+[node name="Area2D" type="Area2D" parent="."]
+unique_name_in_owner = true
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-208, 0)
+shape = SubResource("RectangleShape2D_x1ikb")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(208, 0)
+shape = SubResource("RectangleShape2D_x1ikb")
+disabled = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

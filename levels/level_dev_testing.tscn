@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://cbjwxnmppamtl" path="res://prefabs/well.tscn" id="6_g8n6q"]
 [ext_resource type="PackedScene" uid="uid://d4mf51amjuh0a" path="res://prefabs/enemies/bullet_launcher.tscn" id="6_gg6ai"]
 [ext_resource type="PackedScene" uid="uid://6flsrqw1enju" path="res://prefabs/enemies/enemy_plant.tscn" id="6_ifh8w"]
-[ext_resource type="PackedScene" path="res://prefabs/enemies/guard.tscn" id="6_snr0p"]
+[ext_resource type="PackedScene" uid="uid://dl2wqoqs0xw0e" path="res://prefabs/enemies/guard.tscn" id="6_snr0p"]
 [ext_resource type="PackedScene" uid="uid://ccr6nmfhsnqyn" path="res://prefabs/enemies/pushbot.tscn" id="7_s2jj5"]
 [ext_resource type="PackedScene" uid="uid://b6pwmvylt55ok" path="res://prefabs/enemies/pushbot_controller.tscn" id="8_5sbqq"]
 
@@ -22,8 +22,7 @@ position = Vector2(-32, -8)
 
 [node name="Player" parent="." instance=ExtResource("4_cij3g")]
 position = Vector2(-352, 192)
-floor_stop_on_slope = false
-floor_max_angle = 1.48353
+floor_max_angle = 0.0
 
 [node name="Platform" parent="." instance=ExtResource("5_f14jl")]
 position = Vector2(322, 96)
@@ -32,7 +31,7 @@ position = Vector2(322, 96)
 position = Vector2(1024, -32)
 
 [node name="Platform3" parent="." instance=ExtResource("5_f14jl")]
-position = Vector2(1024, -480)
+position = Vector2(1024, -416)
 
 [node name="Platform4" parent="." instance=ExtResource("5_f14jl")]
 position = Vector2(1730, -232)
@@ -62,13 +61,13 @@ position = Vector2(3776, -440)
 position = Vector2(3968, -440)
 
 [node name="BulletLauncher" parent="." instance=ExtResource("6_gg6ai")]
-position = Vector2(2224, -128)
+position = Vector2(2232, -168)
 
 [node name="BulletLauncher2" parent="." instance=ExtResource("6_gg6ai")]
 position = Vector2(9984, -1936)
 
 [node name="BulletLauncher3" parent="." instance=ExtResource("6_gg6ai")]
-position = Vector2(9976, -1720)
+position = Vector2(9984, -1784)
 
 [node name="Pushbot" parent="." instance=ExtResource("7_s2jj5")]
 position = Vector2(5424, -1472)
@@ -87,6 +86,9 @@ position = Vector2(8818, -1496)
 
 [node name="Guard4" parent="." instance=ExtResource("6_snr0p")]
 position = Vector2(9314, -1504)
+
+[node name="Guard5" parent="." instance=ExtResource("6_snr0p")]
+position = Vector2(1568, 192)
 
 [node name="Incline" type="Area2D" parent="."]
 

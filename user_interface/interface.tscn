@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://bhaj4bqtsgovd"]
 
-[ext_resource type="Script" path="res://user_interface/interface.gd" id="1_ykdg8"]
+[ext_resource type="Script" path="res://scripts/interface.gd" id="1_tp335"]
 [ext_resource type="FontFile" uid="uid://vv01ikl12mma" path="res://fonts/century-gothic/Century Gothic.ttf" id="2_5qos4"]
 [ext_resource type="Texture2D" uid="uid://bwni51rsfluix" path="res://ui_art/dark_square.png" id="3_n6kq0"]
 
@@ -16,8 +16,8 @@ bg_color = Color(0.231373, 0.00784314, 0.419608, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q6727"]
 bg_color = Color(0.403922, 0.784314, 1, 1)
 
-[node name="interface" type="CanvasLayer"]
-script = ExtResource("1_ykdg8")
+[node name="interface" type="CanvasLayer" groups=["Interface"]]
+script = ExtResource("1_tp335")
 
 [node name="Name" type="Label" parent="."]
 anchors_preset = -1
@@ -47,6 +47,7 @@ texture = ExtResource("3_n6kq0")
 expand_mode = 1
 
 [node name="Health" type="ProgressBar" parent="."]
+unique_name_in_owner = true
 anchors_preset = -1
 anchor_left = 0.014
 anchor_top = 0.89
@@ -60,10 +61,10 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_5qos4")
 theme_override_styles/background = SubResource("StyleBoxFlat_15wb7")
 theme_override_styles/fill = SubResource("StyleBoxFlat_dgjxq")
-min_value = 100.0
 value = 100.0
 
 [node name="Spirit" type="ProgressBar" parent="."]
+unique_name_in_owner = true
 anchors_preset = -1
 anchor_left = 0.014
 anchor_top = 0.938
@@ -77,5 +78,47 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_5qos4")
 theme_override_styles/background = SubResource("StyleBoxFlat_g4qbk")
 theme_override_styles/fill = SubResource("StyleBoxFlat_q6727")
-min_value = 100.0
 value = 100.0
+
+[node name="Interact" type="ColorRect" parent="."]
+unique_name_in_owner = true
+visible = false
+anchors_preset = -1
+anchor_left = 0.486
+anchor_top = 0.469
+anchor_right = 0.514
+anchor_bottom = 0.519
+offset_left = 0.127991
+offset_top = 0.0879822
+offset_right = -0.127991
+offset_bottom = -0.312042
+color = Color(0.0980392, 0.0980392, 0.0980392, 1)
+
+[node name="Label" type="Label" parent="Interact"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.5
+anchor_top = -0.5
+anchor_right = 1.5
+anchor_bottom = 1.5
+theme_override_fonts/font = ExtResource("2_5qos4")
+theme_override_font_sizes/font_size = 20
+text = "E"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Currency" type="Label" parent="."]
+unique_name_in_owner = true
+anchors_preset = -1
+anchor_left = 0.889
+anchor_top = 0.012
+anchor_right = 0.993
+anchor_bottom = 0.049
+offset_left = -0.128052
+offset_top = 0.224
+offset_right = 0.0639648
+offset_bottom = 2.248
+theme_override_fonts/font = ExtResource("2_5qos4")
+theme_override_font_sizes/font_size = 15
+text = "RUNES"
+horizontal_alignment = 2
