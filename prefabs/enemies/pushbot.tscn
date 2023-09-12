@@ -1,10 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://ccr6nmfhsnqyn"]
+[gd_scene load_steps=5 format=3 uid="uid://ccr6nmfhsnqyn"]
 
 [ext_resource type="Script" path="res://scripts/pushbot.gd" id="1_b30ma"]
 [ext_resource type="Texture2D" uid="uid://d00aubj2tay7j" path="res://ui_art/white_square.png" id="1_j4npk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3nbfj"]
 size = Vector2(128, 128)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jvicn"]
+size = Vector2(192, 128)
 
 [node name="Pushbot" type="StaticBody2D" groups=["Pushbot"]]
 script = ExtResource("1_b30ma")
@@ -17,3 +20,12 @@ texture = ExtResource("1_j4npk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_3nbfj")
+
+[node name="Range" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Range"]
+position = Vector2(-160, 0)
+shape = SubResource("RectangleShape2D_jvicn")
+
+[connection signal="body_entered" from="Range" to="." method="_on_range_body_entered"]
+[connection signal="body_exited" from="Range" to="." method="_on_range_body_exited"]

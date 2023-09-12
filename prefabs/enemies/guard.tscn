@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dl2wqoqs0xw0e"]
+[gd_scene load_steps=8 format=3 uid="uid://dl2wqoqs0xw0e"]
 
 [ext_resource type="Texture2D" uid="uid://d00aubj2tay7j" path="res://ui_art/white_square.png" id="1_7vtqt"]
 [ext_resource type="Script" path="res://scripts/guard.gd" id="1_hij17"]
@@ -14,6 +14,9 @@ bg_color = Color(0.176471, 0, 0.145098, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x1ikb"]
 size = Vector2(416, 128)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x7hw2"]
+size = Vector2(146, 20)
 
 [node name="Guard" type="RigidBody2D" groups=["Enemy"]]
 collision_mask = 3
@@ -54,5 +57,45 @@ position = Vector2(208, 0)
 shape = SubResource("RectangleShape2D_x1ikb")
 disabled = true
 
+[node name="SwordR" type="TextureRect" parent="."]
+unique_name_in_owner = true
+visible = false
+modulate = Color(0.113725, 0.113725, 0.113725, 1)
+offset_left = 40.0
+offset_top = -8.0
+offset_right = 184.0
+offset_bottom = 8.0
+texture = ExtResource("1_7vtqt")
+expand_mode = 1
+
+[node name="SwordR" type="Area2D" parent="SwordR"]
+
+[node name="RSw" type="CollisionShape2D" parent="SwordR/SwordR"]
+unique_name_in_owner = true
+position = Vector2(71, 8)
+shape = SubResource("RectangleShape2D_x7hw2")
+disabled = true
+
+[node name="SwordL" type="TextureRect" parent="."]
+unique_name_in_owner = true
+visible = false
+modulate = Color(0.113725, 0.113725, 0.113725, 1)
+offset_left = -184.0
+offset_top = -8.0
+offset_right = -40.0
+offset_bottom = 8.0
+texture = ExtResource("1_7vtqt")
+expand_mode = 1
+
+[node name="SwordL" type="Area2D" parent="SwordL"]
+
+[node name="LSw" type="CollisionShape2D" parent="SwordL/SwordL"]
+unique_name_in_owner = true
+position = Vector2(71, 8)
+shape = SubResource("RectangleShape2D_x7hw2")
+disabled = true
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="SwordR/SwordR" to="." method="_on_sword_r_body_entered"]
+[connection signal="body_entered" from="SwordL/SwordL" to="." method="_on_sword_l_body_entered"]

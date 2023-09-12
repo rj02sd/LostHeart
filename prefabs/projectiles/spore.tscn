@@ -1,9 +1,16 @@
-[gd_scene format=3 uid="uid://diccksljf0gf3"]
+[gd_scene load_steps=2 format=3 uid="uid://diccksljf0gf3"]
 
-[node name="spore" type="RigidBody2D"]
+[ext_resource type="Script" path="res://scripts/spore.gd" id="1_vmq2y"]
+
+[node name="spore" type="RigidBody2D" groups=["Spore"]]
+collision_layer = 129
+collision_mask = 129
+gravity_scale = 0.0
+linear_velocity = Vector2(10, 10)
+script = ExtResource("1_vmq2y")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(-8, -16, 8, -16, 0, 16)
+polygon = PackedVector2Array(-16, -16, 0, 16, 16, -16)
 
 [node name="Sprite2D" type="Polygon2D" parent="."]
 color = Color(0, 0, 0, 1)

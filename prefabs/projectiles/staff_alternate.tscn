@@ -3,8 +3,9 @@
 [ext_resource type="Script" path="res://scripts/staff_alternate.gd" id="1_sbqff"]
 
 [node name="staff_alternate" type="StaticBody2D" groups=["Alternate"]]
+z_index = 2
 scale = Vector2(0.5, 0.5)
-collision_layer = 10
+collision_layer = 202
 collision_mask = 0
 script = ExtResource("1_sbqff")
 

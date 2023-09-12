@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://xpwv4c1vkh0v"]
+[gd_scene load_steps=15 format=3 uid="uid://xpwv4c1vkh0v"]
 
 [ext_resource type="Script" path="res://scripts/level_control.gd" id="1_hcimb"]
 [ext_resource type="PackedScene" uid="uid://h2emyuipxge0" path="res://levels/map_dev.tscn" id="3_feisn"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://dl2wqoqs0xw0e" path="res://prefabs/enemies/guard.tscn" id="6_snr0p"]
 [ext_resource type="PackedScene" uid="uid://ccr6nmfhsnqyn" path="res://prefabs/enemies/pushbot.tscn" id="7_s2jj5"]
 [ext_resource type="PackedScene" uid="uid://b6pwmvylt55ok" path="res://prefabs/enemies/pushbot_controller.tscn" id="8_5sbqq"]
+[ext_resource type="PackedScene" uid="uid://6ojvufx12eij" path="res://scenes/wishing_well.tscn" id="14_m26dc"]
 
 [node name="level_dev" type="Node2D"]
 script = ExtResource("1_hcimb")
@@ -26,15 +27,18 @@ floor_max_angle = 0.0
 
 [node name="Platform" parent="." instance=ExtResource("5_f14jl")]
 position = Vector2(322, 96)
+type = 3
 
 [node name="Platform2" parent="." instance=ExtResource("5_f14jl")]
 position = Vector2(1024, -32)
+type = 2
 
 [node name="Platform3" parent="." instance=ExtResource("5_f14jl")]
 position = Vector2(1024, -416)
 
 [node name="Platform4" parent="." instance=ExtResource("5_f14jl")]
-position = Vector2(1730, -232)
+position = Vector2(1728, -352)
+type = 1
 
 [node name="Platform5" parent="." instance=ExtResource("5_f14jl")]
 position = Vector2(7682, -1568)
@@ -100,6 +104,9 @@ visible = false
 level_num = -1
 
 [node name="interface" parent="." instance=ExtResource("6_28dor")]
+
+[node name="wishing_well" parent="." groups=["Wishing_well"] instance=ExtResource("14_m26dc")]
+visible = false
 
 [connection signal="body_entered" from="Incline" to="." method="_on_incline_body_entered"]
 [connection signal="body_exited" from="Incline" to="." method="_on_incline_body_exited"]

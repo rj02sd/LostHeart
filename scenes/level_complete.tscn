@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://hfpaouxmxtmv" path="res://prefabs/next.tscn" id="3_1q6b6"]
 
 [node name="level_complete" type="CanvasLayer"]
+layer = 10
 script = ExtResource("1_hf0pl")
 
 [node name="BG" type="TextureRect" parent="."]

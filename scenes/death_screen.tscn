@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://hfpaouxmxtmv" path="res://prefabs/next.tscn" id="3_o7tqh"]
 
 [node name="death_screen" type="CanvasLayer"]
+layer = 10
 script = ExtResource("1_g1o2u")
 
 [node name="BG" type="TextureRect" parent="."]

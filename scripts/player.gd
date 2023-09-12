@@ -23,6 +23,7 @@ extends CharacterBody2D
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var alternate = preload("res://prefabs/projectiles/staff_alternate.tscn")
 
+var scared = false
 var alternate_ready = true
 var interact_index = 0
 
@@ -30,6 +31,10 @@ func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	
 func _process(delta):
+	if player_stats.health <=0:
+		%death_screen.visible = true
+		PlayerData.in_game = false
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	if not PlayerData.in_game:
 		PlayerData.in_game = true
 	if Input.is_action_just_pressed("primary_attack"):
@@ -64,7 +69,8 @@ func _physics_process(delta):
 		$PlayerSprite.rotation = normal.angle() + deg_to_rad(90)
 		
 	if Input.is_action_just_pressed("jump") and is_on_floor() and not PlayerData.must_climb:
-		velocity.y = player_stats.jump_velocity
+		if not scared:
+			velocity.y = player_stats.jump_velocity
 	
 	var directionx = Input.get_axis("move_left", "move_right")
 	var directiony = Input.get_axis("climb_up", "climb_down")
@@ -101,8 +107,15 @@ func _cooldown_alternate(time):
 	await get_tree().create_timer(time,false).timeout
 	alternate_ready = true
 
-
 func _on_area_2d_2_body_entered(body):
 	if body.get_groups().size() > 0 and body.get_groups()[0] == "Bullet":
 		body.queue_free()
 		player_stats.health -= 10
+	if body.get_groups().size() > 0 and body.get_groups()[0] == "Spore":
+		player_stats.health -= 5
+		body.queue_free()
+
+
+func _on_area_2d_area_entered(area):
+	if area.get_groups().size() > 0 and area.get_groups()[0] == "Plant_Hitbox":
+		area.get_parent().health -= 5

@@ -1,9 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://peemv3th6t4i"]
+[gd_scene load_steps=3 format=3 uid="uid://peemv3th6t4i"]
 
 [ext_resource type="Script" path="res://scripts/dev_ui.gd" id="1_3gt4c"]
 [ext_resource type="FontFile" uid="uid://vv01ikl12mma" path="res://fonts/century-gothic/Century Gothic.ttf" id="2_y60pl"]
-[ext_resource type="PackedScene" uid="uid://dl7f7sjngjih4" path="res://scenes/level_complete.tscn" id="3_qw25a"]
-[ext_resource type="PackedScene" uid="uid://c2u57meumy27d" path="res://scenes/death_screen.tscn" id="4_htrys"]
 
 [node name="DevUI" type="CanvasLayer"]
 script = ExtResource("1_3gt4c")
@@ -52,14 +50,6 @@ offset_bottom = -1.85602
 theme_override_fonts/font = ExtResource("2_y60pl")
 theme_override_font_sizes/font_size = 30
 text = "KILL PLAYER"
-
-[node name="level_complete" parent="." instance=ExtResource("3_qw25a")]
-unique_name_in_owner = true
-visible = false
-
-[node name="death_screen" parent="." instance=ExtResource("4_htrys")]
-unique_name_in_owner = true
-visible = false
 
 [connection signal="pressed" from="Win" to="." method="_on_win_pressed"]
 [connection signal="pressed" from="Lose" to="." method="_on_lose_pressed"]

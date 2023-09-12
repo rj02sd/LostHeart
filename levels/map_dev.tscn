@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://h2emyuipxge0"]
+[gd_scene load_steps=7 format=3 uid="uid://h2emyuipxge0"]
 
 [ext_resource type="Texture2D" uid="uid://d00aubj2tay7j" path="res://ui_art/white_square.png" id="1_olmsl"]
 [ext_resource type="Texture2D" uid="uid://uabljio00qgq" path="res://ui_art/green_square.png" id="2_q8xua"]
+[ext_resource type="PackedScene" uid="uid://w26oddm8keux" path="res://prefabs/trial_finish.tscn" id="3_xyky5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v0v3p"]
 texture = ExtResource("2_q8xua")
@@ -1074,13 +1075,14 @@ polygon = PackedVector2Array(-8.00317, -1432, -8.00809, -1288, -16.0002, -104, -
 z_index = 2
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="LeftBounds"]
-polygon = PackedVector2Array(-696, -448, -600, -184, -504, -272, -496, 496, -696, 496)
+polygon = PackedVector2Array(-696, -448, -600, -184, -504, -272, -499.894, 122.194, -498.85, 222.379, -498.461, 259.723, -496, 496, -856, 488, -864, -120)
 
 [node name="Polygon2D" type="Polygon2D" parent="LeftBounds"]
 color = Color(0, 0, 1, 1)
-polygon = PackedVector2Array(-496, 488, -496, -104, -496, -288, -600, -176, -696, -464, -688, -112, -696, 488)
+polygon = PackedVector2Array(-496, 488, -496, 256, -768, 256, -768, 128, -504, 128, -496, -104, -496, -288, -600, -176, -696, -464, -784, -288, -864, -120, -864, 16, -864, 256, -864, 488)
 
 [node name="Polygon2D2" type="Polygon2D" parent="LeftBounds"]
+position = Vector2(8, -112)
 color = Color(1, 0.0235294, 0.839216, 1)
 polygon = PackedVector2Array(-664, 192, -592, 32, -528, 192)
 
@@ -1097,11 +1099,14 @@ polygon = PackedVector2Array(5192, -1432, 5192, 384, 4960, 384, 4968, -376, 5048
 [node name="RightBounds" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RightBounds"]
-polygon = PackedVector2Array(10056, -2040, 10192, -1984, 10232, -2040, 10224, -1272, 10024, -1272)
+polygon = PackedVector2Array(10056, -2040, 10192, -1984, 10432, -2056, 10440, -1264, 10024, -1272, 10032.5, -1424.87, 10240, -1432, 10240, -1560, 10040, -1560)
 
 [node name="Polygon2D" type="Polygon2D" parent="RightBounds"]
 color = Color(0, 0, 1, 1)
-polygon = PackedVector2Array(10016, -1272, 10056, -2032, 10192, -1984, 10232, -2040, 10232, -1272)
+polygon = PackedVector2Array(10016, -1272, 10024, -1432, 10240, -1432, 10240, -1560, 10032, -1560, 10056, -2032, 10192, -1984, 10432, -2056, 10432, -1272)
 
 [node name="Polygon2D2" type="Polygon2D" parent="RightBounds"]
+position = Vector2(152, -96)
 polygon = PackedVector2Array(10112, -1536, 10112, -1792, 10176, -1792, 10176, -1536)
+
+[node name="Trial_Finish" parent="." instance=ExtResource("3_xyky5")]
