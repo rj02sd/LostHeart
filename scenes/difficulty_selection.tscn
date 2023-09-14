@@ -1,46 +1,195 @@
-[gd_scene load_steps=5 format=3 uid="uid://dxam5mfx7a833"]
+[gd_scene load_steps=6 format=3 uid="uid://dxam5mfx7a833"]
 
 [ext_resource type="Script" path="res://scripts/difficulty_selection.gd" id="1_5hh08"]
 [ext_resource type="Texture2D" uid="uid://d00aubj2tay7j" path="res://ui_art/white_square.png" id="1_epbnl"]
-[ext_resource type="FontFile" uid="uid://cx8c2qvap0bnb" path="res://fonts/century-gothic/GOTHICI.TTF" id="2_cyqqs"]
 [ext_resource type="PackedScene" uid="uid://hfpaouxmxtmv" path="res://prefabs/next.tscn" id="3_2tadm"]
+[ext_resource type="FontFile" uid="uid://bekn0vgx22mbc" path="res://fonts/century-gothic/GOTHICB.TTF" id="3_35now"]
+[ext_resource type="FontFile" uid="uid://vv01ikl12mma" path="res://fonts/century-gothic/Century Gothic.ttf" id="5_katff"]
 
 [node name="difficulty_selection" type="CanvasLayer"]
 script = ExtResource("1_5hh08")
 
 [node name="BG" type="TextureRect" parent="."]
+modulate = Color(0.654902, 0.631373, 0.0431373, 1)
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 0.997
+offset_right = -576.0
+offset_bottom = -0.0559692
+texture = ExtResource("1_epbnl")
+
+[node name="BG2" type="TextureRect" parent="."]
+modulate = Color(1, 0.360784, 0.4, 1)
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.997
+offset_left = 576.0
 offset_right = -3.0
-offset_bottom = -0.0560303
+offset_bottom = -0.0559692
 texture = ExtResource("1_epbnl")
 
 [node name="Title" type="Label" parent="."]
 anchors_preset = -1
-anchor_left = 0.21
-anchor_top = 0.154
-anchor_right = 0.759
-anchor_bottom = 0.293
-offset_left = -49.92
-offset_top = -3.79201
-offset_right = 76.632
-offset_bottom = -3.86401
+anchor_left = 0.167
+anchor_top = 0.21
+anchor_right = 0.826
+anchor_bottom = 0.346
+offset_left = -0.384018
+offset_top = -0.0800018
+offset_right = -0.552063
+offset_bottom = 1.79199
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_cyqqs")
-theme_override_font_sizes/font_size = 70
-text = "DIFFICULTY"
+theme_override_fonts/font = ExtResource("3_35now")
+theme_override_font_sizes/font_size = 50
+text = "choose your challenge"
 horizontal_alignment = 1
 
-[node name="Next" parent="." instance=ExtResource("3_2tadm")]
+[node name="Easy" parent="." instance=ExtResource("3_2tadm")]
 anchors_preset = -1
-anchor_left = 0.389
-anchor_top = 0.605
-anchor_right = 0.562
-anchor_bottom = 0.682
-offset_left = -0.128021
-offset_top = -0.0400085
-offset_right = 0.575928
-offset_bottom = 0.0639648
+anchor_left = 0.285
+anchor_top = 0.395
+anchor_right = 0.458
+anchor_bottom = 0.481
+offset_left = -8.32004
+offset_top = 8.03999
+offset_right = 0.383972
+offset_bottom = 2.31198
+text = "EASY ASCENT"
 
-[connection signal="pressed" from="Next" to="." method="_on_next_pressed"]
+[node name="ColorRect" type="ColorRect" parent="Easy"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -1.0
+anchor_top = 1.44
+anchor_right = 1.0
+anchor_bottom = 5.92
+offset_left = -0.00012207
+offset_top = 8.39233e-05
+offset_right = 0.00012207
+offset_bottom = 6.00037
+color = Color(0, 0, 0, 0.803922)
+
+[node name="Label" type="Label" parent="Easy/ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.04
+anchor_top = 0.07
+anchor_right = 0.96
+anchor_bottom = 0.243
+offset_top = -0.1
+offset_bottom = -4.89
+theme_override_fonts/font = ExtResource("5_katff")
+theme_override_font_sizes/font_size = 25
+text = "REGULAR MODE "
+horizontal_alignment = 2
+autowrap_mode = 2
+
+[node name="Label3" type="Label" parent="Easy/ColorRect"]
+modulate = Color(0.835294, 0.756863, 1, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.06
+anchor_top = 0.243
+anchor_right = 0.96
+anchor_bottom = 0.696
+offset_left = 8.0
+offset_top = 0.109997
+offset_bottom = -0.0800018
+theme_override_fonts/font = ExtResource("5_katff")
+theme_override_font_sizes/font_size = 18
+text = "/// DECREASED DAMAGE TAKEN
+/// INCREASED RUNE GAIN
+/// INCREASED SPIRIT REGEN
+/// HEALTH REGEN"
+horizontal_alignment = 2
+autowrap_mode = 2
+
+[node name="Label2" type="Label" parent="Easy/ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.06
+anchor_top = 0.73
+anchor_right = 0.94
+anchor_bottom = 0.974
+offset_top = 0.0999908
+offset_right = -3.05176e-05
+offset_bottom = 1.98
+theme_override_fonts/font = ExtResource("5_katff")
+theme_override_font_sizes/font_size = 15
+text = "Play this if you prefer to relax and enjoy the  designed concept"
+autowrap_mode = 3
+
+[node name="Hard" parent="." instance=ExtResource("3_2tadm")]
+anchors_preset = -1
+anchor_left = 0.542
+anchor_top = 0.407
+anchor_right = 0.722
+anchor_bottom = 0.481
+offset_left = -0.384033
+offset_top = 0.264008
+offset_right = -7.7442
+offset_bottom = 2.31192
+text = "DAUNTING PATH"
+
+[node name="ColorRect" type="ColorRect" parent="Hard"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.44
+anchor_right = 2.0
+anchor_bottom = 6.04
+offset_top = 8.39233e-05
+offset_bottom = 2.00034
+color = Color(0, 0, 0, 0.803922)
+
+[node name="Label" type="Label" parent="Hard/ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.04
+anchor_top = 0.07
+anchor_right = 0.96
+anchor_bottom = 0.243
+offset_top = -0.1
+offset_bottom = -4.89
+theme_override_fonts/font = ExtResource("5_katff")
+theme_override_font_sizes/font_size = 25
+text = "HARDCORE MODE"
+horizontal_alignment = 2
+autowrap_mode = 2
+
+[node name="Label3" type="Label" parent="Hard/ColorRect"]
+modulate = Color(1, 0.752941, 0.419608, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.06
+anchor_top = 0.243
+anchor_right = 0.96
+anchor_bottom = 0.696
+offset_left = 8.0
+offset_top = 0.109997
+offset_bottom = -0.0800018
+theme_override_fonts/font = ExtResource("5_katff")
+theme_override_font_sizes/font_size = 18
+text = "/// NO CHECKPOINTS
+/// HEALTH LOSS CARRIES OVER
+/// WELLS PROVIDE ONE FREE LEVEL UP
+/// MORE ENEMIES"
+horizontal_alignment = 2
+autowrap_mode = 2
+
+[node name="Label2" type="Label" parent="Hard/ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.06
+anchor_top = 0.73
+anchor_right = 0.94
+anchor_bottom = 0.974
+offset_top = 0.0999908
+offset_right = -3.05176e-05
+offset_bottom = 1.98
+theme_override_fonts/font = ExtResource("5_katff")
+theme_override_font_sizes/font_size = 15
+text = "Play this if you want to challenge yourself and loved your first playthrough"
+autowrap_mode = 3
+
+[connection signal="pressed" from="Easy" to="." method="_on_easy_pressed"]
+[connection signal="pressed" from="Hard" to="." method="_on_hard_pressed"]

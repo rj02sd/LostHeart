@@ -1,98 +1,14 @@
-[gd_scene load_steps=18 format=3 uid="uid://botcgg2xu8rwm"]
+[gd_scene load_steps=6 format=3 uid="uid://botcgg2xu8rwm"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_d7ri4"]
-[ext_resource type="Texture2D" uid="uid://d0nw802k0wl6" path="res://art/Running_Sprite_Sheet.png" id="2_li4sy"]
-[ext_resource type="Texture2D" uid="uid://c8ngs1hne66fn" path="res://art/Idle_Sprite_Sheet.png" id="2_to8cv"]
+[ext_resource type="SpriteFrames" uid="uid://d3q53iycavr1h" path="res://player.tres" id="2_4kdlu"]
 [ext_resource type="PackedScene" uid="uid://c2u57meumy27d" path="res://scenes/death_screen.tscn" id="4_cs7pr"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_650ry"]
-atlas = ExtResource("2_to8cv")
-region = Rect2(0, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3nuh8"]
-atlas = ExtResource("2_to8cv")
-region = Rect2(64, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_fgo07"]
-atlas = ExtResource("2_li4sy")
-region = Rect2(0, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_h85ep"]
-atlas = ExtResource("2_li4sy")
-region = Rect2(64, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_5r2g8"]
-atlas = ExtResource("2_li4sy")
-region = Rect2(128, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_fdun0"]
-atlas = ExtResource("2_li4sy")
-region = Rect2(192, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_nu0wc"]
-atlas = ExtResource("2_li4sy")
-region = Rect2(256, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_yiy0u"]
-atlas = ExtResource("2_li4sy")
-region = Rect2(320, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_qni6r"]
-atlas = ExtResource("2_li4sy")
-region = Rect2(384, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_81qlr"]
-atlas = ExtResource("2_li4sy")
-region = Rect2(448, 0, 64, 64)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_tkcht"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_650ry")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_3nuh8")
-}],
-"loop": true,
-"name": &"idle",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_fgo07")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_h85ep")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_5r2g8")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_fdun0")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_nu0wc")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_yiy0u")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_qni6r")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_81qlr")
-}],
-"loop": true,
-"name": &"moving",
-"speed": 10.0
-}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p76v2"]
 size = Vector2(200, 493)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mnrm1"]
-size = Vector2(29, 40)
+size = Vector2(66.5, 43)
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 z_index = 2
@@ -111,8 +27,15 @@ position_smoothing_speed = 2.0
 unique_name_in_owner = true
 texture_filter = 1
 scale = Vector2(3, 3)
-sprite_frames = SubResource("SpriteFrames_tkcht")
-animation = &"idle"
+sprite_frames = ExtResource("2_4kdlu")
+animation = &"staff_slam"
+
+[node name="HandsSprite" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+visible = false
+scale = Vector2(3, 3)
+sprite_frames = ExtResource("2_4kdlu")
+animation = &"unarmed_half"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(4, -1.3)
@@ -120,7 +43,8 @@ scale = Vector2(0.2, 0.2)
 shape = SubResource("RectangleShape2D_p76v2")
 
 [node name="Area2D2" type="Area2D" parent="."]
-collision_mask = 5
+collision_layer = 257
+collision_mask = 261
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
 position = Vector2(4, -1.3)
@@ -131,13 +55,13 @@ shape = SubResource("RectangleShape2D_p76v2")
 
 [node name="StaffHitboxRight" type="CollisionShape2D" parent="Area2D"]
 unique_name_in_owner = true
-position = Vector2(32, -4)
+position = Vector2(40, -4)
 shape = SubResource("RectangleShape2D_mnrm1")
 disabled = true
 
 [node name="StaffHitboxLeft" type="CollisionShape2D" parent="Area2D"]
 unique_name_in_owner = true
-position = Vector2(-24, -4)
+position = Vector2(-25.25, -4)
 shape = SubResource("RectangleShape2D_mnrm1")
 disabled = true
 

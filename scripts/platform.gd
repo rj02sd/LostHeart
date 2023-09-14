@@ -33,11 +33,11 @@ func _oscillate_platform():
 	_oscillate_platform()
 	
 func _activate_spikes():
-	await get_tree().create_timer(2,false).timeout
+	await get_tree().create_timer(4,false).timeout
 	%Spikes.visible = true
 	%Spikes/Spike.visible = false
 	%Spikes/Warning.visible = true
-	await get_tree().create_timer(3,false).timeout
+	await get_tree().create_timer(1,false).timeout
 	%Spikes/Spike.visible = true
 	%Spikes/Warning.visible = false
 	%Spikes.get_child(0).disabled = false

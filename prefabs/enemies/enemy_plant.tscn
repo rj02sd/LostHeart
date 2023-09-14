@@ -16,13 +16,16 @@ bg_color = Color(0.807843, 0.980392, 0.760784, 1)
 bg_color = Color(0.054902, 0.113725, 0.0196078, 1)
 
 [node name="EnemyPlant" type="Area2D" groups=["Enemy"]]
-modulate = Color(0.14902, 0.14902, 0.14902, 1)
+collision_layer = 513
+collision_mask = 513
 script = ExtResource("1_7qllo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_5sl4h")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+modulate = Color(0.133333, 0.133333, 0.133333, 1)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("1_a1m5q")
 
@@ -57,8 +60,8 @@ fill_mode = 2
 show_percentage = false
 
 [node name="Hitbox" type="Area2D" parent="." groups=["Plant_Hitbox"]]
-collision_layer = 65
-collision_mask = 65
+collision_layer = 577
+collision_mask = 577
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
 shape = SubResource("RectangleShape2D_5sl4h")

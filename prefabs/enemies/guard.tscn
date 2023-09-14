@@ -55,7 +55,6 @@ shape = SubResource("RectangleShape2D_x1ikb")
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(208, 0)
 shape = SubResource("RectangleShape2D_x1ikb")
-disabled = true
 
 [node name="SwordR" type="TextureRect" parent="."]
 unique_name_in_owner = true

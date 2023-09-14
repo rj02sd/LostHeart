@@ -14,3 +14,4 @@ func _on_body_entered(body):
 		%level_complete.visible = true
 		PlayerData.in_game = false
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		body.won = true

@@ -1090,11 +1090,11 @@ polygon = PackedVector2Array(-664, 192, -592, 32, -528, 192)
 z_index = 2
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="InclineBounds"]
-polygon = PackedVector2Array(4968, -384, 5040, -832, 5184, -1416, 5176, -440, 5192, 376, 4976, 376)
+polygon = PackedVector2Array(4968, -384, 5056, -864, 5184, -1416, 5176, -440, 5192, 376, 4976, 376)
 
 [node name="Polygon2D" type="Polygon2D" parent="InclineBounds"]
 color = Color(0, 0, 1, 1)
-polygon = PackedVector2Array(5192, -1432, 5192, 384, 4960, 384, 4968, -376, 5048, -872)
+polygon = PackedVector2Array(5192, -1432, 5192, 384, 4960, 384, 4968, -376, 5056, -872)
 
 [node name="RightBounds" type="StaticBody2D" parent="."]
 

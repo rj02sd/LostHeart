@@ -21,6 +21,10 @@ func _process(delta):
 		%health.visible = false
 		%Area2D.get_child(0).disabled = true
 		%Area2D.get_child(1).disabled = true
+		%SwordL.visible = false
+		%SwordR.visible = false
+		%SwordR/SwordR/RSw.disabled = true
+		%SwordL/SwordL/LSw.disabled = true
 		PlayerData.currency += currency_gain
 	if abs(rotation) > 0.5:
 		await get_tree().create_timer(3,false).timeout
@@ -53,13 +57,13 @@ func _on_area_2d_body_entered(body):
 	if body.get_groups().size() > 0 and body.get_groups()[0] == "Player":
 		target = body
 	if body.get_groups().size() > 0 and body.get_groups()[0] == "Alternate":
-		health -= 1
+		health -= 2
 
 
 func _on_sword_r_body_entered(body):
 	if body.get_groups().size() > 0 and body.get_groups()[0] == "Player":
-		body.player_stats.health -= 15
+		body.player_stats.health -= 10
 
 func _on_sword_l_body_entered(body):
 	if body.get_groups().size() > 0 and body.get_groups()[0] == "Player":
-		body.player_stats.health -= 15
+		body.player_stats.health -= 10

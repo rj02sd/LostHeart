@@ -1,106 +1,292 @@
-[gd_scene load_steps=10 format=3 uid="uid://phuoy8y3i6ht"]
+[gd_scene load_steps=13 format=3 uid="uid://phuoy8y3i6ht"]
 
 [ext_resource type="Script" path="res://scripts/level_select.gd" id="1_1sepy"]
 [ext_resource type="Texture2D" uid="uid://d00aubj2tay7j" path="res://ui_art/white_square.png" id="1_dx674"]
-[ext_resource type="PackedScene" uid="uid://casv5i5f2i638" path="res://levels/level1.tscn" id="2_euddx"]
-[ext_resource type="FontFile" uid="uid://cx8c2qvap0bnb" path="res://fonts/century-gothic/GOTHICI.TTF" id="2_pdf47"]
+[ext_resource type="PackedScene" uid="uid://covaod3tlkn6w" path="res://levels/level1.tscn" id="2_euddx"]
 [ext_resource type="PackedScene" uid="uid://xq47e01nhx4g" path="res://prefabs/level_button.tscn" id="3_b6wwh"]
 [ext_resource type="PackedScene" uid="uid://4yda1v6kgqrl" path="res://levels/level2.tscn" id="3_v2x40"]
 [ext_resource type="PackedScene" uid="uid://2qfqqnkj3141" path="res://levels/level3.tscn" id="4_6ql6a"]
 [ext_resource type="PackedScene" uid="uid://bir0302meucaa" path="res://levels/level4.tscn" id="5_40w46"]
 [ext_resource type="PackedScene" uid="uid://oyi26fwjbf76" path="res://levels/level5.tscn" id="6_6godw"]
+[ext_resource type="FontFile" uid="uid://bekn0vgx22mbc" path="res://fonts/century-gothic/GOTHICB.TTF" id="8_wsd4h"]
+[ext_resource type="FontFile" uid="uid://vv01ikl12mma" path="res://fonts/century-gothic/Century Gothic.ttf" id="10_0bas5"]
+[ext_resource type="Texture2D" uid="uid://2ocb0b1hnlbn" path="res://ui_art/blue_square.png" id="11_jr0fg"]
+[ext_resource type="Texture2D" uid="uid://uabljio00qgq" path="res://ui_art/green_square.png" id="12_ri0rp"]
 
 [node name="level_select" type="CanvasLayer"]
 script = ExtResource("1_1sepy")
 levels = Array[PackedScene]([ExtResource("2_euddx"), ExtResource("3_v2x40"), ExtResource("4_6ql6a"), ExtResource("5_40w46"), ExtResource("6_6godw")])
 
 [node name="BG" type="TextureRect" parent="."]
+modulate = Color(0.117647, 0.133333, 0.129412, 1)
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 0.997
-offset_right = -3.0
-offset_bottom = -0.0560303
+offset_right = -888.0
+offset_bottom = -0.0559692
 texture = ExtResource("1_dx674")
+expand_mode = 1
+
+[node name="BG2" type="TextureRect" parent="."]
+modulate = Color(0.345098, 0.188235, 0.156863, 1)
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.997
+offset_left = 472.0
+offset_right = -472.0
+offset_bottom = -0.0559692
+texture = ExtResource("1_dx674")
+expand_mode = 1
+
+[node name="BG4" type="TextureRect" parent="."]
+modulate = Color(0.101961, 0.388235, 0.211765, 1)
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.997
+offset_left = 680.0
+offset_right = -264.0
+offset_bottom = -0.0559692
+texture = ExtResource("1_dx674")
+expand_mode = 1
+
+[node name="BG5" type="TextureRect" parent="."]
+modulate = Color(0.670588, 0, 0, 1)
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.997
+offset_left = 888.0
+offset_bottom = -0.0559692
+texture = ExtResource("1_dx674")
+expand_mode = 1
+
+[node name="BG3" type="TextureRect" parent="."]
+modulate = Color(0.0823529, 0.12549, 0.243137, 1)
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.997
+offset_left = 264.0
+offset_right = -680.0
+offset_bottom = -0.0559692
+texture = ExtResource("1_dx674")
+expand_mode = 1
 
 [node name="Title" type="Label" parent="."]
 anchors_preset = -1
-anchor_left = 0.21
-anchor_top = 0.154
-anchor_right = 0.759
-anchor_bottom = 0.293
-offset_left = 0.0799866
-offset_top = 0.207993
-offset_right = -0.368042
-offset_bottom = 0.135986
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_pdf47")
-theme_override_font_sizes/font_size = 70
-text = "LEVEL SELECT"
+anchor_left = 0.167
+anchor_top = 0.025
+anchor_right = 0.826
+anchor_bottom = 0.173
+offset_left = -0.384018
+offset_top = -0.200001
+offset_right = -0.552063
+offset_bottom = -6.104
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("8_wsd4h")
+theme_override_font_sizes/font_size = 50
+text = "select a level"
 horizontal_alignment = 1
 
 [node name="levels" type="Node" parent="."]
 
 [node name="LevelButton1" parent="levels" instance=ExtResource("3_b6wwh")]
+unique_name_in_owner = true
 anchors_preset = -1
 anchor_left = 0.056
-anchor_top = 0.679
-anchor_right = 0.229
-anchor_bottom = 0.756
-offset_left = -0.512001
-offset_top = 0.00799561
-offset_right = 0.191986
-offset_bottom = 0.111969
+anchor_top = 0.617
+anchor_right = 0.222
+anchor_bottom = 0.691
+offset_left = -8.512
+offset_top = 0.18396
+offset_right = 0.255981
+offset_bottom = 2.23193
 
 [node name="LevelButton2" parent="levels" instance=ExtResource("3_b6wwh")]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0.231373)
 anchors_preset = -1
-anchor_left = 0.243
-anchor_top = 0.679
-anchor_right = 0.41
-anchor_bottom = 0.756
-offset_left = -7.936
-offset_top = 0.00799561
-offset_right = -0.320068
-offset_bottom = 0.111969
+anchor_left = 0.229
+anchor_top = 0.617
+anchor_right = 0.403
+anchor_bottom = 0.694
+offset_left = 0.191986
+offset_top = 0.18396
+offset_right = -0.256104
+offset_bottom = 0.287964
+disabled = true
 text = "LEVEL 2"
 
 [node name="LevelButton3" parent="levels" instance=ExtResource("3_b6wwh")]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0.231373)
 anchors_preset = -1
 anchor_left = 0.417
-anchor_top = 0.679
+anchor_top = 0.617
 anchor_right = 0.59
-anchor_bottom = 0.753
-offset_left = -0.384003
-offset_top = 0.00799561
-offset_right = 0.319946
-offset_bottom = 2.056
+anchor_bottom = 0.691
+offset_left = -8.384
+offset_top = 0.18396
+offset_right = -7.68005
+offset_bottom = 2.23196
+disabled = true
 text = "LEVEL 3"
 
 [node name="LevelButton4" parent="levels" instance=ExtResource("3_b6wwh")]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0.231373)
 anchors_preset = -1
 anchor_left = 0.597
-anchor_top = 0.679
-anchor_right = 0.771
+anchor_top = 0.617
+anchor_right = 0.764
 anchor_bottom = 0.756
-offset_left = 0.255981
-offset_top = 0.00799561
-offset_right = -0.192017
-offset_bottom = 0.111969
+offset_left = -7.74402
+offset_top = 0.18396
+offset_right = -0.128052
+offset_bottom = -39.888
+disabled = true
 text = "LEVEL 4"
 
 [node name="LevelButton5" parent="levels" instance=ExtResource("3_b6wwh")]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0.231373)
 anchors_preset = -1
 anchor_left = 0.778
-anchor_top = 0.679
+anchor_top = 0.617
 anchor_right = 0.951
-anchor_bottom = 0.756
-offset_left = -0.256042
-offset_top = 0.00799561
-offset_right = 0.447998
-offset_bottom = 0.111969
+anchor_bottom = 0.694
+offset_left = -0.25592
+offset_top = 0.18396
+offset_right = 0.44812
+offset_bottom = 0.287964
+disabled = true
 text = "LEVEL 5"
+
+[node name="Dev" type="Button" parent="."]
+unique_name_in_owner = true
+anchors_preset = -1
+anchor_left = 0.437
+anchor_top = 0.148
+anchor_right = 0.576
+anchor_bottom = 0.222
+offset_left = 0.575989
+offset_top = 0.0960007
+offset_right = -3.55206
+offset_bottom = -1.85602
+theme_override_fonts/font = ExtResource("10_0bas5")
+theme_override_font_sizes/font_size = 30
+text = "DEV LEVEL"
+
+[node name="Relic1" type="TextureButton" parent="."]
+unique_name_in_owner = true
+visible = false
+modulate = Color(1, 1, 1, 0.423529)
+anchors_preset = -1
+anchor_left = 0.104
+anchor_top = 0.79
+anchor_right = 0.167
+anchor_bottom = 0.889
+offset_left = 0.192001
+offset_top = 0.0799866
+offset_right = -0.384018
+offset_bottom = -0.0720215
+texture_normal = ExtResource("1_dx674")
+texture_pressed = ExtResource("11_jr0fg")
+texture_hover = ExtResource("12_ri0rp")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Relic2" type="TextureButton" parent="."]
+unique_name_in_owner = true
+visible = false
+modulate = Color(1, 1, 1, 0.423529)
+anchors_preset = -1
+anchor_left = 0.278
+anchor_top = 0.79
+anchor_right = 0.34
+anchor_bottom = 0.889
+offset_left = -0.256042
+offset_top = 0.0799866
+offset_right = 0.320007
+offset_bottom = -0.0720215
+texture_normal = ExtResource("1_dx674")
+texture_pressed = ExtResource("11_jr0fg")
+texture_hover = ExtResource("12_ri0rp")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Relic3" type="TextureButton" parent="."]
+unique_name_in_owner = true
+visible = false
+modulate = Color(1, 1, 1, 0.423529)
+anchors_preset = -1
+anchor_left = 0.465
+anchor_top = 0.79
+anchor_right = 0.528
+anchor_bottom = 0.889
+offset_left = 0.319946
+offset_top = 0.0799866
+offset_right = -0.255981
+offset_bottom = -0.0720215
+texture_normal = ExtResource("1_dx674")
+texture_pressed = ExtResource("11_jr0fg")
+texture_hover = ExtResource("12_ri0rp")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Relic4" type="TextureButton" parent="."]
+unique_name_in_owner = true
+visible = false
+modulate = Color(1, 1, 1, 0.423529)
+anchors_preset = -1
+anchor_left = 0.646
+anchor_top = 0.79
+anchor_right = 0.708
+anchor_bottom = 0.889
+offset_left = -0.192017
+offset_top = 0.0799866
+offset_right = 0.383972
+offset_bottom = -0.0720215
+texture_normal = ExtResource("1_dx674")
+texture_pressed = ExtResource("11_jr0fg")
+texture_hover = ExtResource("12_ri0rp")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="RelicStats" type="Label" parent="."]
+unique_name_in_owner = true
+visible = false
+anchors_preset = -1
+anchor_left = 0.792
+anchor_top = 0.778
+anchor_right = 0.931
+anchor_bottom = 0.901
+offset_left = 7.61597
+offset_top = -0.144043
+offset_right = 895.648
+offset_bottom = 568.152
+text = "Relic Equipped: X
+  + XYZ
+  - XYZ"
+
+[node name="ColorRect" type="ColorRect" parent="RelicStats"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.792
+anchor_top = 0.778
+anchor_right = 0.944
+anchor_bottom = 0.901
+offset_left = -838.143
+offset_top = -504.144
+offset_right = -837.247
+offset_bottom = -503.848
+color = Color(0.00784314, 0.00784314, 0.00784314, 0.152941)
 
 [connection signal="pressed" from="levels/LevelButton1" to="." method="_on_level_button_1_pressed"]
 [connection signal="pressed" from="levels/LevelButton2" to="." method="_on_level_button_2_pressed"]
 [connection signal="pressed" from="levels/LevelButton3" to="." method="_on_level_button_3_pressed"]
 [connection signal="pressed" from="levels/LevelButton4" to="." method="_on_level_button_4_pressed"]
 [connection signal="pressed" from="levels/LevelButton5" to="." method="_on_level_button_5_pressed"]
+[connection signal="pressed" from="Dev" to="." method="_on_dev_pressed"]
+[connection signal="pressed" from="Relic1" to="." method="_on_relic_1_pressed"]
+[connection signal="pressed" from="Relic2" to="." method="_on_relic_2_pressed"]
+[connection signal="pressed" from="Relic3" to="." method="_on_relic_3_pressed"]
+[connection signal="pressed" from="Relic4" to="." method="_on_relic_4_pressed"]

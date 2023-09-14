@@ -97,7 +97,7 @@ position = Vector2(1568, 192)
 [node name="Incline" type="Area2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Incline"]
-polygon = PackedVector2Array(4952, -392, 5168, -1416, 5152, -1424, 5008, -872, 4936, -392)
+polygon = PackedVector2Array(4952, -376, 5168, -1416, 5144, -1416, 5008, -872, 4952, -536)
 
 [node name="DevUI" parent="." instance=ExtResource("3_lflaj")]
 visible = false

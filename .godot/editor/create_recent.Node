@@ -1,8 +1,15 @@
+Label
+Button
+ColorRect
 CollisionShape2D
+AnimatedSprite2D
+TextureButton
+ItemList
+TextureRect
+HBoxContainer
+TextEdit
 Area2D
 CanvasLayer
-TextureRect
-ColorRect
 ProgressBar
 Sprite2D
 CollisionPolygon2D
@@ -13,8 +20,6 @@ PathFollow2D
 Path2D
 StaticBody2D
 Camera2D
-Label
-AnimatedSprite2D
 Node
 AnimationTree
 AnimationPlayer

@@ -12,9 +12,10 @@ func _ready():
 
 func _process(delta):
 	%Health.value = health
-	if health <= 0:
+	if health <= 0 and not cured:
 		%Health.visible = false
-		self.modulate = Color(1,1,1,1)
+		%Sprite.modulate = Color(1,1,1,1)
+		PlayerData.currency += 75
 		cured = true
 
 func _launch_spores():
@@ -40,3 +41,5 @@ func _launch_spores():
 func _on_range_body_entered(body):
 	if body.get_groups().size() > 0 and body.get_groups()[0] == "Player":
 		target = body
+	if body.get_groups().size() > 0 and body.get_groups()[0] == "Alternate":
+		health -= 2

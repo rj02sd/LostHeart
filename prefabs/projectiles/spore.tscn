@@ -3,8 +3,8 @@
 [ext_resource type="Script" path="res://scripts/spore.gd" id="1_vmq2y"]
 
 [node name="spore" type="RigidBody2D" groups=["Spore"]]
-collision_layer = 129
-collision_mask = 129
+collision_layer = 256
+collision_mask = 256
 gravity_scale = 0.0
 linear_velocity = Vector2(10, 10)
 script = ExtResource("1_vmq2y")

@@ -13,12 +13,8 @@ func _process(delta):
 
 
 func _on_win_pressed():
-	visible = false
-	%level_complete.visible = true
-	PlayerData.in_game = false
+	pass
 
 
 func _on_lose_pressed():
-	visible = false
-	%death_screen.visible = true
-	PlayerData.in_game = false
+	pass

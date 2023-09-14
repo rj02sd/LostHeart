@@ -6,7 +6,7 @@ func _ready():
 
 
 func _process(delta):
-	pass
+	%Currency.text = str(PlayerData.currency) + " RUNES"
 
 
 func _on_return_pressed():
