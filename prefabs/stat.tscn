@@ -1,0 +1,91 @@
+[gd_scene load_steps=3 format=3 uid="uid://ctdnp4xfyf1ql"]
+
+[ext_resource type="FontFile" uid="uid://vv01ikl12mma" path="res://fonts/century-gothic/Century Gothic.ttf" id="1_l4qwu"]
+[ext_resource type="Script" path="res://scripts/stat.gd" id="2_2p3md"]
+
+[node name="Stat" type="Label"]
+offset_left = 312.0
+offset_top = 216.0
+offset_right = 386.0
+offset_bottom = 251.0
+theme_override_fonts/font = ExtResource("1_l4qwu")
+theme_override_font_sizes/font_size = 25
+text = "STAT 1"
+horizontal_alignment = 2
+script = ExtResource("2_2p3md")
+
+[node name="Points" type="HBoxContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 96.0
+offset_right = 456.0
+offset_bottom = 40.0
+
+[node name="point" type="ColorRect" parent="Points"]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(1, 1, 1, 0.498039)
+
+[node name="point2" type="ColorRect" parent="Points"]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(1, 1, 1, 0.498039)
+
+[node name="point3" type="ColorRect" parent="Points"]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(1, 1, 1, 0.498039)
+
+[node name="point4" type="ColorRect" parent="Points"]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(1, 1, 1, 0.498039)
+
+[node name="point5" type="ColorRect" parent="Points"]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(1, 1, 1, 0.498039)
+
+[node name="point6" type="ColorRect" parent="Points"]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(1, 1, 1, 0.498039)
+
+[node name="point7" type="ColorRect" parent="Points"]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(1, 1, 1, 0.498039)
+
+[node name="point8" type="ColorRect" parent="Points"]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(1, 1, 1, 0.498039)
+
+[node name="point9" type="ColorRect" parent="Points"]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(1, 1, 1, 0.498039)
+
+[node name="point10" type="ColorRect" parent="Points"]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(1, 1, 1, 0.498039)
+
+[node name="Add" type="Button" parent="."]
+layout_mode = 0
+offset_left = 472.0
+offset_top = 8.0
+offset_right = 490.0
+offset_bottom = 39.0
+text = "+"
+
+[node name="Subtract" type="Button" parent="."]
+layout_mode = 0
+offset_left = 496.0
+offset_top = 8.0
+offset_right = 514.0
+offset_bottom = 39.0
+text = "-"
+
+[connection signal="pressed" from="Add" to="." method="_on_add_pressed"]
+[connection signal="pressed" from="Subtract" to="." method="_on_subtract_pressed"]

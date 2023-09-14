@@ -56,3 +56,9 @@ func _on_relic_3_pressed():
 
 func _on_relic_4_pressed():
 	PlayerData.relic_equipped = 4
+
+
+func _on_reset_pressed():
+	PlayerData.character_created = false
+	PlayerData.reset_game()
+	get_tree().change_scene_to_file("res://scenes/menu.tscn")

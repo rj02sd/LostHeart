@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://dl2wqoqs0xw0e"]
+[gd_scene load_steps=9 format=3 uid="uid://dl2wqoqs0xw0e"]
 
 [ext_resource type="Texture2D" uid="uid://d00aubj2tay7j" path="res://ui_art/white_square.png" id="1_7vtqt"]
 [ext_resource type="Script" path="res://scripts/guard.gd" id="1_hij17"]
+[ext_resource type="Texture2D" uid="uid://i5qfstqifj56" path="res://ui_art/red_square.png" id="3_6jr7q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x3dq0"]
 size = Vector2(64, 128)
@@ -93,6 +94,26 @@ unique_name_in_owner = true
 position = Vector2(71, 8)
 shape = SubResource("RectangleShape2D_x7hw2")
 disabled = true
+
+[node name="WarningR" type="TextureRect" parent="."]
+unique_name_in_owner = true
+visible = false
+offset_left = 40.0
+offset_top = -8.0
+offset_right = 184.0
+offset_bottom = 8.0
+texture = ExtResource("3_6jr7q")
+expand_mode = 1
+
+[node name="WarningL" type="TextureRect" parent="."]
+unique_name_in_owner = true
+visible = false
+offset_left = -176.0
+offset_top = -8.0
+offset_right = -40.0
+offset_bottom = 8.0
+texture = ExtResource("3_6jr7q")
+expand_mode = 1
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

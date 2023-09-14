@@ -1,3 +1,5 @@
+TextureRect
+HBoxContainer
 Label
 Button
 ColorRect
@@ -5,8 +7,6 @@ CollisionShape2D
 AnimatedSprite2D
 TextureButton
 ItemList
-TextureRect
-HBoxContainer
 TextEdit
 Area2D
 CanvasLayer

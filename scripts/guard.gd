@@ -26,24 +26,33 @@ func _process(delta):
 		%SwordR/SwordR/RSw.disabled = true
 		%SwordL/SwordL/LSw.disabled = true
 		PlayerData.currency += currency_gain
+		target = null
 	if abs(rotation) > 0.5:
 		await get_tree().create_timer(3,false).timeout
 		if abs(rotation) > 0.5:
 			rotation = 0
 
 func _attack():
-	if target and shadow:
-		await get_tree().create_timer(1,false).timeout
-		%SwordL.visible = true
-		%SwordR.visible = true
-		%SwordR/SwordR/RSw.disabled = false
-		%SwordL/SwordL/LSw.disabled = false
-		await get_tree().create_timer(1,false).timeout
+	if target and shadow and health > 0:
+		%WarningL.visible = true
+		%WarningR.visible = true
+		await get_tree().create_timer(0.5,false).timeout
+		if health > 0:
+			%SwordL.visible = true
+			%SwordR.visible = true
+			%SwordR/SwordR/RSw.disabled = false
+			%SwordL/SwordL/LSw.disabled = false
+			%WarningL.visible = false
+			%WarningR.visible = false
+		else:
+			%WarningL.visible = false
+			%WarningR.visible = false
+		await get_tree().create_timer(1.5,false).timeout
 		%SwordL.visible = false
 		%SwordR.visible = false
 		%SwordR/SwordR/RSw.disabled = true
 		%SwordL/SwordL/LSw.disabled = true
-		await get_tree().create_timer(2,false).timeout
+		await get_tree().create_timer(3,false).timeout
 		_attack()
 	elif shadow:
 		await get_tree().create_timer(0.1,false).timeout

@@ -66,7 +66,7 @@ func _process(delta):
 		velocity = Vector2.ZERO
 		%HandsSprite.visible = false
 		%PlayerSprite.play("staff_slam")
-		_cooldown_alternate(0.4)
+		_cooldown_alternate(0.8)
 	
 func _physics_process(delta):
 	if not is_on_floor():
@@ -86,9 +86,14 @@ func _physics_process(delta):
 	var directionx = Input.get_axis("move_left", "move_right")
 	var directiony = Input.get_axis("climb_up", "climb_down")
 	
+	if PlayerData.must_climb:
+		%PlayerSprite.flip_h = false
+			
 	if directionx and not staff_slammed:
 		velocity.x = directionx * player_stats.speed * player_stats.speed_multiplier
-		if directionx < 0:
+		if PlayerData.must_climb:
+			%PlayerSprite.flip_h = false
+		elif directionx < 0:
 			%PlayerSprite.flip_h = true
 			%HandsSprite.flip_h = true
 		elif directionx >= 0:
@@ -155,7 +160,9 @@ func _cooldown_alternate(time):
 	in_combat = true
 	alternate_ready = false
 	staff_slammed = true
+	gravity *= 2
 	await get_tree().create_timer(time,false).timeout
+	gravity /= 2
 	staff_slammed = false
 	in_combat = false
 	%PlayerSprite.play("idle")
