@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://ch2706oi2w651"]
+
+[ext_resource type="Texture2D" uid="uid://c26fx0lsb13h2" path="res://art/bg/ParallaxBg_Godot_Spritesheet.sprites/Japanese_Ground.tres" id="1_byxmw"]
+
+[node name="groundParallax" type="ParallaxBackground"]
+layer = 1
+
+[node name="ParallaxLayer11" type="ParallaxLayer" parent="."]
+position = Vector2(-504, -2720)
+motion_scale = Vector2(2, 1)
+motion_mirroring = Vector2(1536, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer11"]
+texture_filter = 5
+texture_repeat = 3
+position = Vector2(-48, 176)
+scale = Vector2(3, 3)
+texture = ExtResource("1_byxmw")
+centered = false

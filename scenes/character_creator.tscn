@@ -39,43 +39,45 @@ horizontal_alignment = 1
 
 [node name="Create" parent="." instance=ExtResource("4_oooqi")]
 anchors_preset = -1
-anchor_left = 0.465
+anchor_left = 0.642
 anchor_top = 0.833
-anchor_right = 0.639
+anchor_right = 0.816
 anchor_bottom = 0.917
-offset_left = 24.3199
-offset_top = 4.21594
-offset_right = 23.8718
+offset_left = 0.415955
+offset_top = 4.216
+offset_right = -0.0321045
 offset_bottom = -0.216125
 theme_override_font_sizes/font_size = 20
 text = "CREATE"
 
 [node name="Back" parent="." instance=ExtResource("5_8jqip")]
 anchors_preset = -1
-anchor_left = 0.278
+anchor_left = 0.194
 anchor_top = 0.84
-anchor_right = 0.451
-anchor_bottom = 0.917
-offset_left = 23.744
+anchor_right = 0.368
+anchor_bottom = 0.914
+offset_left = 0.511993
 offset_top = -0.320007
-offset_right = 24.4479
-offset_bottom = -0.216064
+offset_right = 0.0638733
+offset_bottom = 1.72791
 
 [node name="Username" type="TextEdit" parent="."]
+unique_name_in_owner = true
 anchors_preset = -1
-anchor_left = 0.023
-anchor_top = 0.293
-anchor_right = 0.251
-anchor_bottom = 0.383
-offset_left = -0.496002
-offset_top = 1.13599
-offset_right = -0.152008
-offset_bottom = -5.18401
+anchor_left = 0.392
+anchor_top = 0.84
+anchor_right = 0.618
+anchor_bottom = 0.92
+offset_left = 0.415985
+offset_top = -0.320007
+offset_right = 3.06396
+offset_bottom = -0.160034
 theme_override_fonts/font = ExtResource("5_j1f1y")
 theme_override_font_sizes/font_size = 30
 placeholder_text = "username"
 
 [node name="Looks" type="ItemList" parent="."]
+visible = false
 anchors_preset = -1
 anchor_left = 0.028
 anchor_top = 0.5
@@ -95,6 +97,7 @@ item_2/text = "test 3"
 item_3/text = "test 4"
 
 [node name="Display" type="TextureRect" parent="."]
+visible = false
 modulate = Color(0.278431, 0.278431, 0.278431, 0.721569)
 anchors_preset = -1
 anchor_left = 0.715
@@ -109,15 +112,16 @@ texture = ExtResource("1_djv6p")
 expand_mode = 1
 
 [node name="Class1" type="TextureButton" parent="."]
+self_modulate = Color(0.172549, 0.172549, 0.172549, 1)
 anchors_preset = -1
-anchor_left = 0.299
-anchor_top = 0.313
-anchor_right = 0.41
-anchor_bottom = 0.691
-offset_left = -0.448029
-offset_top = 0.17598
-offset_right = -0.320038
-offset_bottom = 0.231964
+anchor_left = 0.194
+anchor_top = 0.258
+anchor_right = 0.368
+anchor_bottom = 0.722
+offset_left = 0.511993
+offset_top = 0.815994
+offset_right = 0.0639648
+offset_bottom = 0.143951
 texture_normal = ExtResource("1_djv6p")
 texture_pressed = ExtResource("8_sql2g")
 texture_hover = ExtResource("9_dfvy3")
@@ -132,7 +136,8 @@ anchor_top = -0.143
 anchor_right = 1.0
 offset_top = 0.0349998
 theme_override_fonts/font = ExtResource("5_j1f1y")
-text = "Class 1 Name"
+disabled = true
+text = "SOUL SIPHON"
 
 [node name="Details1" type="Button" parent="Class1"]
 layout_mode = 1
@@ -143,18 +148,44 @@ anchor_bottom = 1.131
 offset_bottom = -0.0950012
 theme_override_fonts/font = ExtResource("5_j1f1y")
 theme_override_font_sizes/font_size = 15
-text = "DETAILS"
+disabled = true
+text = "VAMP ASCENDS"
+
+[node name="Label2" type="Label" parent="Class1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.12
+anchor_top = 0.08
+anchor_right = 0.88
+anchor_bottom = 0.907
+offset_right = -1.52588e-05
+offset_bottom = -0.100006
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_j1f1y")
+text = "PLAYER HEALS FOR 
+A PERCENTAGE OF
+DAMAGE DEALT,
+ INCREASED 
+CURRENCY
+GAIN
+
+
+REDUCED MAX
+HEALTH"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Class2" type="TextureButton" parent="."]
+self_modulate = Color(0.172549, 0.172549, 0.172549, 1)
 anchors_preset = -1
-anchor_left = 0.424
-anchor_top = 0.313
-anchor_right = 0.535
-anchor_bottom = 0.691
-offset_left = -0.448029
-offset_top = 0.17598
-offset_right = -0.320007
-offset_bottom = 0.231964
+anchor_left = 0.417
+anchor_top = 0.258
+anchor_right = 0.59
+anchor_bottom = 0.719
+offset_left = -0.384033
+offset_top = 0.815994
+offset_right = 0.319946
+offset_bottom = 2.08798
 texture_normal = ExtResource("1_djv6p")
 texture_pressed = ExtResource("8_sql2g")
 texture_hover = ExtResource("9_dfvy3")
@@ -169,7 +200,8 @@ anchor_top = -0.143
 anchor_right = 1.0
 offset_top = 0.0349998
 theme_override_fonts/font = ExtResource("5_j1f1y")
-text = "Class 2 Name"
+disabled = true
+text = "SLAYER"
 
 [node name="Details2" type="Button" parent="Class2"]
 layout_mode = 1
@@ -181,18 +213,44 @@ offset_top = 8.08498
 offset_bottom = -0.0950012
 theme_override_fonts/font = ExtResource("5_j1f1y")
 theme_override_font_sizes/font_size = 15
-text = "DETAILS"
+disabled = true
+text = "DAMAGE ASCENDS"
+
+[node name="Label2" type="Label" parent="Class2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.12
+anchor_top = 0.08
+anchor_right = 0.88
+anchor_bottom = 0.907
+offset_right = -1.52588e-05
+offset_bottom = -0.100006
+theme_override_colors/font_color = Color(1, 0.87451, 0.443137, 1)
+theme_override_fonts/font = ExtResource("5_j1f1y")
+text = "PLAYER GAINS
+SCALING CRITICAL
+CHANCE,
+CRITICAL DAMAGE, 
+OVERALL 
+DAMAGE
+
+
+REDUCED MAX 
+SPIRIT"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Class3" type="TextureButton" parent="."]
+self_modulate = Color(0.172549, 0.172549, 0.172549, 1)
 anchors_preset = -1
-anchor_left = 0.549
-anchor_top = 0.321
-anchor_right = 0.66
-anchor_bottom = 0.691
-offset_left = -0.447998
-offset_top = -5.00801
-offset_right = -0.320007
-offset_bottom = 0.231964
+anchor_left = 0.639
+anchor_top = 0.259
+anchor_right = 0.812
+anchor_bottom = 0.719
+offset_left = -0.128052
+offset_top = 0.167999
+offset_right = 0.575928
+offset_bottom = 2.08798
 texture_normal = ExtResource("1_djv6p")
 texture_pressed = ExtResource("8_sql2g")
 texture_hover = ExtResource("9_dfvy3")
@@ -209,7 +267,8 @@ anchor_bottom = -0.012
 offset_top = 0.0349998
 offset_bottom = 2.94
 theme_override_fonts/font = ExtResource("5_j1f1y")
-text = "Class 3 Name"
+disabled = true
+text = "JUGGERNAUT"
 
 [node name="Details3" type="Button" parent="Class3"]
 layout_mode = 1
@@ -220,8 +279,35 @@ anchor_bottom = 1.131
 offset_bottom = -0.0950012
 theme_override_fonts/font = ExtResource("5_j1f1y")
 theme_override_font_sizes/font_size = 15
-text = "DETAILS"
+disabled = true
+text = "HEALTH ASCENDS"
 
-[connection signal="pressed" from="Create" to="." method="_on_create_pressed"]
+[node name="Label2" type="Label" parent="Class3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.12
+anchor_top = 0.08
+anchor_right = 0.88
+anchor_bottom = 0.907
+offset_right = -1.52588e-05
+offset_bottom = -0.100006
+theme_override_colors/font_color = Color(0, 0.913725, 0.94902, 1)
+theme_override_fonts/font = ExtResource("5_j1f1y")
+text = "PLAYER GAINS A 
+SIGNIFICANT
+AMOUNT OF HEALTH
+AND RESISTANCE
+
+
+REDUCED ATTACK
+SPEED"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [connection signal="pressed" from="Create" to="." method="_on_next_pressed"]
+[connection signal="pressed" from="Create" to="." method="_on_create_pressed"]
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
+[connection signal="text_changed" from="Username" to="." method="_on_username_text_changed"]
+[connection signal="pressed" from="Class1" to="." method="_on_class_1_pressed"]
+[connection signal="pressed" from="Class2" to="." method="_on_class_2_pressed"]
+[connection signal="pressed" from="Class3" to="." method="_on_class_3_pressed"]

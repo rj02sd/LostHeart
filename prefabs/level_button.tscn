@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://xq47e01nhx4g"]
+[gd_scene load_steps=2 format=3 uid="uid://xq47e01nhx4g"]
 
 [ext_resource type="FontFile" uid="uid://vv01ikl12mma" path="res://fonts/century-gothic/Century Gothic.ttf" id="1_gg81s"]
-[ext_resource type="Texture2D" uid="uid://bwni51rsfluix" path="res://ui_art/dark_square.png" id="2_xaokl"]
 
 [node name="LevelButton" type="Button"]
 offset_left = 136.0
@@ -11,14 +10,3 @@ offset_bottom = 482.0
 theme_override_fonts/font = ExtResource("1_gg81s")
 theme_override_font_sizes/font_size = 25
 text = "LEVEL 1"
-
-[node name="TextureRect" type="TextureRect" parent="."]
-modulate = Color(0.662745, 0.662745, 0.662745, 0.701961)
-layout_mode = 1
-anchors_preset = -1
-anchor_top = -4.16
-anchor_right = 1.0
-anchor_bottom = -0.16
-offset_top = 1.52588e-05
-texture = ExtResource("2_xaokl")
-expand_mode = 1

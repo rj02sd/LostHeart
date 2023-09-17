@@ -1,6 +1,7 @@
 extends Area2D
 
 var in_range = false
+var currency = 500
 
 func _ready():
 	pass
@@ -9,8 +10,12 @@ func _ready():
 func _process(delta):
 	if Input.is_action_just_pressed("interact") and in_range:
 		if get_tree().get_first_node_in_group("Pushbot"):
-			PlayerData.currency += 150
+			PlayerData.currency += currency * PlayerData.player_ref.player_stats.currency_multiplier
+			%Sprite2D.play("default")
+			await get_tree().create_timer(1,false).timeout
+			%Sprite2D.stop()
 			get_tree().get_first_node_in_group("Pushbot").queue_free()
+			await get_tree().create_timer(1,false).timeout
 			queue_free()
 
 

@@ -1,0 +1,21 @@
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://d3cll6d0txwpl"]
+
+[ext_resource type="Texture2D" uid="uid://c7fxfr5nxtdsk" path="res://art/Ground_Large.png" id="1_hl0xo"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ys83t"]
+texture = ExtResource("1_hl0xo")
+texture_region_size = Vector2i(32, 32)
+2:0/0 = 0
+2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:0/0/physics_layer_0/angular_velocity = 0.0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+4:0/0 = 0
+4:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:0/0/physics_layer_0/angular_velocity = 0.0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+
+[resource]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 1023
+physics_layer_0/collision_mask = 1023
+sources/2 = SubResource("TileSetAtlasSource_ys83t")

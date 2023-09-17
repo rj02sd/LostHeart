@@ -1,11 +1,12 @@
-[gd_scene load_steps=9 format=3 uid="uid://dl2wqoqs0xw0e"]
+[gd_scene load_steps=10 format=3 uid="uid://dl2wqoqs0xw0e"]
 
-[ext_resource type="Texture2D" uid="uid://d00aubj2tay7j" path="res://ui_art/white_square.png" id="1_7vtqt"]
 [ext_resource type="Script" path="res://scripts/guard.gd" id="1_hij17"]
-[ext_resource type="Texture2D" uid="uid://i5qfstqifj56" path="res://ui_art/red_square.png" id="3_6jr7q"]
+[ext_resource type="Texture2D" uid="uid://d40k2pru13dq" path="res://art/samurai.png" id="2_468mu"]
+[ext_resource type="Texture2D" uid="uid://biqear5ghlx8a" path="res://art/sword.png" id="3_gbu2p"]
+[ext_resource type="Texture2D" uid="uid://bq5a8cq3tyywf" path="res://art/18861-radial_gradient.png" id="4_ofi5x"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x3dq0"]
-size = Vector2(64, 128)
+size = Vector2(64, 112)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rrubs"]
 bg_color = Color(1, 0.898039, 0.666667, 1)
@@ -14,27 +15,33 @@ bg_color = Color(1, 0.898039, 0.666667, 1)
 bg_color = Color(0.176471, 0, 0.145098, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x1ikb"]
-size = Vector2(416, 128)
+size = Vector2(320, 128)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x7hw2"]
 size = Vector2(146, 20)
 
-[node name="Guard" type="RigidBody2D" groups=["Enemy"]]
-collision_mask = 3
+[node name="Guard" type="CharacterBody2D" groups=["Enemy"]]
+light_mask = 64
+collision_layer = 32769
+collision_mask = 32771
 script = ExtResource("1_hij17")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 unique_name_in_owner = true
+light_mask = 64
 shape = SubResource("RectangleShape2D_x3dq0")
 
 [node name="sprite" type="Sprite2D" parent="."]
 unique_name_in_owner = true
-modulate = Color(0.196078, 0.196078, 0.196078, 1)
-scale = Vector2(0.125, 0.25)
-texture = ExtResource("1_7vtqt")
+light_mask = 64
+texture_filter = 1
+position = Vector2(-4.5, -4)
+scale = Vector2(3.39063, 4.375)
+texture = ExtResource("2_468mu")
 
 [node name="health" type="ProgressBar" parent="."]
 unique_name_in_owner = true
+light_mask = 64
 offset_left = -32.0
 offset_top = -80.0
 offset_right = 32.0
@@ -45,77 +52,143 @@ value = 100.0
 fill_mode = 1
 show_percentage = false
 
+[node name="PointLight2D" type="PointLight2D" parent="health"]
+position = Vector2(32, 4)
+scale = Vector2(0.3125, 0.15625)
+range_item_cull_mask = 64
+texture = ExtResource("4_ofi5x")
+
 [node name="Area2D" type="Area2D" parent="."]
 unique_name_in_owner = true
+light_mask = 64
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-208, 0)
+light_mask = 64
+position = Vector2(-160, 0)
 shape = SubResource("RectangleShape2D_x1ikb")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(208, 0)
+light_mask = 64
+position = Vector2(160, 0)
 shape = SubResource("RectangleShape2D_x1ikb")
 
 [node name="SwordR" type="TextureRect" parent="."]
 unique_name_in_owner = true
 visible = false
-modulate = Color(0.113725, 0.113725, 0.113725, 1)
-offset_left = 40.0
-offset_top = -8.0
-offset_right = 184.0
-offset_bottom = 8.0
-texture = ExtResource("1_7vtqt")
+modulate = Color(0.337255, 0.337255, 0.615686, 1)
+light_mask = 64
+texture_filter = 3
+offset_left = 24.0
+offset_top = -69.0
+offset_right = 207.0
+offset_bottom = 59.0
+texture = ExtResource("3_gbu2p")
 expand_mode = 1
+flip_h = true
 
 [node name="SwordR" type="Area2D" parent="SwordR"]
+light_mask = 64
+position = Vector2(16, 61)
 
 [node name="RSw" type="CollisionShape2D" parent="SwordR/SwordR"]
 unique_name_in_owner = true
+light_mask = 64
 position = Vector2(71, 8)
 shape = SubResource("RectangleShape2D_x7hw2")
 disabled = true
+
+[node name="PointLight2D" type="PointLight2D" parent="SwordR"]
+position = Vector2(88, 69)
+scale = Vector2(0.5625, 0.0625)
+color = Color(0.858824, 0.803922, 1, 1)
+energy = 5.0
+range_item_cull_mask = 64
+texture = ExtResource("4_ofi5x")
 
 [node name="SwordL" type="TextureRect" parent="."]
 unique_name_in_owner = true
 visible = false
-modulate = Color(0.113725, 0.113725, 0.113725, 1)
-offset_left = -184.0
-offset_top = -8.0
-offset_right = -40.0
-offset_bottom = 8.0
-texture = ExtResource("1_7vtqt")
+modulate = Color(0.337255, 0.337255, 0.615686, 1)
+light_mask = 64
+texture_filter = 3
+offset_left = -208.0
+offset_top = -69.0
+offset_right = -25.0
+offset_bottom = 59.0
+texture = ExtResource("3_gbu2p")
 expand_mode = 1
 
 [node name="SwordL" type="Area2D" parent="SwordL"]
+light_mask = 64
+position = Vector2(16, 61)
 
 [node name="LSw" type="CollisionShape2D" parent="SwordL/SwordL"]
 unique_name_in_owner = true
+light_mask = 64
 position = Vector2(71, 8)
 shape = SubResource("RectangleShape2D_x7hw2")
 disabled = true
 
+[node name="PointLight2D" type="PointLight2D" parent="SwordL"]
+position = Vector2(87, 69)
+scale = Vector2(0.5625, 0.0625)
+color = Color(0.858824, 0.803922, 1, 1)
+energy = 5.0
+range_item_cull_mask = 64
+texture = ExtResource("4_ofi5x")
+
 [node name="WarningR" type="TextureRect" parent="."]
 unique_name_in_owner = true
 visible = false
-offset_left = 40.0
-offset_top = -8.0
-offset_right = 184.0
-offset_bottom = 8.0
-texture = ExtResource("3_6jr7q")
+modulate = Color(0.615686, 0, 0, 1)
+light_mask = 64
+texture_filter = 3
+offset_left = 24.0
+offset_top = -69.0
+offset_right = 207.0
+offset_bottom = 59.0
+texture = ExtResource("3_gbu2p")
 expand_mode = 1
+flip_h = true
+
+[node name="PointLight2D" type="PointLight2D" parent="WarningR"]
+position = Vector2(88, 69)
+scale = Vector2(0.5625, 0.0625)
+color = Color(0.858824, 0, 0, 1)
+energy = 5.0
+range_item_cull_mask = 64
+texture = ExtResource("4_ofi5x")
 
 [node name="WarningL" type="TextureRect" parent="."]
 unique_name_in_owner = true
 visible = false
-offset_left = -176.0
-offset_top = -8.0
-offset_right = -40.0
-offset_bottom = 8.0
-texture = ExtResource("3_6jr7q")
+modulate = Color(0.615686, 0, 0, 1)
+light_mask = 64
+texture_filter = 3
+offset_left = -208.0
+offset_top = -69.0
+offset_right = -25.0
+offset_bottom = 59.0
+texture = ExtResource("3_gbu2p")
 expand_mode = 1
 
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[node name="PointLight2D" type="PointLight2D" parent="WarningL"]
+position = Vector2(87, 69)
+scale = Vector2(0.5625, 0.0625)
+color = Color(0.858824, 0, 0, 1)
+energy = 5.0
+range_item_cull_mask = 64
+texture = ExtResource("4_ofi5x")
+
+[node name="Overall_Light" type="PointLight2D" parent="."]
+unique_name_in_owner = true
+scale = Vector2(0.25, 0.5)
+color = Color(0.156863, 0, 0.317647, 1)
+energy = 2.0
+range_item_cull_mask = 64
+texture = ExtResource("4_ofi5x")
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="SwordR/SwordR" to="." method="_on_sword_r_body_entered"]
 [connection signal="body_entered" from="SwordL/SwordL" to="." method="_on_sword_l_body_entered"]

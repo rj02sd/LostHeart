@@ -1,21 +1,22 @@
-[gd_scene load_steps=13 format=3 uid="uid://phuoy8y3i6ht"]
+[gd_scene load_steps=14 format=3 uid="uid://phuoy8y3i6ht"]
 
 [ext_resource type="Script" path="res://scripts/level_select.gd" id="1_1sepy"]
 [ext_resource type="Texture2D" uid="uid://d00aubj2tay7j" path="res://ui_art/white_square.png" id="1_dx674"]
-[ext_resource type="PackedScene" uid="uid://covaod3tlkn6w" path="res://levels/level1.tscn" id="2_euddx"]
+[ext_resource type="PackedScene" uid="uid://4yda1v6kgqrl" path="res://levels/level1.tscn" id="2_euddx"]
 [ext_resource type="PackedScene" uid="uid://xq47e01nhx4g" path="res://prefabs/level_button.tscn" id="3_b6wwh"]
-[ext_resource type="PackedScene" uid="uid://4yda1v6kgqrl" path="res://levels/level2.tscn" id="3_v2x40"]
+[ext_resource type="PackedScene" uid="uid://covaod3tlkn6w" path="res://levels/level2.tscn" id="3_v2x40"]
 [ext_resource type="PackedScene" uid="uid://2qfqqnkj3141" path="res://levels/level3.tscn" id="4_6ql6a"]
 [ext_resource type="PackedScene" uid="uid://bir0302meucaa" path="res://levels/level4.tscn" id="5_40w46"]
 [ext_resource type="PackedScene" uid="uid://oyi26fwjbf76" path="res://levels/level5.tscn" id="6_6godw"]
 [ext_resource type="FontFile" uid="uid://bekn0vgx22mbc" path="res://fonts/century-gothic/GOTHICB.TTF" id="8_wsd4h"]
 [ext_resource type="FontFile" uid="uid://vv01ikl12mma" path="res://fonts/century-gothic/Century Gothic.ttf" id="10_0bas5"]
+[ext_resource type="Texture2D" uid="uid://bwni51rsfluix" path="res://ui_art/dark_square.png" id="10_qlgmy"]
 [ext_resource type="Texture2D" uid="uid://2ocb0b1hnlbn" path="res://ui_art/blue_square.png" id="11_jr0fg"]
 [ext_resource type="Texture2D" uid="uid://uabljio00qgq" path="res://ui_art/green_square.png" id="12_ri0rp"]
 
 [node name="level_select" type="CanvasLayer"]
 script = ExtResource("1_1sepy")
-levels = Array[PackedScene]([ExtResource("2_euddx"), ExtResource("3_v2x40"), ExtResource("4_6ql6a"), ExtResource("5_40w46"), ExtResource("6_6godw")])
+levels = Array[PackedScene]([ExtResource("3_v2x40"), ExtResource("2_euddx"), ExtResource("4_6ql6a"), ExtResource("5_40w46"), ExtResource("6_6godw")])
 
 [node name="BG" type="TextureRect" parent="."]
 modulate = Color(0.117647, 0.133333, 0.129412, 1)
@@ -87,22 +88,37 @@ text = "select a level"
 horizontal_alignment = 1
 
 [node name="levels" type="Node" parent="."]
+unique_name_in_owner = true
 
 [node name="LevelButton1" parent="levels" instance=ExtResource("3_b6wwh")]
 unique_name_in_owner = true
 anchors_preset = -1
-anchor_left = 0.056
+anchor_left = 0.229
 anchor_top = 0.617
-anchor_right = 0.222
-anchor_bottom = 0.691
-offset_left = -8.512
-offset_top = 0.18396
-offset_right = 0.255981
-offset_bottom = 2.23193
+anchor_right = 0.403
+anchor_bottom = 0.694
+offset_left = -207.808
+offset_top = 0.184021
+offset_right = -208.256
+offset_bottom = 0.288025
+
+[node name="TextureRect" type="TextureRect" parent="levels/LevelButton1"]
+modulate = Color(1, 1, 1, 0.690196)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.04
+anchor_top = -4.16
+anchor_right = 1.0
+anchor_bottom = -0.32
+offset_left = -8.0
+offset_top = 0.000137329
+offset_right = 0.00012207
+offset_bottom = 1.14441e-05
+texture = ExtResource("10_qlgmy")
+expand_mode = 1
 
 [node name="LevelButton2" parent="levels" instance=ExtResource("3_b6wwh")]
 unique_name_in_owner = true
-modulate = Color(1, 1, 1, 0.231373)
 anchors_preset = -1
 anchor_left = 0.229
 anchor_top = 0.617
@@ -112,12 +128,24 @@ offset_left = 0.191986
 offset_top = 0.18396
 offset_right = -0.256104
 offset_bottom = 0.287964
-disabled = true
 text = "LEVEL 2"
 
+[node name="TextureRect" type="TextureRect" parent="levels/LevelButton2"]
+modulate = Color(1, 1, 1, 0.690196)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.04
+anchor_top = -4.16
+anchor_right = 1.0
+anchor_bottom = -0.32
+offset_left = -8.0
+offset_top = 0.000137329
+offset_right = 0.00012207
+offset_bottom = 1.14441e-05
+texture = ExtResource("10_qlgmy")
+expand_mode = 1
+
 [node name="LevelButton3" parent="levels" instance=ExtResource("3_b6wwh")]
-unique_name_in_owner = true
-modulate = Color(1, 1, 1, 0.231373)
 anchors_preset = -1
 anchor_left = 0.417
 anchor_top = 0.617
@@ -127,27 +155,53 @@ offset_left = -8.384
 offset_top = 0.18396
 offset_right = -7.68005
 offset_bottom = 2.23196
-disabled = true
 text = "LEVEL 3"
+
+[node name="TextureRect" type="TextureRect" parent="levels/LevelButton3"]
+modulate = Color(1, 1, 1, 0.690196)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.04
+anchor_top = -4.16
+anchor_right = 1.0
+anchor_bottom = -0.32
+offset_left = -8.0
+offset_top = 0.000137329
+offset_right = 6.10352e-05
+offset_bottom = 1.14441e-05
+texture = ExtResource("10_qlgmy")
+expand_mode = 1
 
 [node name="LevelButton4" parent="levels" instance=ExtResource("3_b6wwh")]
 unique_name_in_owner = true
-modulate = Color(1, 1, 1, 0.231373)
 anchors_preset = -1
 anchor_left = 0.597
 anchor_top = 0.617
 anchor_right = 0.764
-anchor_bottom = 0.756
+anchor_bottom = 0.694
 offset_left = -7.74402
 offset_top = 0.18396
 offset_right = -0.128052
-offset_bottom = -39.888
-disabled = true
+offset_bottom = 0.287994
 text = "LEVEL 4"
+
+[node name="TextureRect" type="TextureRect" parent="levels/LevelButton4"]
+modulate = Color(1, 1, 1, 0.690196)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.04
+anchor_top = -4.16
+anchor_right = 1.0
+anchor_bottom = -0.32
+offset_left = -8.0
+offset_top = 0.000274658
+offset_right = 6.10352e-05
+offset_bottom = 2.09808e-05
+texture = ExtResource("10_qlgmy")
+expand_mode = 1
 
 [node name="LevelButton5" parent="levels" instance=ExtResource("3_b6wwh")]
 unique_name_in_owner = true
-modulate = Color(1, 1, 1, 0.231373)
 anchors_preset = -1
 anchor_left = 0.778
 anchor_top = 0.617
@@ -157,20 +211,34 @@ offset_left = -0.25592
 offset_top = 0.18396
 offset_right = 0.44812
 offset_bottom = 0.287964
-disabled = true
 text = "LEVEL 5"
+
+[node name="TextureRect" type="TextureRect" parent="levels/LevelButton5"]
+modulate = Color(1, 1, 1, 0.690196)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.04
+anchor_top = -4.16
+anchor_right = 1.0
+anchor_bottom = -0.32
+offset_left = -8.0
+offset_top = 0.000137329
+offset_right = -6.10352e-05
+offset_bottom = 1.14441e-05
+texture = ExtResource("10_qlgmy")
+expand_mode = 1
 
 [node name="Training" type="Button" parent="."]
 unique_name_in_owner = true
 anchors_preset = -1
-anchor_left = 0.437
+anchor_left = 0.34
 anchor_top = 0.148
-anchor_right = 0.576
+anchor_right = 0.472
 anchor_bottom = 0.222
-offset_left = -111.424
+offset_left = 0.320007
 offset_top = 0.0960007
-offset_right = -115.552
-offset_bottom = -1.856
+offset_right = 4.25598
+offset_bottom = -1.85602
 theme_override_fonts/font = ExtResource("10_0bas5")
 theme_override_font_sizes/font_size = 30
 text = "TRAINING"
@@ -295,7 +363,7 @@ offset_right = -837.247
 offset_bottom = -503.848
 color = Color(0.00784314, 0.00784314, 0.00784314, 0.152941)
 
-[connection signal="pressed" from="levels/LevelButton1" to="." method="_on_level_button_1_pressed"]
+[connection signal="pressed" from="levels/LevelButton1" to="." method="_on_level_button_2_pressed"]
 [connection signal="pressed" from="levels/LevelButton2" to="." method="_on_level_button_2_pressed"]
 [connection signal="pressed" from="levels/LevelButton3" to="." method="_on_level_button_3_pressed"]
 [connection signal="pressed" from="levels/LevelButton4" to="." method="_on_level_button_4_pressed"]

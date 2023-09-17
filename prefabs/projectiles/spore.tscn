@@ -1,17 +1,32 @@
-[gd_scene load_steps=2 format=3 uid="uid://diccksljf0gf3"]
+[gd_scene load_steps=4 format=3 uid="uid://diccksljf0gf3"]
 
 [ext_resource type="Script" path="res://scripts/spore.gd" id="1_vmq2y"]
+[ext_resource type="Texture2D" uid="uid://ddhgi6owhqnct" path="res://art/spikey.png" id="2_2a6kd"]
+[ext_resource type="Texture2D" uid="uid://bq5a8cq3tyywf" path="res://art/18861-radial_gradient.png" id="2_ntppi"]
 
 [node name="spore" type="RigidBody2D" groups=["Spore"]]
-collision_layer = 256
-collision_mask = 256
+light_mask = 1024
+collision_layer = 257
+collision_mask = 257
 gravity_scale = 0.0
 linear_velocity = Vector2(10, 10)
 script = ExtResource("1_vmq2y")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+light_mask = 1024
 polygon = PackedVector2Array(-16, -16, 0, 16, 16, -16)
 
-[node name="Sprite2D" type="Polygon2D" parent="."]
-color = Color(0, 0, 0, 1)
-polygon = PackedVector2Array(0, 16, -8, -16, 8, -16)
+[node name="Sprite2D" type="Sprite2D" parent="."]
+light_mask = 1024
+position = Vector2(2, -15)
+rotation = 3.14159
+scale = Vector2(7, 7)
+texture = ExtResource("2_2a6kd")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(-7.15256e-07, -4)
+scale = Vector2(0.125, 0.15625)
+color = Color(0.235294, 0, 0.454902, 1)
+energy = 5.0
+range_item_cull_mask = 1024
+texture = ExtResource("2_ntppi")

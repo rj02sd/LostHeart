@@ -1,0 +1,118 @@
+[gd_scene load_steps=8 format=3 uid="uid://b31tbuwl2y6nd"]
+
+[ext_resource type="Texture2D" uid="uid://d00aubj2tay7j" path="res://ui_art/white_square.png" id="1_7fwyw"]
+[ext_resource type="Texture2D" uid="uid://cy3xpks6y1o33" path="res://art/Mountain.png" id="2_kca61"]
+[ext_resource type="Texture2D" uid="uid://bg40ssu01f1t4" path="res://art/Untitled_Artwork-2.png" id="3_84xpp"]
+[ext_resource type="Texture2D" uid="uid://d36rdjxkwbg3t" path="res://art/Untitled_Artwork-3.png" id="4_2gntf"]
+[ext_resource type="Texture2D" uid="uid://dt4hbi4h54ngl" path="res://art/Untitled_Artwork-1.png" id="5_i5sbt"]
+[ext_resource type="Texture2D" uid="uid://br41kfpw3iuer" path="res://art/Untitled_Artwork-4.png" id="6_24e5q"]
+[ext_resource type="Texture2D" uid="uid://1o6ul74y3pmp" path="res://art/Untitled_Artwork-5.png" id="7_aj1wx"]
+
+[node name="BackgroundT2" type="ParallaxBackground"]
+visible = false
+
+[node name="BG" type="Sprite2D" parent="."]
+modulate = Color(0.0745098, 0.0941176, 0.384314, 1)
+y_sort_enabled = true
+position = Vector2(4584, -832)
+scale = Vector2(24.9063, 7.4375)
+texture = ExtResource("1_7fwyw")
+
+[node name="ParallaxLayer6" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.1, 1)
+motion_mirroring = Vector2(960, 0)
+
+[node name="Polygon2D4" type="Polygon2D" parent="ParallaxLayer6"]
+texture_filter = 3
+texture_repeat = 2
+position = Vector2(152, -1536)
+scale = Vector2(0.5, 0.5)
+color = Color(0.294118, 0.294118, 0.294118, 1)
+texture = ExtResource("2_kca61")
+polygon = PackedVector2Array(1024, -664, 3264, 2512, -1616, 2544)
+
+[node name="Polygon2D3" type="Polygon2D" parent="ParallaxLayer6"]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(-616, -616)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_kca61")
+polygon = PackedVector2Array(1024, -664, 2064, 752, -192, 768)
+
+[node name="Polygon2D5" type="Polygon2D" parent="ParallaxLayer6"]
+texture_filter = 3
+texture_repeat = 2
+position = Vector2(-104, -800)
+scale = Vector2(0.5, 0.5)
+color = Color(0.611765, 0.611765, 0.611765, 1)
+texture = ExtResource("2_kca61")
+polygon = PackedVector2Array(1024, -664, 2832, 1120, -912, 1168)
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+texture_filter = 3
+position = Vector2(-504, -1528)
+motion_scale = Vector2(0.01, 1)
+motion_mirroring = Vector2(1536, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer2"]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(-8, 432)
+scale = Vector2(3, 3)
+texture = ExtResource("3_84xpp")
+centered = false
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="."]
+texture_filter = 3
+position = Vector2(-504, -1528)
+motion_scale = Vector2(0.1, 1)
+motion_mirroring = Vector2(1536, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer3"]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(-8, 432)
+scale = Vector2(3, 3)
+texture = ExtResource("4_2gntf")
+centered = false
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+texture_filter = 3
+position = Vector2(-504, -1528)
+motion_scale = Vector2(0.4, 1)
+motion_mirroring = Vector2(1536, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer"]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(-8, 432)
+scale = Vector2(3, 3)
+texture = ExtResource("5_i5sbt")
+centered = false
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="."]
+texture_filter = 3
+position = Vector2(-504, -1528)
+motion_scale = Vector2(0.7, 1)
+motion_mirroring = Vector2(1536, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer4"]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(-8, 432)
+scale = Vector2(3, 3)
+texture = ExtResource("6_24e5q")
+centered = false
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="."]
+texture_filter = 3
+position = Vector2(-504, -1528)
+motion_mirroring = Vector2(1536, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer5"]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(-8, 432)
+scale = Vector2(3, 3)
+texture = ExtResource("7_aj1wx")
+centered = false

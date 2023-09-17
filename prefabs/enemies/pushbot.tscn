@@ -1,31 +1,44 @@
-[gd_scene load_steps=5 format=3 uid="uid://ccr6nmfhsnqyn"]
+[gd_scene load_steps=6 format=3 uid="uid://ccr6nmfhsnqyn"]
 
 [ext_resource type="Script" path="res://scripts/pushbot.gd" id="1_b30ma"]
-[ext_resource type="Texture2D" uid="uid://d00aubj2tay7j" path="res://ui_art/white_square.png" id="1_j4npk"]
+[ext_resource type="Texture2D" uid="uid://ct18wq5tlh7vk" path="res://art/Hand_launcher.png" id="2_wp4db"]
+[ext_resource type="Texture2D" uid="uid://bq5a8cq3tyywf" path="res://art/18861-radial_gradient.png" id="3_7hq61"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3nbfj"]
 size = Vector2(128, 128)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jvicn"]
-size = Vector2(192, 128)
+size = Vector2(224, 128)
 
 [node name="Pushbot" type="StaticBody2D" groups=["Pushbot"]]
+light_mask = 128
 script = ExtResource("1_b30ma")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(0.152941, 0.152941, 0.152941, 1)
-position = Vector2(-9.53674e-06, 0)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("1_j4npk")
+light_mask = 128
+texture_filter = 1
+position = Vector2(7.99999, -8)
+scale = Vector2(5, 5)
+texture = ExtResource("2_wp4db")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+light_mask = 128
 shape = SubResource("RectangleShape2D_3nbfj")
 
 [node name="Range" type="Area2D" parent="."]
+light_mask = 128
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Range"]
-position = Vector2(-160, 0)
+light_mask = 128
+position = Vector2(-144, 0)
 shape = SubResource("RectangleShape2D_jvicn")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(0, -1.13687e-13)
+scale = Vector2(0.5, 0.5)
+color = Color(0.317647, 0, 0.592157, 1)
+range_item_cull_mask = 128
+texture = ExtResource("3_7hq61")
 
 [connection signal="body_entered" from="Range" to="." method="_on_range_body_entered"]
 [connection signal="body_exited" from="Range" to="." method="_on_range_body_exited"]

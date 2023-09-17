@@ -1,28 +1,458 @@
-[gd_scene load_steps=5 format=3 uid="uid://covaod3tlkn6w"]
+[gd_scene load_steps=28 format=3 uid="uid://4yda1v6kgqrl"]
 
 [ext_resource type="Texture2D" uid="uid://d00aubj2tay7j" path="res://ui_art/white_square.png" id="1_ctyaw"]
-[ext_resource type="PackedScene" uid="uid://peemv3th6t4i" path="res://prefabs/dev_ui.tscn" id="3_h5bu3"]
+[ext_resource type="Script" path="res://scripts/level_control.gd" id="1_ei18d"]
+[ext_resource type="PackedScene" uid="uid://6flsrqw1enju" path="res://prefabs/enemies/enemy_plant.tscn" id="3_a0kad"]
+[ext_resource type="PackedScene" uid="uid://d4mf51amjuh0a" path="res://prefabs/enemies/bullet_launcher.tscn" id="4_3sbf6"]
 [ext_resource type="PackedScene" uid="uid://botcgg2xu8rwm" path="res://prefabs/player.tscn" id="4_u7k4f"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_k2w48"]
-size = Vector2(1162, 93)
+[ext_resource type="Texture2D" uid="uid://bnsi2ftbcnetu" path="res://art/bg/ParallaxBg_Godot_Spritesheet.sprites/Japanese_Background-1.tres" id="4_w2pog"]
+[ext_resource type="Texture2D" uid="uid://dtqufqxo5kdvf" path="res://art/bg/ParallaxBg_Godot_Spritesheet.sprites/Japanese_Background-2.tres" id="5_b6crb"]
+[ext_resource type="Texture2D" uid="uid://nk32sx2o38jj" path="res://art/bg/ParallaxBg_Godot_Spritesheet.sprites/Japanese_Background-3.tres" id="6_4oq0m"]
+[ext_resource type="Texture2D" uid="uid://ddqy22rns8a21" path="res://art/bg/ParallaxBg_Godot_Spritesheet.sprites/Japanese_Background-4.tres" id="7_kjuw4"]
+[ext_resource type="Texture2D" uid="uid://c26fx0lsb13h2" path="res://art/bg/ParallaxBg_Godot_Spritesheet.sprites/Japanese_Ground.tres" id="8_t56tf"]
+[ext_resource type="Texture2D" uid="uid://bq5a8cq3tyywf" path="res://art/18861-radial_gradient.png" id="14_2qvgx"]
+[ext_resource type="TileSet" uid="uid://d3cll6d0txwpl" path="res://ground_tilemap.tres" id="14_6p32m"]
+[ext_resource type="PackedScene" uid="uid://bhaj4bqtsgovd" path="res://user_interface/interface.tscn" id="14_72tn2"]
+[ext_resource type="PackedScene" uid="uid://6ojvufx12eij" path="res://scenes/wishing_well.tscn" id="15_a5vln"]
+[ext_resource type="TileSet" uid="uid://bvl28opbkc5cl" path="res://trees.tres" id="15_vqb05"]
+[ext_resource type="Texture2D" uid="uid://b3iurte2vugcb" path="res://art/bg/ParallaxBg_Godot_Spritesheet.sprites/Japanese_Background-5.tres" id="17_hqf1s"]
+[ext_resource type="Texture2D" uid="uid://c07ds7qb5xr50" path="res://art/bg/ParallaxBg_Godot_Spritesheet.sprites/Japanese_Background-6.tres" id="18_so67i"]
+[ext_resource type="PackedScene" uid="uid://w26oddm8keux" path="res://prefabs/trial_finish.tscn" id="19_kj4oq"]
+[ext_resource type="Texture2D" uid="uid://340qytu1vem2" path="res://art/bg/ParallaxBg_Godot_Spritesheet.sprites/Japanese_Background-7.tres" id="19_ty2rb"]
+[ext_resource type="PackedScene" uid="uid://g7nqrkb4tks" path="res://prefabs/platforms/platform.tscn" id="20_1d7tc"]
+[ext_resource type="Texture2D" uid="uid://diwvaseuktt71" path="res://art/bg/ParallaxBg_Godot_Spritesheet.sprites/Japanese_Background-8.tres" id="20_r6jkp"]
+[ext_resource type="Texture2D" uid="uid://ddn8a1gaktnf5" path="res://art/bg/ParallaxBg_Godot_Spritesheet.sprites/Japanese_Background-9.tres" id="21_jk44b"]
+[ext_resource type="Texture2D" uid="uid://br71ohxt030ek" path="res://art/bg/ParallaxBg_Godot_Spritesheet.sprites/Japanese_Background-10.tres" id="22_xhx0b"]
+[ext_resource type="Texture2D" uid="uid://cy3xpks6y1o33" path="res://art/Mountain.png" id="23_8smk1"]
+[ext_resource type="PackedScene" uid="uid://dl2wqoqs0xw0e" path="res://prefabs/enemies/guard.tscn" id="25_htuc1"]
+[ext_resource type="PackedScene" uid="uid://dj087m8bonw6y" path="res://prefabs/star.tscn" id="26_jgujw"]
+[ext_resource type="PackedScene" uid="uid://cbjwxnmppamtl" path="res://prefabs/well.tscn" id="27_o2r7s"]
 
 [node name="level1" type="Node2D"]
+script = ExtResource("1_ei18d")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Platforms" type="Node2D" parent="."]
 
-[node name="BGPlaceholder" type="Sprite2D" parent="."]
-position = Vector2(-3.05176e-05, 0)
-scale = Vector2(2.25, 1.28125)
+[node name="Platform" parent="Platforms" instance=ExtResource("20_1d7tc")]
+position = Vector2(2816, -96)
+
+[node name="Platform2" parent="Platforms" instance=ExtResource("20_1d7tc")]
+position = Vector2(3328, -280)
+
+[node name="Platform3" parent="Platforms" instance=ExtResource("20_1d7tc")]
+position = Vector2(3840, -480)
+
+[node name="Platform4" parent="Platforms" instance=ExtResource("20_1d7tc")]
+position = Vector2(3449, -672)
+
+[node name="Platform5" parent="Platforms" instance=ExtResource("20_1d7tc")]
+position = Vector2(2816, -864)
+
+[node name="Platform6" parent="Platforms" instance=ExtResource("20_1d7tc")]
+position = Vector2(3392, -1064)
+
+[node name="Platform7" parent="Platforms" instance=ExtResource("20_1d7tc")]
+position = Vector2(3768, -1248)
+
+[node name="Platform8" parent="Platforms" instance=ExtResource("20_1d7tc")]
+position = Vector2(3584, -1448)
+
+[node name="Platform9" parent="Platforms" instance=ExtResource("20_1d7tc")]
+position = Vector2(3840, -1640)
+type = 2
+spike_cooldown = 3
+
+[node name="Enemies" type="Node2D" parent="."]
+modulate = Color(0.282353, 0.137255, 0.713726, 1)
+
+[node name="A1" type="Node2D" parent="Enemies"]
+
+[node name="Guard3" parent="Enemies/A1" instance=ExtResource("25_htuc1")]
+position = Vector2(2048, 8)
+max_health = 10
+speed = 200
+
+[node name="Guard4" parent="Enemies/A1" instance=ExtResource("25_htuc1")]
+position = Vector2(1440, 8)
+max_health = 15
+currency_gain = 50
+
+[node name="Guard6" parent="Enemies/A1" instance=ExtResource("25_htuc1")]
+position = Vector2(2024, 8)
+max_health = 10
+speed = 150
+
+[node name="Guard7" parent="Enemies/A1" instance=ExtResource("25_htuc1")]
+position = Vector2(2080, 8)
+max_health = 30
+speed = 280
+
+[node name="BulletLauncher2" parent="Enemies/A1" instance=ExtResource("4_3sbf6")]
+position = Vector2(4120, -576)
+
+[node name="BulletLauncher7" parent="Enemies/A1" instance=ExtResource("4_3sbf6")]
+position = Vector2(4120, -736)
+launch_rate = 4.0
+
+[node name="BulletLauncher3" parent="Enemies/A1" instance=ExtResource("4_3sbf6")]
+position = Vector2(4120, -992)
+launch_rate = 2.1
+
+[node name="BulletLauncher4" parent="Enemies/A1" instance=ExtResource("4_3sbf6")]
+position = Vector2(4112, -915)
+launch_rate = 2.0
+
+[node name="BulletLauncher5" parent="Enemies/A1" instance=ExtResource("4_3sbf6")]
+position = Vector2(4152, -1320)
+launch_rate = 1.5
+
+[node name="BulletLauncher6" parent="Enemies/A1" instance=ExtResource("4_3sbf6")]
+position = Vector2(4144, -1544)
+launch_rate = 1.0
+
+[node name="EnemyPlant" parent="Enemies/A1" instance=ExtResource("3_a0kad")]
+position = Vector2(3712, 0)
+health = 30
+projectiles = 6
+fire_rate = 2
+
+[node name="A2" type="Node2D" parent="Enemies"]
+
+[node name="EnemyPlant" parent="Enemies/A2" instance=ExtResource("3_a0kad")]
+position = Vector2(5248, -1856)
+health = 20
+resistance = 50
+
+[node name="EnemyPlant2" parent="Enemies/A2" instance=ExtResource("3_a0kad")]
+position = Vector2(5440, -1856)
+health = 20
+resistance = 50
+
+[node name="EnemyPlant3" parent="Enemies/A2" instance=ExtResource("3_a0kad")]
+position = Vector2(5632, -1856)
+health = 20
+resistance = 50
+
+[node name="EnemyPlant4" parent="Enemies/A2" instance=ExtResource("3_a0kad")]
+position = Vector2(5056, -1856)
+health = 20
+resistance = 50
+
+[node name="A3" type="Node2D" parent="Enemies"]
+
+[node name="Misc" type="Node2D" parent="."]
+
+[node name="Star" parent="Misc" instance=ExtResource("26_jgujw")]
+position = Vector2(3809, -160)
+
+[node name="Star2" parent="Misc" instance=ExtResource("26_jgujw")]
+position = Vector2(2416, 8)
+
+[node name="Star3" parent="Misc" instance=ExtResource("26_jgujw")]
+position = Vector2(2208, -1000)
+
+[node name="Star4" parent="Misc" instance=ExtResource("26_jgujw")]
+position = Vector2(2976, -1568)
+
+[node name="Star5" parent="Misc" instance=ExtResource("26_jgujw")]
+position = Vector2(6304, -3112)
+
+[node name="Well" parent="Misc" instance=ExtResource("27_o2r7s")]
+position = Vector2(4480, -2032)
+
+[node name="Well2" parent="Misc" instance=ExtResource("27_o2r7s")]
+position = Vector2(6720, -3296)
+
+[node name="ground_parallax" type="ParallaxBackground" parent="."]
+layer = 1
+
+[node name="ParallaxLayer11" type="ParallaxLayer" parent="ground_parallax"]
+position = Vector2(-160, -2952)
+motion_scale = Vector2(2, 1)
+motion_mirroring = Vector2(1536, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ground_parallax/ParallaxLayer11"]
+modulate = Color(0.282353, 0.137255, 0.713726, 1)
+texture_filter = 5
+texture_repeat = 3
+position = Vector2(-48, 176)
+scale = Vector2(3, 3)
+texture = ExtResource("8_t56tf")
+centered = false
+
+[node name="lvl1Parallax" type="ParallaxBackground" parent="."]
+scroll_base_scale = Vector2(0.4, 0.4)
+
+[node name="BG" type="Sprite2D" parent="lvl1Parallax"]
+modulate = Color(0.0745098, 0.0941176, 0.384314, 1)
+y_sort_enabled = true
+position = Vector2(4856, -824)
+scale = Vector2(24.9063, 7.4375)
 texture = ExtResource("1_ctyaw")
 
-[node name="DevUI" parent="." instance=ExtResource("3_h5bu3")]
+[node name="ParallaxLayer" type="ParallaxLayer" parent="lvl1Parallax"]
+position = Vector2(-520, -2320)
+motion_scale = Vector2(0, 1)
+motion_mirroring = Vector2(2048, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="lvl1Parallax/ParallaxLayer"]
+modulate = Color(0.282353, 0.137255, 0.713726, 1)
+texture_filter = 4
+texture_repeat = 3
+position = Vector2(24, 128)
+scale = Vector2(4, 4)
+texture = ExtResource("4_w2pog")
+centered = false
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="lvl1Parallax"]
+visible = false
+position = Vector2(-520, -2312)
+motion_scale = Vector2(0, 1)
+motion_mirroring = Vector2(2048, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="lvl1Parallax/ParallaxLayer2"]
+modulate = Color(0.282353, 0.137255, 0.713726, 1)
+texture_filter = 4
+texture_repeat = 3
+position = Vector2(24, 128)
+scale = Vector2(4, 4)
+texture = ExtResource("5_b6crb")
+centered = false
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="lvl1Parallax"]
+visible = false
+position = Vector2(-512, -2400)
+motion_scale = Vector2(0, 1)
+motion_mirroring = Vector2(2048, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="lvl1Parallax/ParallaxLayer3"]
+modulate = Color(0.282353, 0.137255, 0.713726, 1)
+texture_filter = 4
+texture_repeat = 3
+position = Vector2(24, 128)
+scale = Vector2(4, 4)
+texture = ExtResource("6_4oq0m")
+centered = false
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="lvl1Parallax"]
+position = Vector2(-168, -2544)
+motion_scale = Vector2(0, 1)
+motion_mirroring = Vector2(2048, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="lvl1Parallax/ParallaxLayer4"]
+modulate = Color(0.282353, 0.137255, 0.713726, 1)
+texture_filter = 5
+texture_repeat = 3
+position = Vector2(24, 248)
+scale = Vector2(4, 4)
+texture = ExtResource("7_kjuw4")
+centered = false
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="lvl1Parallax"]
+position = Vector2(-160, -2864)
+motion_scale = Vector2(0.15, 1)
+motion_mirroring = Vector2(1022, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="lvl1Parallax/ParallaxLayer5"]
+modulate = Color(0.282353, 0.137255, 0.713726, 1)
+texture_filter = 5
+texture_repeat = 3
+position = Vector2(8, 1224)
+scale = Vector2(2, 2)
+texture = ExtResource("17_hqf1s")
+centered = false
+
+[node name="ParallaxLayer6" type="ParallaxLayer" parent="lvl1Parallax"]
+position = Vector2(-160, -2864)
+motion_scale = Vector2(0.3, 1)
+motion_mirroring = Vector2(1024, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="lvl1Parallax/ParallaxLayer6"]
+modulate = Color(0.282353, 0.137255, 0.713726, 1)
+texture_filter = 5
+texture_repeat = 3
+position = Vector2(16, 1224)
+scale = Vector2(2, 2)
+texture = ExtResource("18_so67i")
+centered = false
+
+[node name="ParallaxLayer7" type="ParallaxLayer" parent="lvl1Parallax"]
+position = Vector2(-160, -2864)
+motion_scale = Vector2(0.5, 1)
+motion_mirroring = Vector2(1024, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="lvl1Parallax/ParallaxLayer7"]
+modulate = Color(0.282353, 0.137255, 0.713726, 1)
+texture_filter = 5
+texture_repeat = 3
+position = Vector2(8, 1224)
+scale = Vector2(2, 2)
+texture = ExtResource("19_ty2rb")
+centered = false
+
+[node name="ParallaxLayer8" type="ParallaxLayer" parent="lvl1Parallax"]
+position = Vector2(-160, -2864)
+motion_scale = Vector2(0.6, 1)
+motion_mirroring = Vector2(1024, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="lvl1Parallax/ParallaxLayer8"]
+modulate = Color(0.282353, 0.137255, 0.713726, 1)
+texture_filter = 5
+texture_repeat = 3
+position = Vector2(8, 1224)
+scale = Vector2(2, 2)
+texture = ExtResource("20_r6jkp")
+centered = false
+
+[node name="ParallaxLayer9" type="ParallaxLayer" parent="lvl1Parallax"]
+position = Vector2(-160, -2864)
+motion_scale = Vector2(0.7, 1)
+motion_mirroring = Vector2(1024, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="lvl1Parallax/ParallaxLayer9"]
+modulate = Color(0.282353, 0.137255, 0.713726, 1)
+texture_filter = 5
+texture_repeat = 3
+position = Vector2(8, 1224)
+scale = Vector2(2, 2)
+texture = ExtResource("21_jk44b")
+centered = false
+
+[node name="ParallaxLayer10" type="ParallaxLayer" parent="lvl1Parallax"]
+position = Vector2(-160, -2864)
+motion_scale = Vector2(0.8, 1)
+motion_mirroring = Vector2(1024, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="lvl1Parallax/ParallaxLayer10"]
+modulate = Color(0.282353, 0.137255, 0.713726, 1)
+texture_filter = 5
+texture_repeat = 3
+position = Vector2(8, 1224)
+scale = Vector2(2, 2)
+texture = ExtResource("22_xhx0b")
+centered = false
 
 [node name="Player" parent="." instance=ExtResource("4_u7k4f")]
-position = Vector2(-480, 190)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="PointLight2D" type="PointLight2D" parent="Player"]
+light_mask = 2
+position = Vector2(7, 11.5)
+scale = Vector2(0.53125, 0.714844)
+color = Color(1, 0.862745, 0.513726, 1)
+energy = 3.0
+range_item_cull_mask = 2
+texture = ExtResource("14_2qvgx")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(1, 282.5)
-shape = SubResource("RectangleShape2D_k2w48")
+[node name="interface" parent="." instance=ExtResource("14_72tn2")]
+
+[node name="wishing_well" parent="." groups=["Wishing_well"] instance=ExtResource("15_a5vln")]
+visible = false
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+color = Color(0, 0, 0, 1)
+energy = 0.5
+blend_mode = 2
+
+[node name="LevelBounds" type="StaticBody2D" parent="."]
+light_mask = 3
+z_index = 2
+position = Vector2(2760, 80)
+rotation = -1.57079
+
+[node name="Polygon2D" type="Polygon2D" parent="LevelBounds"]
+light_mask = 3
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(-4.57764e-05, -8)
+texture = ExtResource("23_8smk1")
+polygon = PackedVector2Array(-15.997, 1344, 264.003, 1344, 632.009, 1384, 1760.01, 1415.99, 1832.01, 1431.99, 1864.01, 1471.99, -15.9908, 1472)
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="LevelBounds"]
+light_mask = 3
+polygon = PackedVector2Array(-7.99162, 1336, -7.99087, 1456, 1856.01, 1463.99, 1832.01, 1423.99, 1768.01, 1407.99, 656.009, 1376, 272.008, 1336)
+
+[node name="Ground" type="TileMap" parent="."]
+tile_set = ExtResource("14_6p32m")
+format = 2
+layer_0/tile_data = PackedInt32Array(131072, 131074, 0, 131073, 131074, 0, 131074, 131074, 0, 131075, 131074, 0, 131076, 131074, 0, 131077, 131074, 0, 131078, 131074, 0, 131079, 131074, 0, 131080, 131074, 0, 131081, 131074, 0, 131082, 131074, 0, 131083, 131074, 0, 131084, 131074, 0, 131085, 131074, 0, 131086, 131074, 0, 131087, 131074, 0, 131088, 131074, 0, 131089, 131074, 0, 131090, 131074, 0, 131091, 131074, 0, 131092, 131074, 0, 131093, 131074, 0, 131094, 131074, 0, 131095, 131074, 0, 131096, 131074, 0, 131097, 131074, 0, 131098, 131074, 0, 131099, 131074, 0, 131100, 131074, 0, 131101, 131074, 0, 131102, 131074, 0, 131103, 131074, 0, 131104, 131074, 0, 131105, 131074, 0, 131106, 131074, 0, 131107, 131074, 0, 131108, 131074, 0, 131109, 131074, 0, 131110, 131074, 0, 131111, 131074, 0, 131112, 131074, 0, 131113, 131074, 0, 131114, 131074, 0, 131115, 131074, 0, 131116, 131074, 0, 131117, 131074, 0, 131118, 131074, 0, 131119, 131074, 0, 131120, 131074, 0, 131121, 131074, 0, 196603, 131074, 0, 196604, 131074, 0, 196605, 131074, 0, 196606, 131074, 0, 196607, 131074, 0, 131122, 131074, 0, 131123, 131074, 0, 131124, 131074, 0, 131125, 131074, 0, 131126, 131074, 0, 131127, 131074, 0, 131128, 131074, 0, 131129, 131074, 0, 131130, 131074, 0, 131131, 131074, 0, 131132, 131074, 0, 131133, 131074, 0, 131134, 131074, 0, 131135, 131074, 0, 131136, 131074, 0, 131137, 131074, 0, 131138, 131074, 0, 131139, 131074, 0, 131140, 131074, 0, 131141, 131074, 0, 131142, 131074, 0, 131143, 131074, 0, 131144, 131074, 0, 131145, 131074, 0, 131146, 131074, 0, 131147, 131074, 0, 131148, 131074, 0, 131149, 131074, 0, 131150, 131074, 0, 131151, 131074, 0, 131152, 131074, 0, 131153, 131074, 0, 131154, 131074, 0, 131155, 131074, 0, 131156, 131074, 0, 131157, 131074, 0, 131158, 131074, 0, 131159, 131074, 0, 131160, 131074, 0, 131161, 131074, 0, 131162, 131074, 0, 131163, 131074, 0, 131164, 131074, 0, 131165, 131074, 0, 131166, 131074, 0, 131167, 131074, 0, 131168, 131074, 0, 131169, 131074, 0, 131170, 131074, 0, 131171, 131074, 0, 131172, 131074, 0, 131173, 131074, 0, 131174, 131074, 0, 131175, 131074, 0, 131176, 131074, 0, 131177, 131074, 0, 131178, 131074, 0, 131179, 131074, 0, 131180, 131074, 0, 131181, 131074, 0, 131182, 131074, 0, 131183, 131074, 0, 131184, 131074, 0, 131185, 131074, 0, 131186, 131074, 0, 131187, 131074, 0, 131188, 131074, 0, 131189, 131074, 0, 131190, 131074, 0, 131191, 131074, 0, 131192, 131074, 0, 131193, 131074, 0, 131194, 131074, 0, 131195, 131074, 0, 131196, 131074, 0, 131197, 131074, 0, 131198, 131074, 0, 131199, 131074, 0, -3669884, 131074, 0, -3669883, 131074, 0, -3669882, 131074, 0, -3669881, 131074, 0, -3669880, 131074, 0, -3669879, 131074, 0, -3669878, 131074, 0, -3669877, 131074, 0, -3669876, 131074, 0, -3669875, 131074, 0, -3669874, 131074, 0, -3669873, 131074, 0, -3669872, 131074, 0, -3669871, 131074, 0, -3669870, 131074, 0, -3669869, 131074, 0, -3669868, 131074, 0, -3669867, 131074, 0, -3669866, 131074, 0, -3669865, 131074, 0, -3669864, 131074, 0, -3669863, 131074, 0, -3669862, 131074, 0, -3669861, 131074, 0, -3669860, 131074, 0, -3669859, 131074, 0, -3669858, 131074, 0, -3669857, 131074, 0, -3669856, 131074, 0, -3669855, 131074, 0, -3669854, 131074, 0, -3669853, 131074, 0, -3669852, 131074, 0, -3669851, 131074, 0, -3669850, 131074, 0, -3669849, 131074, 0, -3669848, 131074, 0, -3669847, 131074, 0, -3669846, 131074, 0, -3669845, 131074, 0, -3669844, 131074, 0, -3669843, 131074, 0, -3669842, 131074, 0, -3669841, 131074, 0, -3669840, 131074, 0, -3669839, 131074, 0, -3669838, 131074, 0, -3669837, 131074, 0, -3669836, 131074, 0, -3669835, 131074, 0, -3669834, 131074, 0, -3669833, 131074, 0, -3669832, 131074, 0, -3669831, 131074, 0, -6225727, 131074, 0, -6225726, 131074, 0, -6225725, 131074, 0, -6225724, 131074, 0, -6225723, 131074, 0, -6225722, 131074, 0, -6225721, 131074, 0, -6225720, 131074, 0, -6225719, 131074, 0, -6225718, 131074, 0, -6225717, 131074, 0, -6225716, 131074, 0, -6225715, 131074, 0, -6225714, 131074, 0, -6225713, 131074, 0, -6225712, 131074, 0, -6225711, 131074, 0, -6225710, 131074, 0, -6225709, 131074, 0, -6225708, 131074, 0, -6225707, 131074, 0, -6225706, 131074, 0, -6225705, 131074, 0, -6225704, 131074, 0, -6225703, 131074, 0, -6225702, 131074, 0, -6225701, 131074, 0, -6225700, 131074, 0, -6225699, 131074, 0, -6225698, 131074, 0, -6225697, 131074, 0, -6225696, 131074, 0, -6225695, 131074, 0, -6225694, 131074, 0, -6225693, 131074, 0)
+
+[node name="Trees" type="TileMap" parent="."]
+tile_set = ExtResource("15_vqb05")
+format = 2
+
+[node name="InclineBounds" type="StaticBody2D" parent="."]
+light_mask = 3
+z_index = 2
+position = Vector2(984, -1624)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="InclineBounds"]
+light_mask = 3
+polygon = PackedVector2Array(4968, -384, 4968, -376, 5056, -872, 5160, -1312, 5184, -1416, 5192, -1416, 5192, -440, 5192, -136, 4968, -136)
+
+[node name="Polygon2D" type="Polygon2D" parent="InclineBounds"]
+light_mask = 3
+texture_filter = 3
+texture_repeat = 2
+texture = ExtResource("23_8smk1")
+polygon = PackedVector2Array(5184, -1408, 5192, -1416, 5192, -136, 4960, -136, 4968, -376, 5056, -872)
+
+[node name="Incline" type="Area2D" parent="InclineBounds"]
+light_mask = 3
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="InclineBounds/Incline"]
+light_mask = 3
+polygon = PackedVector2Array(4960, -168, 4968, -392, 5056, -880, 5184, -1408, 5144, -1416, 5016, -864, 4928, -440, 4928, -168)
+
+[node name="LeftBounds" type="StaticBody2D" parent="."]
+light_mask = 3
+z_index = 2
+position = Vector2(336, -184)
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="LeftBounds"]
+light_mask = 3
+polygon = PackedVector2Array(-696, -448, -600, -184, -504, -272, -499.894, 122.194, -498.85, 222.379, -498.461, 259.723, -496, 496, -856, 488, -864, -120)
+
+[node name="Polygon2D" type="Polygon2D" parent="LeftBounds"]
+light_mask = 3
+texture_repeat = 2
+color = Color(0, 0, 1, 1)
+texture = ExtResource("23_8smk1")
+polygon = PackedVector2Array(-496, 488, -496, 256, -768, 256, -768, 128, -504, 128, -496, -104, -496, -288, -600, -176, -696, -464, -784, -288, -864, -120, -864, 16, -864, 256, -864, 488)
+
+[node name="Polygon2D2" type="Polygon2D" parent="LeftBounds"]
+light_mask = 3
+texture_repeat = 2
+position = Vector2(-112, -344)
+color = Color(1, 0.0235294, 0.839216, 1)
+texture = ExtResource("23_8smk1")
+polygon = PackedVector2Array(-664, 192, -592, 32, -528, 192)
+
+[node name="RightBounds" type="StaticBody2D" parent="."]
+light_mask = 3
+position = Vector2(-2728, -1608)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RightBounds"]
+light_mask = 3
+polygon = PackedVector2Array(10056, -2040, 10192, -1984, 10432, -2056, 10432, -1192, 10032, -1200, 10032.5, -1424.87, 10240, -1432, 10240, -1560, 10040, -1560)
+
+[node name="Polygon2D" type="Polygon2D" parent="RightBounds"]
+light_mask = 3
+texture_filter = 3
+texture_repeat = 2
+color = Color(0, 0, 1, 1)
+texture = ExtResource("23_8smk1")
+polygon = PackedVector2Array(10016, -1192, 10024, -1432, 10240, -1432, 10240, -1560, 10032, -1560, 10056, -2032, 10192, -1984, 10432, -2056, 10432, -1192)
+
+[node name="Polygon2D2" type="Polygon2D" parent="RightBounds"]
+light_mask = 3
+texture_filter = 3
+texture_repeat = 2
+position = Vector2(152, -96)
+texture = ExtResource("23_8smk1")
+polygon = PackedVector2Array(10112, -1536, 10112, -1792, 10176, -1792, 10176, -1536)
+
+[node name="Trial_Finish" parent="RightBounds" instance=ExtResource("19_kj4oq")]
+position = Vector2(10048, -1533)
+
+[connection signal="body_entered" from="InclineBounds/Incline" to="." method="_on_incline_body_entered"]
+[connection signal="body_exited" from="InclineBounds/Incline" to="." method="_on_incline_body_exited"]

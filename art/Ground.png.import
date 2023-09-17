@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1kjuecgyl83r"
-path="res://.godot/imported/Slash_Sprite_Sheet.png-8dc729a704a3414332b11b431307f892.ctex"
+uid="uid://dgs5wgiiyno1y"
+path="res://.godot/imported/Ground.png-f174c8dbb44298072d815f57309a01f1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Slash_Sprite_Sheet.png"
-dest_files=["res://.godot/imported/Slash_Sprite_Sheet.png-8dc729a704a3414332b11b431307f892.ctex"]
+source_file="res://art/Ground.png"
+dest_files=["res://.godot/imported/Ground.png-f174c8dbb44298072d815f57309a01f1.ctex"]
 
 [params]
 

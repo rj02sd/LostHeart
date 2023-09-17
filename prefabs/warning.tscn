@@ -1,0 +1,108 @@
+[gd_scene format=3 uid="uid://bf6l1iv1grmoa"]
+
+[node name="Warning" type="Node2D"]
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+light_mask = 4
+position = Vector2(16, -44)
+scale = Vector2(0.9375, 0.046875)
+color = Color(1, 0, 0, 1)
+polygon = PackedVector2Array(-273.067, 256, -256, 85.3333, -238.933, 256)
+
+[node name="Polygon2D2" type="Polygon2D" parent="."]
+light_mask = 4
+position = Vector2(48, -44)
+scale = Vector2(0.9375, 0.046875)
+color = Color(1, 0, 0, 1)
+polygon = PackedVector2Array(-273.067, 256, -256, 85.3333, -238.933, 256)
+
+[node name="Polygon2D3" type="Polygon2D" parent="."]
+light_mask = 4
+position = Vector2(80, -44)
+scale = Vector2(0.9375, 0.046875)
+color = Color(1, 0, 0, 1)
+polygon = PackedVector2Array(-273.067, 256, -256, 85.3333, -238.933, 256)
+
+[node name="Polygon2D4" type="Polygon2D" parent="."]
+light_mask = 4
+position = Vector2(112, -44)
+scale = Vector2(0.9375, 0.046875)
+color = Color(1, 0, 0, 1)
+polygon = PackedVector2Array(-273.067, 256, -256, 85.3333, -238.933, 256)
+
+[node name="Polygon2D5" type="Polygon2D" parent="."]
+light_mask = 4
+position = Vector2(144, -44)
+scale = Vector2(0.9375, 0.046875)
+color = Color(1, 0, 0, 1)
+polygon = PackedVector2Array(-273.067, 256, -256, 85.3333, -238.933, 256)
+
+[node name="Polygon2D6" type="Polygon2D" parent="."]
+light_mask = 4
+position = Vector2(176, -44)
+scale = Vector2(0.9375, 0.046875)
+color = Color(1, 0, 0, 1)
+polygon = PackedVector2Array(-273.067, 256, -256, 85.3333, -238.933, 256)
+
+[node name="Polygon2D7" type="Polygon2D" parent="."]
+light_mask = 4
+position = Vector2(208, -44)
+scale = Vector2(0.9375, 0.046875)
+color = Color(1, 0, 0, 1)
+polygon = PackedVector2Array(-273.067, 256, -256, 85.3333, -238.933, 256)
+
+[node name="Polygon2D8" type="Polygon2D" parent="."]
+light_mask = 4
+position = Vector2(240, -44)
+scale = Vector2(0.9375, 0.046875)
+color = Color(1, 0, 0, 1)
+polygon = PackedVector2Array(-273.067, 256, -256, 85.3333, -238.933, 256, -257.107, 256)
+
+[node name="Polygon2D9" type="Polygon2D" parent="."]
+light_mask = 4
+position = Vector2(272, -44)
+scale = Vector2(0.9375, 0.046875)
+color = Color(1, 0, 0, 1)
+polygon = PackedVector2Array(-273.067, 256, -256, 85.3333, -238.933, 256)
+
+[node name="Polygon2D10" type="Polygon2D" parent="."]
+light_mask = 4
+position = Vector2(304, -44)
+scale = Vector2(0.9375, 0.046875)
+color = Color(1, 0, 0, 1)
+polygon = PackedVector2Array(-273.067, 256, -256, 85.3333, -238.933, 256)
+
+[node name="Polygon2D11" type="Polygon2D" parent="."]
+light_mask = 4
+position = Vector2(336, -44)
+scale = Vector2(0.9375, 0.046875)
+color = Color(1, 0, 0, 1)
+polygon = PackedVector2Array(-273.067, 256, -256, 85.3333, -238.933, 256)
+
+[node name="Polygon2D12" type="Polygon2D" parent="."]
+light_mask = 4
+position = Vector2(368, -44)
+scale = Vector2(0.9375, 0.046875)
+color = Color(1, 0, 0, 1)
+polygon = PackedVector2Array(-273.067, 256, -256, 85.3333, -238.933, 256)
+
+[node name="Polygon2D13" type="Polygon2D" parent="."]
+light_mask = 4
+position = Vector2(400, -44)
+scale = Vector2(0.9375, 0.046875)
+color = Color(1, 0, 0, 1)
+polygon = PackedVector2Array(-273.067, 256, -256, 85.3333, -238.933, 256)
+
+[node name="Polygon2D14" type="Polygon2D" parent="."]
+light_mask = 4
+position = Vector2(432, -44)
+scale = Vector2(0.9375, 0.046875)
+color = Color(1, 0, 0, 1)
+polygon = PackedVector2Array(-273.067, 256, -256, 85.3333, -238.933, 256)
+
+[node name="Polygon2D15" type="Polygon2D" parent="."]
+light_mask = 4
+position = Vector2(464, -44)
+scale = Vector2(0.9375, 0.046875)
+color = Color(1, 0, 0, 1)
+polygon = PackedVector2Array(-273.067, 256, -256, 85.3333, -238.933, 256)

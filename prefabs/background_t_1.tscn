@@ -1,0 +1,219 @@
+[gd_scene load_steps=5 format=3 uid="uid://dtf4c5n2gfwxe"]
+
+[ext_resource type="Texture2D" uid="uid://d00aubj2tay7j" path="res://ui_art/white_square.png" id="1_j0kj3"]
+[ext_resource type="Texture2D" uid="uid://cy3xpks6y1o33" path="res://art/Mountain.png" id="2_8qikh"]
+[ext_resource type="Texture2D" uid="uid://d36rdjxkwbg3t" path="res://art/Untitled_Artwork-3.png" id="3_k6g7t"]
+[ext_resource type="Script" path="res://scripts/clouds.gd" id="4_g3u5s"]
+
+[node name="BackgroundT1" type="ParallaxBackground"]
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(2304, -384)
+
+[node name="BG" type="Sprite2D" parent="."]
+modulate = Color(0.0745098, 0.0941176, 0.384314, 1)
+y_sort_enabled = true
+position = Vector2(4584, -832)
+scale = Vector2(24.9063, 7.4375)
+texture = ExtResource("1_j0kj3")
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.1, 1)
+motion_mirroring = Vector2(960, 0)
+
+[node name="Polygon2D4" type="Polygon2D" parent="ParallaxLayer5"]
+texture_filter = 3
+texture_repeat = 2
+position = Vector2(152, -1536)
+scale = Vector2(0.5, 0.5)
+color = Color(0.294118, 0.294118, 0.294118, 1)
+texture = ExtResource("2_8qikh")
+polygon = PackedVector2Array(1024, -664, 3264, 2512, -1616, 2544)
+
+[node name="Polygon2D3" type="Polygon2D" parent="ParallaxLayer5"]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(-616, -616)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_8qikh")
+polygon = PackedVector2Array(1024, -664, 2064, 752, -192, 768)
+
+[node name="Polygon2D5" type="Polygon2D" parent="ParallaxLayer5"]
+texture_filter = 3
+texture_repeat = 2
+position = Vector2(-104, -800)
+scale = Vector2(0.5, 0.5)
+color = Color(0.611765, 0.611765, 0.611765, 1)
+texture = ExtResource("2_8qikh")
+polygon = PackedVector2Array(1024, -664, 2832, 1120, -912, 1168)
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="."]
+texture_filter = 3
+position = Vector2(-600, -1120)
+motion_scale = Vector2(0.1, 1)
+motion_mirroring = Vector2(1536, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer4"]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(-8, 432)
+scale = Vector2(3, 3)
+texture = ExtResource("3_k6g7t")
+centered = false
+
+[node name="ParallaxLayer7" type="ParallaxLayer" parent="."]
+texture_filter = 3
+position = Vector2(-872, -1184)
+motion_scale = Vector2(0.1, 1)
+motion_mirroring = Vector2(1536, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer7"]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(-8, 432)
+scale = Vector2(3, 3)
+texture = ExtResource("3_k6g7t")
+centered = false
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+visible = false
+motion_scale = Vector2(0, 1)
+motion_mirroring = Vector2(1920, 0)
+script = ExtResource("4_g3u5s")
+
+[node name="Polygon2D" type="Polygon2D" parent="ParallaxLayer"]
+position = Vector2(-328, 0)
+color = Color(1, 1, 1, 0.121569)
+polygon = PackedVector2Array(-344, -312, -24, -568, 288, -304, -48, -48)
+
+[node name="Polygon2D2" type="Polygon2D" parent="ParallaxLayer"]
+position = Vector2(-128, 16)
+color = Color(1, 1, 1, 0.121569)
+polygon = PackedVector2Array(-344, -312, -24, -568, 288, -304, -48, -48)
+
+[node name="Polygon2D3" type="Polygon2D" parent="ParallaxLayer"]
+position = Vector2(88, 24)
+color = Color(1, 1, 1, 0.121569)
+polygon = PackedVector2Array(-344, -312, -24, -568, 288, -304, -48, -48)
+
+[node name="Polygon2D4" type="Polygon2D" parent="ParallaxLayer"]
+position = Vector2(296, 24)
+color = Color(1, 1, 1, 0.121569)
+polygon = PackedVector2Array(-344, -312, -24, -568, 288, -304, -48, -48)
+
+[node name="Polygon2D5" type="Polygon2D" parent="ParallaxLayer"]
+position = Vector2(536, 16)
+color = Color(1, 1, 1, 0.121569)
+polygon = PackedVector2Array(-344, -312, -24, -568, 288, -304, -48, -48)
+
+[node name="Polygon2D6" type="Polygon2D" parent="ParallaxLayer"]
+position = Vector2(800, 48)
+color = Color(1, 1, 1, 0.121569)
+polygon = PackedVector2Array(-344, -312, -24, -568, 288, -304, -48, -48)
+
+[node name="Polygon2D7" type="Polygon2D" parent="ParallaxLayer"]
+position = Vector2(1032, 32)
+color = Color(1, 1, 1, 0.121569)
+polygon = PackedVector2Array(-344, -312, -24, -568, 288, -304, -48, -48)
+
+[node name="Polygon2D8" type="Polygon2D" parent="ParallaxLayer"]
+position = Vector2(1312, 24)
+color = Color(1, 1, 1, 0.121569)
+polygon = PackedVector2Array(-344, -312, -24, -568, 288, -304, -48, -48)
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="."]
+visible = false
+position = Vector2(72, 160)
+motion_scale = Vector2(0, 1)
+motion_mirroring = Vector2(1920, 0)
+script = ExtResource("4_g3u5s")
+
+[node name="Polygon2D" type="Polygon2D" parent="ParallaxLayer3"]
+position = Vector2(-328, 0)
+color = Color(1, 1, 1, 0.0470588)
+polygon = PackedVector2Array(-344, -312, -24, -568, 288, -304, -48, -48)
+
+[node name="Polygon2D2" type="Polygon2D" parent="ParallaxLayer3"]
+position = Vector2(-128, 16)
+color = Color(1, 1, 1, 0.0470588)
+polygon = PackedVector2Array(-344, -312, -24, -568, 288, -304, -48, -48)
+
+[node name="Polygon2D3" type="Polygon2D" parent="ParallaxLayer3"]
+position = Vector2(88, 24)
+color = Color(1, 1, 1, 0.0470588)
+polygon = PackedVector2Array(-344, -312, -24, -568, 288, -304, -48, -48)
+
+[node name="Polygon2D4" type="Polygon2D" parent="ParallaxLayer3"]
+position = Vector2(296, 24)
+color = Color(1, 1, 1, 0.0470588)
+polygon = PackedVector2Array(-344, -312, -24, -568, 288, -304, -48, -48)
+
+[node name="Polygon2D5" type="Polygon2D" parent="ParallaxLayer3"]
+position = Vector2(536, 16)
+color = Color(1, 1, 1, 0.0470588)
+polygon = PackedVector2Array(-344, -312, -24, -568, 288, -304, -48, -48)
+
+[node name="Polygon2D6" type="Polygon2D" parent="ParallaxLayer3"]
+position = Vector2(800, 48)
+color = Color(1, 1, 1, 0.0470588)
+polygon = PackedVector2Array(-344, -312, -24, -568, 288, -304, -48, -48)
+
+[node name="Polygon2D7" type="Polygon2D" parent="ParallaxLayer3"]
+position = Vector2(1032, 32)
+color = Color(1, 1, 1, 0.0470588)
+polygon = PackedVector2Array(-344, -312, -24, -568, 288, -304, -48, -48)
+
+[node name="Polygon2D8" type="Polygon2D" parent="ParallaxLayer3"]
+position = Vector2(1312, 24)
+color = Color(1, 1, 1, 0.0470588)
+polygon = PackedVector2Array(-344, -312, -24, -568, 288, -304, -48, -48)
+
+[node name="ParallaxLayer6" type="ParallaxLayer" parent="."]
+position = Vector2(8, 24)
+motion_scale = Vector2(0.5, 1)
+motion_mirroring = Vector2(1920, 0)
+
+[node name="Polygon2D3" type="Polygon2D" parent="ParallaxLayer6"]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(-528, -292)
+scale = Vector2(0.5, 0.5)
+color = Color(0.588235, 0.101961, 0, 1)
+texture = ExtResource("2_8qikh")
+polygon = PackedVector2Array(256, -152, 1280, 1088, -800, 1152)
+
+[node name="Polygon2D5" type="Polygon2D" parent="ParallaxLayer6"]
+texture_filter = 3
+texture_repeat = 2
+position = Vector2(424, -312)
+scale = Vector2(0.5, 0.5)
+color = Color(1, 1, 0.854902, 1)
+texture = ExtResource("2_8qikh")
+polygon = PackedVector2Array(304, -128, 1280, 1088, -800, 1152)
+
+[node name="Polygon2D6" type="Polygon2D" parent="ParallaxLayer6"]
+texture_filter = 3
+texture_repeat = 2
+position = Vector2(-216, -132)
+scale = Vector2(0.5, 0.5)
+color = Color(1, 1, 0.854902, 1)
+texture = ExtResource("2_8qikh")
+polygon = PackedVector2Array(256, -152, 1280, 1088, -800, 1152)
+
+[node name="Polygon2D4" type="Polygon2D" parent="ParallaxLayer6"]
+texture_filter = 3
+texture_repeat = 2
+position = Vector2(192, -200)
+scale = Vector2(0.5, 0.5)
+color = Color(1, 0.392157, 0.278431, 1)
+texture = ExtResource("2_8qikh")
+polygon = PackedVector2Array(80, -120, 1056, 904, -1024, 936)
+
+[node name="Polygon2D7" type="Polygon2D" parent="ParallaxLayer6"]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(1000, -208)
+scale = Vector2(0.5, 0.5)
+color = Color(1, 0.392157, 0.278431, 1)
+texture = ExtResource("2_8qikh")
+polygon = PackedVector2Array(80, -120, 1056, 904, -1024, 936)

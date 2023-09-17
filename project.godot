@@ -20,6 +20,15 @@ config/icon="res://icon.svg"
 PlayerData="*res://scripts/player_data.gd"
 MusicPlayer="*res://prefabs/music_player.tscn"
 
+[display]
+
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/codeandweb.texturepacker/plugin.cfg")
+
 [input]
 
 move_left={

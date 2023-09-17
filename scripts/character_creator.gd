@@ -16,3 +16,19 @@ func _on_back_pressed():
 func _on_create_pressed():
 	if next_scene:
 		get_tree().change_scene_to_packed(next_scene)
+
+
+func _on_class_1_pressed():
+	PlayerData.class_selected = "Soul Siphon"
+
+
+func _on_class_2_pressed():
+	PlayerData.class_selected = "Slayer"
+
+
+func _on_class_3_pressed():
+	PlayerData.class_selected = "Juggernaut"
+
+
+func _on_username_text_changed():
+	PlayerData.username = %Username.text

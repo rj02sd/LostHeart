@@ -1,12 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://7bd7m7jfykc5"]
+[gd_scene load_steps=5 format=3 uid="uid://7bd7m7jfykc5"]
 
-[ext_resource type="Texture2D" uid="uid://bwni51rsfluix" path="res://ui_art/dark_square.png" id="1_5er1k"]
 [ext_resource type="Script" path="res://scripts/pusher.gd" id="1_sk1pp"]
+[ext_resource type="Texture2D" uid="uid://clewsxmg6v25o" path="res://art/Hand.png" id="2_lhthu"]
+[ext_resource type="Texture2D" uid="uid://bq5a8cq3tyywf" path="res://art/18861-radial_gradient.png" id="3_swelr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_txsn8"]
-size = Vector2(32, 128)
+size = Vector2(56, 128)
 
 [node name="pusher" type="RigidBody2D"]
+light_mask = 256
 collision_layer = 32
 collision_mask = 32
 gravity_scale = 0.0
@@ -14,8 +16,21 @@ linear_velocity = Vector2(-100, 0)
 script = ExtResource("1_sk1pp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+light_mask = 256
+position = Vector2(-4, 0)
 shape = SubResource("RectangleShape2D_txsn8")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.0625, 0.25)
-texture = ExtResource("1_5er1k")
+modulate = Color(1, 1, 0.662745, 1)
+light_mask = 256
+texture_filter = 1
+position = Vector2(-8, 16)
+scale = Vector2(5, 5)
+texture = ExtResource("2_lhthu")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(9.53674e-07, -3.8147e-06)
+scale = Vector2(0.25, 0.5625)
+color = Color(0.784314, 0.717647, 0.572549, 1)
+range_item_cull_mask = 256
+texture = ExtResource("3_swelr")

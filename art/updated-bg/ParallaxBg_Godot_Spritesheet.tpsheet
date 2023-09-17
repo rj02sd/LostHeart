@@ -1,0 +1,333 @@
+{
+	"textures": [
+		{
+			"image": "ParallaxBg_Godot_Spritesheet.png",
+			"size": {
+				"w": 1851,
+				"h": 921
+			},
+			"sprites": [
+				{
+					"filename": "Japanese_Background-4.png",
+					"region": {
+						"x": 1,
+						"y": 1,
+						"w": 512,
+						"h": 664
+					},
+					"margin": {
+						"x": 0,
+						"y": 360,
+						"w": 0,
+						"h": 360
+					}
+				},
+				{
+					"filename": "Japanese_Background-6.png",
+					"region": {
+						"x": 1,
+						"y": 667,
+						"w": 512,
+						"h": 224
+					},
+					"margin": {
+						"x": 0,
+						"y": 670,
+						"w": 0,
+						"h": 800
+					}
+				},
+				{
+					"filename": "Japanese_Background-12 (1).png",
+					"region": {
+						"x": 1,
+						"y": 893,
+						"w": 43,
+						"h": 27
+					},
+					"margin": {
+						"x": 223,
+						"y": 933,
+						"w": 469,
+						"h": 997
+					}
+				},
+				{
+					"filename": "Japanese_Background-12 (4).png",
+					"region": {
+						"x": 46,
+						"y": 893,
+						"w": 41,
+						"h": 23
+					},
+					"margin": {
+						"x": 133,
+						"y": 938,
+						"w": 471,
+						"h": 1001
+					}
+				},
+				{
+					"filename": "Mouldar Mt (2).png",
+					"region": {
+						"x": 515,
+						"y": 1,
+						"w": 422,
+						"h": 603
+					},
+					"margin": {
+						"x": 40,
+						"y": 421,
+						"w": 90,
+						"h": 421
+					}
+				},
+				{
+					"filename": "Japanese_Background-5.png",
+					"region": {
+						"x": 515,
+						"y": 606,
+						"w": 512,
+						"h": 301
+					},
+					"margin": {
+						"x": 0,
+						"y": 637,
+						"w": 0,
+						"h": 723
+					}
+				},
+				{
+					"filename": "Mouldar Mt (1).png",
+					"region": {
+						"x": 939,
+						"y": 1,
+						"w": 397,
+						"h": 369
+					},
+					"margin": {
+						"x": 114,
+						"y": 655,
+						"w": 115,
+						"h": 655
+					}
+				},
+				{
+					"filename": "Japanese_Background-8.png",
+					"region": {
+						"x": 1338,
+						"y": 1,
+						"w": 512,
+						"h": 193
+					},
+					"margin": {
+						"x": 0,
+						"y": 831,
+						"w": 0,
+						"h": 831
+					}
+				},
+				{
+					"filename": "Japanese_Background-9.png",
+					"region": {
+						"x": 1338,
+						"y": 196,
+						"w": 512,
+						"h": 159
+					},
+					"margin": {
+						"x": 0,
+						"y": 865,
+						"w": 0,
+						"h": 865
+					}
+				},
+				{
+					"filename": "Japanese_Background-10.png",
+					"region": {
+						"x": 1338,
+						"y": 357,
+						"w": 512,
+						"h": 149
+					},
+					"margin": {
+						"x": 0,
+						"y": 875,
+						"w": 0,
+						"h": 875
+					}
+				},
+				{
+					"filename": "Modular Cloud (1).png",
+					"region": {
+						"x": 939,
+						"y": 508,
+						"w": 212,
+						"h": 96
+					},
+					"margin": {
+						"x": 6,
+						"y": 77,
+						"w": 300,
+						"h": 928
+					}
+				},
+				{
+					"filename": "Japanese_Background-12 (2).png",
+					"region": {
+						"x": 939,
+						"y": 372,
+						"w": 72,
+						"h": 117
+					},
+					"margin": {
+						"x": 98,
+						"y": 838,
+						"w": 440,
+						"h": 907
+					}
+				},
+				{
+					"filename": "Modular Tree.png",
+					"region": {
+						"x": 1013,
+						"y": 372,
+						"w": 72,
+						"h": 94
+					},
+					"margin": {
+						"x": 42,
+						"y": 860,
+						"w": 440,
+						"h": 930
+					}
+				},
+				{
+					"filename": "Modular Cloud (2).png",
+					"region": {
+						"x": 1087,
+						"y": 372,
+						"w": 209,
+						"h": 86
+					},
+					"margin": {
+						"x": 284,
+						"y": 120,
+						"w": 303,
+						"h": 938
+					}
+				},
+				{
+					"filename": "Japanese_Background-12.png",
+					"region": {
+						"x": 1087,
+						"y": 460,
+						"w": 124,
+						"h": 46
+					},
+					"margin": {
+						"x": 255,
+						"y": 961,
+						"w": 388,
+						"h": 978
+					}
+				},
+				{
+					"filename": "Japanese_Background-12 (3).png",
+					"region": {
+						"x": 1213,
+						"y": 460,
+						"w": 110,
+						"h": 161
+					},
+					"margin": {
+						"x": 139,
+						"y": 799,
+						"w": 402,
+						"h": 863
+					}
+				},
+				{
+					"filename": "Japanese_Background-3.png",
+					"region": {
+						"x": 1325,
+						"y": 508,
+						"w": 512,
+						"h": 145
+					},
+					"margin": {
+						"x": 0,
+						"y": 359,
+						"w": 0,
+						"h": 879
+					}
+				},
+				{
+					"filename": "Japanese_Background-1.png",
+					"region": {
+						"x": 1029,
+						"y": 623,
+						"w": 277,
+						"h": 277
+					},
+					"margin": {
+						"x": 118,
+						"y": 227,
+						"w": 235,
+						"h": 747
+					}
+				},
+				{
+					"filename": "Japanese_Background-11.png",
+					"region": {
+						"x": 1308,
+						"y": 655,
+						"w": 512,
+						"h": 101
+					},
+					"margin": {
+						"x": 0,
+						"y": 923,
+						"w": 0,
+						"h": 923
+					}
+				},
+				{
+					"filename": "Japanese_Background-7.png",
+					"region": {
+						"x": 1308,
+						"y": 758,
+						"w": 512,
+						"h": 93
+					},
+					"margin": {
+						"x": 0,
+						"y": 829,
+						"w": 0,
+						"h": 931
+					}
+				},
+				{
+					"filename": "Japanese_Background-2.png",
+					"region": {
+						"x": 1308,
+						"y": 853,
+						"w": 208,
+						"h": 51
+					},
+					"margin": {
+						"x": 215,
+						"y": 10,
+						"w": 304,
+						"h": 973
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "1.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:e4ef8c0a9de6aa2137fc7091de6ecbf8:4eb8fc167be8fdb9c2590f5fc385d7d2:227615ca666eeb1df492f81f060f5828$"
+	}
+}

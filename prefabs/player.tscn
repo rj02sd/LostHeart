@@ -11,56 +11,69 @@ size = Vector2(200, 493)
 size = Vector2(66.5, 43)
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
+light_mask = 32770
 z_index = 2
 collision_layer = 53
-collision_mask = 53
+collision_mask = 24629
 floor_max_angle = 0.174533
+platform_on_leave = 1
 script = ExtResource("1_d7ri4")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(168, -56)
+light_mask = 32770
+position = Vector2(168, -58)
 limit_smoothed = true
 position_smoothing_enabled = true
 position_smoothing_speed = 2.0
 
 [node name="PlayerSprite" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
+light_mask = 32770
 texture_filter = 1
 scale = Vector2(3, 3)
 sprite_frames = ExtResource("2_4kdlu")
-animation = &"staff_slam"
+animation = &"idle"
 
 [node name="HandsSprite" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
 visible = false
+light_mask = 32770
 scale = Vector2(3, 3)
 sprite_frames = ExtResource("2_4kdlu")
-animation = &"unarmed_half"
+animation = &"climbing"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+light_mask = 32770
 position = Vector2(4, -1.3)
 scale = Vector2(0.2, 0.2)
 shape = SubResource("RectangleShape2D_p76v2")
 
 [node name="Area2D2" type="Area2D" parent="."]
-collision_layer = 257
-collision_mask = 261
+light_mask = 32770
+collision_layer = 53
+collision_mask = 24629
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+light_mask = 32770
 position = Vector2(4, -1.3)
 scale = Vector2(0.2, 0.2)
 shape = SubResource("RectangleShape2D_p76v2")
 
 [node name="Area2D" type="Area2D" parent="."]
+light_mask = 32770
+collision_layer = 53
+collision_mask = 24629
 
 [node name="StaffHitboxRight" type="CollisionShape2D" parent="Area2D"]
 unique_name_in_owner = true
+light_mask = 32770
 position = Vector2(40, -4)
 shape = SubResource("RectangleShape2D_mnrm1")
 disabled = true
 
 [node name="StaffHitboxLeft" type="CollisionShape2D" parent="Area2D"]
 unique_name_in_owner = true
+light_mask = 32770
 position = Vector2(-25.25, -4)
 shape = SubResource("RectangleShape2D_mnrm1")
 disabled = true

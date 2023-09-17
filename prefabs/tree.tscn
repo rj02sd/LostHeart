@@ -1,0 +1,41 @@
+[gd_scene load_steps=2 format=3 uid="uid://buwv667j4sse7"]
+
+[ext_resource type="Texture2D" uid="uid://bq5a8cq3tyywf" path="res://art/18861-radial_gradient.png" id="1_8uord"]
+
+[node name="Tree" type="Node2D"]
+light_mask = 2048
+
+[node name="p1" type="Polygon2D" parent="."]
+light_mask = 2048
+color = Color(0.129412, 0.0941176, 0.0352941, 1)
+polygon = PackedVector2Array(-16, 0, 16, 0, 16, -128, -16, -128)
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+light_mask = 2048
+color = Color(0, 0.352941, 0, 1)
+polygon = PackedVector2Array(-16, -128, -64, -128, 0, -192, 64, -128, 16, -128)
+
+[node name="Polygon2D2" type="Polygon2D" parent="."]
+light_mask = 2048
+position = Vector2(0, -40)
+color = Color(0, 0.352941, 0, 1)
+polygon = PackedVector2Array(-16, -128, -96, -128, 0, -192, 96, -128, 16, -128)
+
+[node name="Polygon2D3" type="Polygon2D" parent="."]
+light_mask = 2048
+position = Vector2(0, -80)
+color = Color(0, 0.352941, 0, 1)
+polygon = PackedVector2Array(-16, -128, -80, -128, 0, -192, 80, -128, 16, -128)
+
+[node name="Polygon2D4" type="Polygon2D" parent="."]
+light_mask = 2048
+position = Vector2(0, -120)
+color = Color(0, 0.352941, 0, 1)
+polygon = PackedVector2Array(-16, -128, -64, -128, 0, -192, 64, -128, 16, -128)
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(8, -168)
+color = Color(0.905882, 0.901961, 0, 1)
+energy = 2.0
+range_item_cull_mask = 2048
+texture = ExtResource("1_8uord")

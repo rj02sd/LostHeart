@@ -8,9 +8,39 @@ func _ready():
 func _process(delta):
 	match PlayerData.levels_completed:
 		0:
-			pass
-		_:
-			pass
+			%levels/LevelButton1.disabled = false
+			
+			%levels/LevelButton2.disabled = true
+			%levels/LevelButton3.disabled = true
+			%levels/LevelButton4.disabled = true
+			%levels/LevelButton5.disabled = true
+		1:
+			%levels/LevelButton2.disabled = false
+			%levels/LevelButton1.disabled = false
+			
+			%levels/LevelButton3.disabled = true
+			%levels/LevelButton4.disabled = true
+			%levels/LevelButton5.disabled = true
+		2:
+			%levels/LevelButton3.disabled = false
+			%levels/LevelButton2.disabled = false
+			%levels/LevelButton1.disabled = false
+			
+			%levels/LevelButton4.disabled = true
+			%levels/LevelButton5.disabled = true
+		3:
+			%levels/LevelButton4.disabled = false
+			%levels/LevelButton3.disabled = false
+			%levels/LevelButton2.disabled = false
+			%levels/LevelButton1.disabled = false
+			
+			%levels/LevelButton5.disabled = true
+		4:
+			%levels/LevelButton5.disabled = false
+			%levels/LevelButton4.disabled = false
+			%levels/LevelButton3.disabled = false
+			%levels/LevelButton2.disabled = false
+			%levels/LevelButton1.disabled = false
 
 
 func _on_level_button_1_pressed():

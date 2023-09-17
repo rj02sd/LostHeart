@@ -1,21 +1,38 @@
-[gd_scene load_steps=4 format=3 uid="uid://cfxk2unfgrkf"]
+[gd_scene load_steps=6 format=3 uid="uid://cfxk2unfgrkf"]
 
 [ext_resource type="Script" path="res://scripts/big_bullet.gd" id="1_15ttc"]
-[ext_resource type="Texture2D" uid="uid://bwni51rsfluix" path="res://ui_art/dark_square.png" id="1_kxy4s"]
+[ext_resource type="Texture2D" uid="uid://tnq7w4v1t8ko" path="res://art/bullet.png" id="2_vwbnh"]
+[ext_resource type="Texture2D" uid="uid://bq5a8cq3tyywf" path="res://art/18861-radial_gradient.png" id="3_xtevp"]
+[ext_resource type="Script" path="res://scripts/dancing_light.gd" id="4_rvdi1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gdmlu"]
 size = Vector2(80, 48)
 
 [node name="big_bullet" type="StaticBody2D" groups=["Bullet"]]
-collision_layer = 12
+light_mask = 2048
+collision_layer = 1036
 collision_mask = 8
 constant_linear_velocity = Vector2(-200, 0)
 script = ExtResource("1_15ttc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+light_mask = 2048
 shape = SubResource("RectangleShape2D_gdmlu")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(6.82121e-13, 0)
-scale = Vector2(0.15625, 0.09375)
-texture = ExtResource("1_kxy4s")
+modulate = Color(0.435294, 0, 0.372549, 1)
+light_mask = 2048
+texture_filter = 1
+position = Vector2(8.00001, 12)
+scale = Vector2(4, 5.625)
+texture = ExtResource("2_vwbnh")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(-4, 0)
+scale = Vector2(0.34375, 0.1875)
+color = Color(0.423529, 0, 0.0941176, 1)
+energy = 10.0
+range_item_cull_mask = 2048
+texture = ExtResource("3_xtevp")
+script = ExtResource("4_rvdi1")

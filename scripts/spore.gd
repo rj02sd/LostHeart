@@ -1,7 +1,7 @@
 extends RigidBody2D
 
 var target
-var speed = 300
+var speed = 150
 
 func _ready():
 	await get_tree().create_timer(4,false).timeout

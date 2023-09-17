@@ -1,65 +1,126 @@
-[gd_scene load_steps=7 format=3 uid="uid://g7nqrkb4tks"]
+[gd_scene load_steps=13 format=3 uid="uid://g7nqrkb4tks"]
 
 [ext_resource type="Script" path="res://scripts/platform.gd" id="1_kv74t"]
-[ext_resource type="Texture2D" uid="uid://d00aubj2tay7j" path="res://ui_art/white_square.png" id="2_4a24c"]
-[ext_resource type="Texture2D" uid="uid://i5qfstqifj56" path="res://ui_art/red_square.png" id="3_0r2dp"]
+[ext_resource type="Texture2D" uid="uid://c7fxfr5nxtdsk" path="res://art/Ground_Large.png" id="2_hgmkj"]
+[ext_resource type="PackedScene" uid="uid://dlopq8y5h61ex" path="res://prefabs/spike.tscn" id="3_ny2cl"]
+[ext_resource type="PackedScene" uid="uid://bf6l1iv1grmoa" path="res://prefabs/warning.tscn" id="4_srpvj"]
+[ext_resource type="Texture2D" uid="uid://bq5a8cq3tyywf" path="res://art/18861-radial_gradient.png" id="5_lc57l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gby10"]
-size = Vector2(508, 64)
+size = Vector2(512, 64)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ul2gr"]
-size = Vector2(512, 40)
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lelkl"]
+texture = ExtResource("2_hgmkj")
+texture_region_size = Vector2i(32, 32)
+2:0/0 = 0
+4:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_fiuyc"]
+tile_size = Vector2i(32, 32)
+sources/0 = SubResource("TileSetAtlasSource_lelkl")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vv58a"]
+size = Vector2(512, 56)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8r1u0"]
-size = Vector2(512, 512)
+size = Vector2(460.8, 853.333)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v3ca6"]
+size = Vector2(512, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ul2gr"]
+size = Vector2(8, 72)
 
 [node name="Platform" type="StaticBody2D"]
+light_mask = 4
 disable_mode = 2
-collision_layer = 16
-collision_mask = 16
+collision_layer = 32784
+collision_mask = 32784
 script = ExtResource("1_kv74t")
 
 [node name="CollisionPolygon2D" type="CollisionShape2D" parent="."]
-position = Vector2(2, 0)
+light_mask = 4
 shape = SubResource("RectangleShape2D_gby10")
 one_way_collision = true
+one_way_collision_margin = 15.0
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(1, 0.592157, 0.00784314, 1)
-scale = Vector2(1, 0.125)
-texture = ExtResource("2_4a24c")
+[node name="PlatformSprite" type="TileMap" parent="."]
+light_mask = 4
+tile_set = SubResource("TileSet_fiuyc")
+format = 2
+layer_0/tile_data = PackedInt32Array(-8, 131072, 0, -7, 131072, 0, -6, 131072, 0, -5, 131072, 0, -4, 131072, 0, -3, 131072, 0, -2, 131072, 0, -1, 131072, 0, -65536, 131072, 0, -65535, 131072, 0, -65534, 131072, 0, -65533, 131072, 0, -65532, 131072, 0, -65531, 131072, 0, -65530, 131072, 0, -65529, 131072, 0, 7, 262144, 0, 6, 262144, 0, 5, 262144, 0, 4, 262144, 0, 3, 262144, 0, 2, 262144, 0, 1, 262144, 0, 0, 262144, 0, 65535, 262144, 0, 65534, 262144, 0, 65533, 262144, 0, 65532, 262144, 0, 65531, 262144, 0, 65530, 262144, 0, 65529, 262144, 0, 65528, 262144, 0)
 
 [node name="Illusion" type="Area2D" parent="."]
 unique_name_in_owner = true
 visible = false
+light_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Illusion"]
+light_mask = 4
 position = Vector2(0, -44)
-shape = SubResource("RectangleShape2D_ul2gr")
+shape = SubResource("RectangleShape2D_vv58a")
 disabled = true
 
 [node name="Spikes" type="Area2D" parent="."]
 unique_name_in_owner = true
 visible = false
+light_mask = 4
 position = Vector2(0, -44)
 scale = Vector2(0.9375, 0.046875)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes"]
-position = Vector2(0, -6.10352e-05)
+light_mask = 4
+position = Vector2(-5.08626e-06, -170.667)
 shape = SubResource("RectangleShape2D_8r1u0")
 disabled = true
 
-[node name="Spike" type="Sprite2D" parent="Spikes"]
+[node name="Spike" parent="Spikes" instance=ExtResource("3_ny2cl")]
 unique_name_in_owner = true
-modulate = Color(0.113725, 0.113725, 0.113725, 0.643137)
-texture = ExtResource("2_4a24c")
+visible = false
+light_mask = 4
+position = Vector2(0, 938.667)
+scale = Vector2(1, 20)
 
-[node name="Warning" type="Sprite2D" parent="Spikes"]
+[node name="Warning" parent="Spikes" instance=ExtResource("4_srpvj")]
 unique_name_in_owner = true
-position = Vector2(0, 85.3333)
-scale = Vector2(1, 0.666667)
-texture = ExtResource("3_0r2dp")
+visible = false
+light_mask = 4
+position = Vector2(0, 938.667)
+scale = Vector2(1, 20)
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(-7.62939e-06, 0)
+scale = Vector2(2, 1)
+color = Color(0.560784, 0, 1, 1)
+energy = 1.45
+range_item_cull_mask = 4
+texture = ExtResource("5_lc57l")
+
+[node name="PlayerSmoothing" type="Area2D" parent="."]
+unique_name_in_owner = true
+
+[node name="Top" type="CollisionShape2D" parent="PlayerSmoothing"]
+unique_name_in_owner = true
+light_mask = 4
+position = Vector2(0, -120)
+shape = SubResource("RectangleShape2D_v3ca6")
+
+[node name="SideL" type="CollisionShape2D" parent="PlayerSmoothing"]
+unique_name_in_owner = true
+light_mask = 4
+position = Vector2(256, -88)
+shape = SubResource("RectangleShape2D_ul2gr")
+disabled = true
+
+[node name="SideR" type="CollisionShape2D" parent="PlayerSmoothing"]
+unique_name_in_owner = true
+light_mask = 4
+position = Vector2(-256, -88)
+shape = SubResource("RectangleShape2D_ul2gr")
+disabled = true
 
 [connection signal="body_entered" from="Illusion" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Illusion" to="." method="_on_area_2d_body_exited"]
 [connection signal="body_entered" from="Spikes" to="." method="_on_spikes_body_entered"]
+[connection signal="body_entered" from="PlayerSmoothing" to="." method="_on_player_smoothing_body_entered"]
+[connection signal="body_exited" from="PlayerSmoothing" to="." method="_on_player_smoothing_body_exited"]

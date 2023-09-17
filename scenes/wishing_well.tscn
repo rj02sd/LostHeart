@@ -12,7 +12,7 @@ layer = 5
 script = ExtResource("1_xkusj")
 
 [node name="BG" type="TextureRect" parent="."]
-modulate = Color(0, 0.301961, 0.768627, 1)
+modulate = Color(0.27451, 0.184314, 0.0901961, 1)
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 0.997

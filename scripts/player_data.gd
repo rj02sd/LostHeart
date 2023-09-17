@@ -8,16 +8,19 @@ var difficulty
 var in_game = false
 var must_climb = false
 var currency = 0
-var checkpoint = [Vector2.ZERO,Vector2.ZERO,Vector2.ZERO,Vector2.ZERO,Vector2.ZERO]
-var levels_completed = 0
+var checkpoint = Vector2.ZERO
+var levels_completed = 2
 var relic_equipped = -1
+var divinity = 1
 var relics = ["None","None","None","None"]
 var level_upgrades = [1,1,1,1,1]
 var game_started = false
+var player_class
+var player_ref
 
 func _ready():
 	if get_tree().get_first_node_in_group("Player"):
-		checkpoint =  get_tree().get_first_node_in_group("Player").global_position
+		player_ref = get_tree().get_first_node_in_group("Player")
 
 func reset_game():
 	difficulty = null
@@ -25,17 +28,28 @@ func reset_game():
 	character_created = null
 	game_started = false
 	level_upgrades = [1,1,1,1,1]
-	checkpoint = [Vector2.ZERO,Vector2.ZERO,Vector2.ZERO,Vector2.ZERO,Vector2.ZERO]
 	levels_completed = 0
-	checkpoint = []
+	checkpoint = Vector2.ZERO
 	currency = 0
 	must_climb = false
 	relics = ["None","None","None","None"]
 	relic_equipped = -1
+	divinity = 1
 	in_game = false
 	username = null
 	look = null
-
+	
 
 func _process(delta):
-	pass
+	player_ref = get_tree().get_first_node_in_group("Player")
+	if not username and in_game:
+		username = "Anonymous"
+	if not class_selected and in_game:
+		var rand_class = randi_range(0,3)
+		match rand_class:
+			0:
+				class_selected = "Soul Siphon"
+			1:
+				class_selected = "Slayer"
+			2:
+				class_selected = "Juggernaut"

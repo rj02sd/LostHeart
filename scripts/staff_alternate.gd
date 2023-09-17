@@ -8,8 +8,8 @@ func _ready():
 
 func _process(delta):
 	
-	scale.x += 0.04
-	scale.y += 0.04
+	scale.x += 0.02
+	scale.y += 0.02
 	
 	if scale.x > 2:
 		queue_free()

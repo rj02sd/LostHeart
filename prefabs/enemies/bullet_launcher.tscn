@@ -1,12 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://d4mf51amjuh0a"]
+[gd_scene load_steps=5 format=3 uid="uid://d4mf51amjuh0a"]
 
 [ext_resource type="Script" path="res://scripts/bullet_launcher.gd" id="1_fu2bj"]
-[ext_resource type="Texture2D" uid="uid://d00aubj2tay7j" path="res://ui_art/white_square.png" id="1_p37is"]
+[ext_resource type="Texture2D" uid="uid://d4d5dhsnllf5k" path="res://art/shooter.png" id="2_1xttq"]
+[ext_resource type="Texture2D" uid="uid://bq5a8cq3tyywf" path="res://art/18861-radial_gradient.png" id="3_omda4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_67wrc"]
 size = Vector2(64, 64)
 
 [node name="BulletLauncher" type="StaticBody2D"]
+texture_filter = 1
 script = ExtResource("1_fu2bj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -14,12 +16,19 @@ shape = SubResource("RectangleShape2D_67wrc")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(0.105882, 0.105882, 0.105882, 1)
-scale = Vector2(0.125, 0.125)
-texture = ExtResource("1_p37is")
+light_mask = 16
+position = Vector2(8.00001, -4.05312e-06)
+scale = Vector2(4, 3.5)
+texture = ExtResource("2_1xttq")
 
 [node name="Launch" type="Marker2D" parent="."]
 unique_name_in_owner = true
 position = Vector2(-64, 0)
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(-64, 0)
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(-3.38813e-21, -1.42109e-14)
+scale = Vector2(0.15625, 0.21875)
+color = Color(0.858824, 0.0941176, 0.184314, 1)
+energy = 10.0
+range_item_cull_mask = 16
+texture = ExtResource("3_omda4")

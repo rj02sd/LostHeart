@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://nbmdw37k2fyo"]
+
+[ext_resource type="Script" path="res://scripts/heart.gd" id="1_7e1tm"]
+[ext_resource type="Texture2D" uid="uid://bq5a8cq3tyywf" path="res://art/18861-radial_gradient.png" id="2_r6htn"]
+
+[node name="Heart" type="StaticBody2D" groups=["Heart"]]
+scale = Vector2(1.4, 1.4)
+collision_layer = 8192
+collision_mask = 8192
+constant_linear_velocity = Vector2(0, 100)
+script = ExtResource("1_7e1tm")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-136, 16, -136, -48, -68.5714, -125.714, 80, -128, 144, -64, 144, 0, 16, 128, 8, 128, -8, 144)
+
+[node name="Polygon2D3" type="Polygon2D" parent="."]
+position = Vector2(16, 0)
+color = Color(0.0745098, 0, 0.0392157, 1)
+polygon = PackedVector2Array(0, 128, -128, 0, -128, -64, -64, -128, 0, -64, 64, -128, 128, -64, 128, 0)
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color(0.513726, 0, 0.247059, 1)
+polygon = PackedVector2Array(0, 128, -128, 0, -128, -64, -64, -128, 0, -64, 64, -128, 128, -64, 128, 0)
+
+[node name="Polygon2D2" type="Polygon2D" parent="."]
+position = Vector2(-10, 16)
+color = Color(0.14902, 0.00392157, 0.152941, 1)
+polygon = PackedVector2Array(0, 128, -128, 0, -128, -64, -64, -128, 0, -64, 64, -128, 128, -64, 128, 0)
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(-4, 4)
+color = Color(0.0784314, 0.0784314, 0.0784314, 1)
+energy = 5.0
+texture = ExtResource("2_r6htn")

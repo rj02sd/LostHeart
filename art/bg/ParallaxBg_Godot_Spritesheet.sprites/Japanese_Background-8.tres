@@ -1,0 +1,8 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://diwvaseuktt71"]
+
+[ext_resource type="Texture2D" uid="uid://bvple3h2nuih3" path="res://art/bg/ParallaxBg_Godot_Spritesheet.png" id="1_h3he8"]
+
+[resource]
+atlas = ExtResource("1_h3he8")
+region = Rect2(1029, 302, 512, 193)
+margin = Rect2(0, 831, 0, 831)
