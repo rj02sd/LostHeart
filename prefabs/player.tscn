@@ -1,8 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://botcgg2xu8rwm"]
+[gd_scene load_steps=9 format=3 uid="uid://botcgg2xu8rwm"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_d7ri4"]
 [ext_resource type="SpriteFrames" uid="uid://d3q53iycavr1h" path="res://player.tres" id="2_4kdlu"]
+[ext_resource type="AudioStream" uid="uid://dwj3oou0uo1ug" path="res://sfx/staff_slash.mp3" id="4_0m138"]
 [ext_resource type="PackedScene" uid="uid://c2u57meumy27d" path="res://scenes/death_screen.tscn" id="4_cs7pr"]
+[ext_resource type="AudioStream" uid="uid://bun67r51tnyxb" path="res://sfx/shield.wav" id="5_5chen"]
+[ext_resource type="AudioStream" uid="uid://b2ou1ftdhay4o" path="res://music/AscensionDeath.mp3" id="6_dwf03"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p76v2"]
 size = Vector2(200, 493)
@@ -14,7 +17,7 @@ size = Vector2(66.5, 43)
 light_mask = 32770
 z_index = 2
 collision_layer = 53
-collision_mask = 24629
+collision_mask = 28725
 floor_max_angle = 0.174533
 platform_on_leave = 1
 script = ExtResource("1_d7ri4")
@@ -51,7 +54,7 @@ shape = SubResource("RectangleShape2D_p76v2")
 [node name="Area2D2" type="Area2D" parent="."]
 light_mask = 32770
 collision_layer = 53
-collision_mask = 24629
+collision_mask = 28725
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
 light_mask = 32770
@@ -62,7 +65,7 @@ shape = SubResource("RectangleShape2D_p76v2")
 [node name="Area2D" type="Area2D" parent="."]
 light_mask = 32770
 collision_layer = 53
-collision_mask = 24629
+collision_mask = 28725
 
 [node name="StaffHitboxRight" type="CollisionShape2D" parent="Area2D"]
 unique_name_in_owner = true
@@ -81,6 +84,21 @@ disabled = true
 [node name="death_screen" parent="." instance=ExtResource("4_cs7pr")]
 unique_name_in_owner = true
 visible = false
+
+[node name="attack" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("4_0m138")
+volume_db = 5.0
+
+[node name="shield" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("5_5chen")
+volume_db = -5.0
+pitch_scale = 1.5
+
+[node name="death_sound" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("6_dwf03")
 
 [connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

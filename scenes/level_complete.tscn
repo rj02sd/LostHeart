@@ -1,15 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://dl7f7sjngjih4"]
+[gd_scene load_steps=6 format=3 uid="uid://dl7f7sjngjih4"]
 
 [ext_resource type="Script" path="res://scripts/level_complete.gd" id="1_hf0pl"]
 [ext_resource type="Texture2D" uid="uid://d00aubj2tay7j" path="res://ui_art/white_square.png" id="1_trsd2"]
 [ext_resource type="FontFile" uid="uid://cx8c2qvap0bnb" path="res://fonts/century-gothic/GOTHICI.TTF" id="2_kim5t"]
 [ext_resource type="PackedScene" uid="uid://hfpaouxmxtmv" path="res://prefabs/next.tscn" id="3_1q6b6"]
+[ext_resource type="AudioStream" uid="uid://bkxaotnalrnr1" path="res://music/Ascension_VictoryV1.mp3" id="5_6pt1e"]
 
 [node name="level_complete" type="CanvasLayer"]
 layer = 10
 script = ExtResource("1_hf0pl")
 
 [node name="BG" type="TextureRect" parent="."]
+modulate = Color(0.207843, 0.52549, 0, 1)
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 0.997
@@ -30,7 +32,7 @@ offset_bottom = 0.135986
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_kim5t")
 theme_override_font_sizes/font_size = 70
-text = "LEVEL COMPLETE"
+text = "ASCENT COMPLETE"
 horizontal_alignment = 1
 
 [node name="MainMenu" parent="." instance=ExtResource("3_1q6b6")]
@@ -68,6 +70,10 @@ offset_top = -0.0400085
 offset_right = 0.447937
 offset_bottom = 0.0639648
 text = "LEVEL SELECT"
+
+[node name="victory_sound" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("5_6pt1e")
 
 [connection signal="pressed" from="MainMenu" to="." method="_on_main_menu_pressed"]
 [connection signal="pressed" from="NextLevel" to="." method="_on_next_level_pressed"]

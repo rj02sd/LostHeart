@@ -1,23 +1,83 @@
-res://levels/level1.tscn::aa99e0592ba765736396c89a012af6be::1694288794::res://.godot/exported/133200997/export-b4587a2a7cb4026c0e83dd630b893882-level1.scn
-res://levels/level2.tscn::0e0744e2767a117649cb572f11a2c05e::1694288794::res://.godot/exported/133200997/export-0395fb0b237cf46a4009ef1e6d9cca7e-level2.scn
-res://levels/level3.tscn::0a0889fd39f15f00bd8be5ca478a4269::1694288794::res://.godot/exported/133200997/export-8cf1d36e5d605ab2ea2425b481c42e34-level3.scn
-res://levels/level4.tscn::34dd4c674a34c0934c95d77f3f224ab8::1694288794::res://.godot/exported/133200997/export-a7ae462aef5db6a11e593b0c44287123-level4.scn
-res://levels/level5.tscn::2fb0c03b30c4a3a5332334364984fdce::1694288794::res://.godot/exported/133200997/export-36fe0d00cbed354ee0f01edc5c36ee90-level5.scn
-res://levels/level_dev_testing.tscn::d429b8155447c5eb9df922576898a207::1694288794::res://.godot/exported/133200997/export-864347ffcbb433f165e0f76e2d4697db-level_dev_testing.scn
+res://levels/level1.tscn::58cf0afe1e508db6196bc42b7a2c1fca::1694979171::res://.godot/exported/133200997/export-b4587a2a7cb4026c0e83dd630b893882-level1.scn
+res://levels/level2.tscn::6fcb21f0e35310cd42a55eac00387111::1694979171::res://.godot/exported/133200997/export-0395fb0b237cf46a4009ef1e6d9cca7e-level2.scn
+res://levels/level3.tscn::c539ae685b639a537b34bcc413ffe3ef::1694979171::res://.godot/exported/133200997/export-8cf1d36e5d605ab2ea2425b481c42e34-level3.scn
+res://levels/level4.tscn::2f77fa1b3e86049a4d2fea6e07e1c49a::1694979171::res://.godot/exported/133200997/export-a7ae462aef5db6a11e593b0c44287123-level4.scn
+res://levels/level5.tscn::b1cf9defd0910842bcda6e79ab04a00d::1694979171::res://.godot/exported/133200997/export-36fe0d00cbed354ee0f01edc5c36ee90-level5.scn
+res://levels/level_dev_testing.tscn::ba9ead90591db3aa91c9ada44f762abd::1694979170::res://.godot/exported/133200997/export-864347ffcbb433f165e0f76e2d4697db-level_dev_testing.scn
 res://prefabs/back.tscn::68ee222c5a4dc4d16e58b5aeda3758c4::1694288794::res://.godot/exported/133200997/export-4598c563b646005c19b32cc19844754b-back.scn
-res://prefabs/bounds.tscn::70c801d8ae51f922f154f77aa079f48b::1694288794::res://.godot/exported/133200997/export-4e00f39941da0b744697a248910b3669-bounds.scn
-res://prefabs/dev_ui.tscn::fcfeb75644cbf8e08e7f9dcd0af6a4fc::1694288794::res://.godot/exported/133200997/export-ac935a93e122e444a214f3148c4ea33e-dev_ui.scn
-res://prefabs/level_button.tscn::162845172ec944d00ae47381419f2048::1694288794::res://.godot/exported/133200997/export-a212853d4f4e6b82e0d9b6debffb3b59-level_button.scn
-res://prefabs/music_player.tscn::bfc81dcec22f809e5510c9f142ad2c4f::1694288794::res://.godot/exported/133200997/export-6938606505c03e1904967ee6115dd43d-music_player.scn
+res://prefabs/dev_ui.tscn::a15909c6ec3a668c30cbe562ede5fd35::1694569092::res://.godot/exported/133200997/export-ac935a93e122e444a214f3148c4ea33e-dev_ui.scn
+res://prefabs/level_button.tscn::cbe0068dc45b1461ed0912ff11661fb1::1694789381::res://.godot/exported/133200997/export-a212853d4f4e6b82e0d9b6debffb3b59-level_button.scn
+res://prefabs/music_player.tscn::c75b4c3da9e1b1ddb09a614ce91ba575::1694373468::res://.godot/exported/133200997/export-6938606505c03e1904967ee6115dd43d-music_player.scn
 res://prefabs/next.tscn::8c5628e8da495e02472f9b07553a2291::1694288794::res://.godot/exported/133200997/export-b93c2c1df756d8b1b2bd279ef972f111-next.scn
-res://prefabs/player.tscn::73d2041f65d3b2c64f2a48c4c4d37f34::1694288794::res://.godot/exported/133200997/export-42edd82908ac9fd10409a12fa106efa9-player.scn
-res://scenes/character_creator.tscn::4809fc10c203ea0e470ec7c2151274cc::1694290076::res://.godot/exported/133200997/export-dac7ae78112ff92186456502bd3ea837-character_creator.scn
-res://scenes/controls.tscn::cd0414df052c79950a5717113db6da12::1694290068::res://.godot/exported/133200997/export-78c429240e48cc630eec0842443d3c39-controls.scn
-res://scenes/credits.tscn::28252a157d8ac232fe79f0f89f094776::1694290058::res://.godot/exported/133200997/export-5458de4021be8c034221a84b705724a2-credits.scn
-res://scenes/death_screen.tscn::60c4b7b42aefc51c7a7bbb724f3b44c3::1694290050::res://.godot/exported/133200997/export-da697a7ce36191eb82c84ca9320d9702-death_screen.scn
-res://scenes/difficulty_selection.tscn::ec7a239924f259ca13acba6ce348022d::1694290034::res://.godot/exported/133200997/export-43f5071201f4c2debb7b685c13ca7381-difficulty_selection.scn
-res://scenes/level_complete.tscn::bfa2d1c04c690fd6dc7d703e63a540c9::1694290026::res://.godot/exported/133200997/export-c9d0204b8499aa569d59b03e3745bb3b-level_complete.scn
-res://scenes/level_select.tscn::062f6cc042f31d71f64536b17e41dc87::1694288794::res://.godot/exported/133200997/export-0c939b19205267a005b2e63ce5e60e4d-level_select.scn
-res://scenes/menu.tscn::372c65750cd1c4a88af239124086287a::1694289967::res://.godot/exported/133200997/export-1ce5c86e8ca186dcaaeaa8726f1268db-menu.scn
-res://scenes/tutorial.tscn::55a9080a0f0dfe042f28db35a1df1f38::1694289992::res://.godot/exported/133200997/export-42ce494387c984238fc1312df9601261-tutorial.scn
-res://user_interface/interface.tscn::1f11288b75ef7824c41a48816cd00b2b::1694288794::res://.godot/exported/133200997/export-9a3fb2380f1aeff82e86173c1bad0136-interface.scn
+res://prefabs/player.tscn::fe0f396106cf158f1fe15564f2e05ff6::1694976283::res://.godot/exported/133200997/export-42edd82908ac9fd10409a12fa106efa9-player.scn
+res://scenes/character_creator.tscn::05dbe834eb3814e5279b8495c11b9b09::1694960663::res://.godot/exported/133200997/export-dac7ae78112ff92186456502bd3ea837-character_creator.scn
+res://scenes/controls.tscn::551af77ce34405b5a6366c6babed2601::1694973500::res://.godot/exported/133200997/export-78c429240e48cc630eec0842443d3c39-controls.scn
+res://scenes/credits.tscn::69dfe7bb83730ea6914dc38834048d4a::1694979171::res://.godot/exported/133200997/export-5458de4021be8c034221a84b705724a2-credits.scn
+res://scenes/death_screen.tscn::f8902f632448a0f636c5a470e5c6f3a2::1694976283::res://.godot/exported/133200997/export-da697a7ce36191eb82c84ca9320d9702-death_screen.scn
+res://scenes/difficulty_selection.tscn::404397877123bc09e29997b3b951f526::1694946201::res://.godot/exported/133200997/export-43f5071201f4c2debb7b685c13ca7381-difficulty_selection.scn
+res://scenes/level_complete.tscn::451b072bb76a3130933712d69703c41d::1694977723::res://.godot/exported/133200997/export-c9d0204b8499aa569d59b03e3745bb3b-level_complete.scn
+res://scenes/level_select.tscn::b2095605202ae872e0767dfa43baad86::1694960663::res://.godot/exported/133200997/export-0c939b19205267a005b2e63ce5e60e4d-level_select.scn
+res://scenes/menu.tscn::c028a6da9df533dbbe5b1aa73a64c5ed::1694979322::res://.godot/exported/133200997/export-1ce5c86e8ca186dcaaeaa8726f1268db-menu.scn
+res://scenes/tutorial.tscn::fa34cc6d1a1e2553dda03f8afcb62915::1694979184::res://.godot/exported/133200997/export-42ce494387c984238fc1312df9601261-tutorial.scn
+res://user_interface/interface.tscn::3d7288c3cb2fe9e8c6370d2e8588c176::1694979170::res://.godot/exported/133200997/export-9a3fb2380f1aeff82e86173c1bad0136-interface.scn
+res://art/bg/ParallaxBg_Godot_Spritesheet.sprites/Japanese_Background-1.tres::2233310aea629f29787bc59890730cfa::1694915048::res://.godot/exported/133200997/export-30c6c81a763c3b3d5bd3a5f3b1aafd19-Japanese_Background-1.res
+res://art/bg/ParallaxBg_Godot_Spritesheet.sprites/Japanese_Background-2.tres::2443e068d770df6f84061a50bc2481db::1694866222::res://.godot/exported/133200997/export-f6acf3e50344e0bd1c3dedec47498be1-Japanese_Background-2.res
+res://art/bg/ParallaxBg_Godot_Spritesheet.sprites/Japanese_Background-3.tres::8c1354066cc51ffa177fd42766663b9b::1694866222::res://.godot/exported/133200997/export-053d13cf6bdefaba66d7af4e904cc24d-Japanese_Background-3.res
+res://art/bg/ParallaxBg_Godot_Spritesheet.sprites/Japanese_Background-4.tres::9ca33430e741b66610307196a3afc66d::1694866222::res://.godot/exported/133200997/export-9a5edaae033e17c1dda99ca63036c526-Japanese_Background-4.res
+res://art/bg/ParallaxBg_Godot_Spritesheet.sprites/Japanese_Background-5.tres::e78d816f7cc0ab65588700467c0d40b1::1694866222::res://.godot/exported/133200997/export-7db38c30eab3ebd3190f5d1d1f5dffe9-Japanese_Background-5.res
+res://art/bg/ParallaxBg_Godot_Spritesheet.sprites/Japanese_Background-6.tres::f39a47131a62304474e6418d41d55d0e::1694866222::res://.godot/exported/133200997/export-94223962458a5f701aa18bd35084164e-Japanese_Background-6.res
+res://art/bg/ParallaxBg_Godot_Spritesheet.sprites/Japanese_Background-7.tres::064732f9774c27c8d749d2a098546303::1694866222::res://.godot/exported/133200997/export-418286acbb85f350a2fb7c0b616ebd24-Japanese_Background-7.res
+res://art/bg/ParallaxBg_Godot_Spritesheet.sprites/Japanese_Background-8.tres::80dff02c899b2a94625f5a60fa29fce1::1694866222::res://.godot/exported/133200997/export-76573b5af8d28a42fdcf7dc40298ff34-Japanese_Background-8.res
+res://art/bg/ParallaxBg_Godot_Spritesheet.sprites/Japanese_Background-9.tres::a8133551529c1be6d23a73c83564a112::1694866222::res://.godot/exported/133200997/export-531c64dfbdd007c78411fad00cf8b654-Japanese_Background-9.res
+res://art/bg/ParallaxBg_Godot_Spritesheet.sprites/Japanese_Background-10.tres::8ccdf385d9b4c3f5781ff2886f5917b8::1694866222::res://.godot/exported/133200997/export-e1a0d9784e4204b0a6b9ad21bb5a2dbb-Japanese_Background-10.res
+res://art/bg/ParallaxBg_Godot_Spritesheet.sprites/Japanese_Ground.tres::636e1f188898b897ad538a0588bc3e8f::1694866222::res://.godot/exported/133200997/export-d8810d4a6d0a053e3b9f10df9c824b39-Japanese_Ground.res
+res://art/updated-bg/ParallaxBg_Godot_Spritesheet.sprites/Japanese_Background-1.tres::f5d481022820bbe8b29f700393b05f06::1694915021::res://.godot/exported/133200997/export-b201d6c9f0de3597baee0d9d974912fb-Japanese_Background-1.res
+res://art/updated-bg/ParallaxBg_Godot_Spritesheet.sprites/Japanese_Background-2.tres::2f5b659cfa5fda920b4aedad31f373a6::1694915022::res://.godot/exported/133200997/export-38a0204abf20201f1d5bdd2517ed579c-Japanese_Background-2.res
+res://art/updated-bg/ParallaxBg_Godot_Spritesheet.sprites/Japanese_Background-3.tres::81570bad445b55f834d59cc3d6bfeeaf::1694915021::res://.godot/exported/133200997/export-311d6aa316eff237f48b13f3b42463b6-Japanese_Background-3.res
+res://art/updated-bg/ParallaxBg_Godot_Spritesheet.sprites/Japanese_Background-4.tres::e413c75e7572df6f4418f278e3910137::1694915021::res://.godot/exported/133200997/export-8f0c9be24b22115ce91bdcc3ff47ea21-Japanese_Background-4.res
+res://art/updated-bg/ParallaxBg_Godot_Spritesheet.sprites/Japanese_Background-5.tres::7fe94cc8e5b8084da6f99ad560f911fc::1694915021::res://.godot/exported/133200997/export-a451e317f71dc9016de5ea1bee6a8ce8-Japanese_Background-5.res
+res://art/updated-bg/ParallaxBg_Godot_Spritesheet.sprites/Japanese_Background-6.tres::da9ed82d93bc060b82a4c227568d7c0d::1694915021::res://.godot/exported/133200997/export-bb73aeb59045290ea9c44b8866c40813-Japanese_Background-6.res
+res://art/updated-bg/ParallaxBg_Godot_Spritesheet.sprites/Japanese_Background-7.tres::4807873d007fa986c8ac750186b17f10::1694915021::res://.godot/exported/133200997/export-95882106558b9aa35dcb47ba2590cf82-Japanese_Background-7.res
+res://art/updated-bg/ParallaxBg_Godot_Spritesheet.sprites/Japanese_Background-8.tres::935c4873135bf772cc90ed4c7f166b01::1694915021::res://.godot/exported/133200997/export-5550e945af671f9f3b731136b415bbd7-Japanese_Background-8.res
+res://art/updated-bg/ParallaxBg_Godot_Spritesheet.sprites/Japanese_Background-9.tres::d4112ab90e67d3e0ebc455520abd09b8::1694915021::res://.godot/exported/133200997/export-21dd0461cb6c20e6de8b69239f76c91d-Japanese_Background-9.res
+res://art/updated-bg/ParallaxBg_Godot_Spritesheet.sprites/Japanese_Background-10.tres::535e9f2e169b03b26ed4b6752f655091::1694915021::res://.godot/exported/133200997/export-bde1df34f21d72de341ee1f0cec65469-Japanese_Background-10.res
+res://art/updated-bg/ParallaxBg_Godot_Spritesheet.sprites/Japanese_Background-11.tres::a103bc2750f59a07620f01b0291573d8::1694915021::res://.godot/exported/133200997/export-09fa48906d5bc07d0acedfd0fcac7c4b-Japanese_Background-11.res
+res://art/updated-bg/ParallaxBg_Godot_Spritesheet.sprites/Japanese_Background-12 (1).tres::88f3a532d3754b3da5844a12d7abb579::1694915021::res://.godot/exported/133200997/export-00bded6d342ec4594748bcfa92bfbca7-Japanese_Background-12 (1).res
+res://art/updated-bg/ParallaxBg_Godot_Spritesheet.sprites/Japanese_Background-12 (2).tres::21d65601956b9512ca1230daf194d9c7::1694915021::res://.godot/exported/133200997/export-b8f1fa328f9b35c5511872f3b47d3334-Japanese_Background-12 (2).res
+res://art/updated-bg/ParallaxBg_Godot_Spritesheet.sprites/Japanese_Background-12 (3).tres::aa86643fda46bf3ba760c18ff33768e7::1694915021::res://.godot/exported/133200997/export-07c78a3f5402cd66609ad8bdaf452b9a-Japanese_Background-12 (3).res
+res://art/updated-bg/ParallaxBg_Godot_Spritesheet.sprites/Japanese_Background-12 (4).tres::20d8cb5a6d63b646039bd496ed63a936::1694915021::res://.godot/exported/133200997/export-24ae3ab09878257931bf3af662cdbe57-Japanese_Background-12 (4).res
+res://art/updated-bg/ParallaxBg_Godot_Spritesheet.sprites/Japanese_Background-12.tres::3430dc18779702ca33a645ffbd8a493d::1694915021::res://.godot/exported/133200997/export-6a4724d6368978a320cf07abc2c0ee6e-Japanese_Background-12.res
+res://art/updated-bg/ParallaxBg_Godot_Spritesheet.sprites/Modular Cloud (1).tres::243be5011c8eea1b823178379fb9bab4::1694915021::res://.godot/exported/133200997/export-68ee2f5a997826fa48cb44c28d2c4671-Modular Cloud (1).res
+res://art/updated-bg/ParallaxBg_Godot_Spritesheet.sprites/Modular Cloud (2).tres::b2bd0b71f1e17a566b7e3c1384ade175::1694915021::res://.godot/exported/133200997/export-d7b5d48ce875d523fbfb95abb6df0e7d-Modular Cloud (2).res
+res://art/updated-bg/ParallaxBg_Godot_Spritesheet.sprites/Modular Tree.tres::5d3229c32569114f1fddf4e50080cb3e::1694915021::res://.godot/exported/133200997/export-170c30506a8e0e4062a73c9b67514ff5-Modular Tree.res
+res://art/updated-bg/ParallaxBg_Godot_Spritesheet.sprites/Mouldar Mt (1).tres::912ec419ec1542a04f28ad36d05f100c::1694915021::res://.godot/exported/133200997/export-b6e6656ef8760b55eaedba5ea2bdcce8-Mouldar Mt (1).res
+res://art/updated-bg/ParallaxBg_Godot_Spritesheet.sprites/Mouldar Mt (2).tres::4eba51ca1f0deb782315c360d3c46e11::1694915021::res://.godot/exported/133200997/export-098c1dd12950255a6563ba5d22715bea-Mouldar Mt (2).res
+res://levels/bounds_dev.tscn::7b93c6e4c17c50e1e2f95912e22af1c2::1694544605::res://.godot/exported/133200997/export-00331c1929d95dcee2f16eb01d288434-bounds_dev.scn
+res://levels/map1.tscn::cfae76a06f259ca0d3d939404e40adc0::1694479948::res://.godot/exported/133200997/export-1fd10ba5b9ba716461e66476741b6eee-map1.scn
+res://prefabs/enemies/bullet_launcher.tscn::c6446d140a84a4d2b333d251a4c40f47::1694960663::res://.godot/exported/133200997/export-414314ecae869f71f6aa94eb95544674-bullet_launcher.scn
+res://prefabs/enemies/enemy_plant.tscn::276f4c741b3aafd97062fc97acd0075e::1694973501::res://.godot/exported/133200997/export-00cc08044d2c0f98010369b12682fcd9-enemy_plant.scn
+res://prefabs/enemies/guard.tscn::737641021a79a87b2b4e3ceeda46c7f2::1694976283::res://.godot/exported/133200997/export-202a6defa7ad2956f7b5682b0206bca4-guard.scn
+res://prefabs/enemies/pushbot.tscn::7114f87fdf90945e6abdfbb4198721d2::1694923618::res://.godot/exported/133200997/export-c44553814cd98337fe77d328251bc76a-pushbot.scn
+res://prefabs/enemies/pushbot_controller.tscn::1cac293b5a17db59d21d8978fa391b28::1694973988::res://.godot/exported/133200997/export-7482c7b632f0396f5c8ac070870a04c2-pushbot_controller.scn
+res://prefabs/enemies/pusher.tscn::6d68f553098162562fcf79d9fd5c797f::1694973947::res://.godot/exported/133200997/export-8a28a4c01601f1d41cd80f2ff6f688b4-pusher.scn
+res://prefabs/platforms/platform.tscn::2a09504b3d2f4dc4ee658fe3909eba6f::1694976283::res://.godot/exported/133200997/export-2cacc45645f5cb332e3a1fc7b2bdea00-platform.scn
+res://prefabs/projectiles/big_bullet.tscn::b850ec2ef8ff3c36252f3c9fba99819e::1694817514::res://.godot/exported/133200997/export-bedb20de15e3805f4602107fedd0f06f-big_bullet.scn
+res://prefabs/projectiles/spore.tscn::540b3bcc3f3ef5a084b8f58ed4176b25::1694973500::res://.godot/exported/133200997/export-16d0530116699df2b389c91efd8dc2d0-spore.scn
+res://prefabs/projectiles/staff_alternate.tscn::b31a19dcec57380ce19c390389b90722::1694973501::res://.godot/exported/133200997/export-a2889386e8a464d9e693283151591404-staff_alternate.scn
+res://prefabs/background_t_1.tscn::ec33976f44b2fd3d31b446efd0496d54::1694895067::res://.godot/exported/133200997/export-8ed4594fcdd43e3ff99705e4c875007c-background_t_1.scn
+res://prefabs/background_t_2.tscn::e98470ff17d7056c9d5ba2e8f392341a::1694831264::res://.godot/exported/133200997/export-c72670fa5722cd605b84474df0203281-background_t_2.scn
+res://prefabs/ground_parallax.tscn::3476d8a669e8b87b810bdc55fdd33337::1694902831::res://.godot/exported/133200997/export-3e5ce98d5cc15c916e98e3fc13b50e17-ground_parallax.scn
+res://prefabs/heart.tscn::4b4d661dfb5cf9e246286a90dcf0e638::1694946201::res://.godot/exported/133200997/export-2fb253b3278e66e2ed213c028724d819-heart.scn
+res://prefabs/spike.tscn::7f409f40ff9ca344a37fe53262f0d715::1694831184::res://.godot/exported/133200997/export-ea96cc0223d7432d8414e5e13cc7f5c5-spike.scn
+res://prefabs/star.tscn::5c5702e708e922c1cb104c22024f07f1::1694979171::res://.godot/exported/133200997/export-d1b426056c4bd74d1dab348995d3b308-star.scn
+res://prefabs/stat.tscn::6d63c59133a40e34d32262e9215185ec::1694960663::res://.godot/exported/133200997/export-545dfa8a5d0c384fa16acfe1fde1e079-stat.scn
+res://prefabs/tree.tscn::d7ed79f6f109daf52ae4efc6ec9c9f90::1694831184::res://.godot/exported/133200997/export-5332a2e302b8323270ced092037ad2f6-tree.scn
+res://prefabs/trial_finish.tscn::18cfa56774956e3ce549a4152ac30ae5::1694976283::res://.godot/exported/133200997/export-212a6d685dd8d1c9f8b22e05d4b8a7b4-trial_finish.scn
+res://prefabs/vine.tscn::1787ea27822abda6d7f797d41d7a08da::1694938476::res://.godot/exported/133200997/export-cb5a0c57009743873ac013158854d6fa-vine.scn
+res://prefabs/warning.tscn::928f054a96f0d213f2be7d8922a896a9::1694831184::res://.godot/exported/133200997/export-b5799a14db21c73bf41c84ecc685195f-warning.scn
+res://prefabs/well.tscn::aaceaf528c2e703c37be155af1b7dc36::1694973843::res://.godot/exported/133200997/export-7518bd81efdb3c4510e10c0a0f3ed19a-well.scn
+res://scenes/wishing_well.tscn::194aebe082080ce202143e14505e3b97::1694973501::res://.godot/exported/133200997/export-546bf56e3734709048592c742f4c58df-wishing_well.scn
+res://user_interface/pause_menu.tscn::62a91ebfa73481f490652e67921e3c92::1694973501::res://.godot/exported/133200997/export-13637dc93a3cae20d9f0a0ff19d23c2b-pause_menu.scn
+res://ground_tilemap.tres::411e2d6864af6ed54b4204e3641f8a58::1694978358::res://.godot/exported/133200997/export-6c0a6c05b1c4cd2258c2e3a6fada7777-ground_tilemap.res
+res://player.tres::2279810af34fe9962bbf1331ea13bba8::1694978358::res://.godot/exported/133200997/export-0b6771c05d43512051d87073b70547d5-player.res
+res://trees.tres::80b72454f25d2a3d3eba80214f31f502::1694978358::res://.godot/exported/133200997/export-7b63b73ad5d58caf8494fe7ec4145e4e-trees.res

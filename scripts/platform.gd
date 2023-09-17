@@ -68,6 +68,7 @@ func _activate_spikes():
 	%Spikes/Spike.visible = false
 	%Spikes/Warning.visible = true
 	await get_tree().create_timer(1,false).timeout
+	%spikesAudio.play()
 	%Spikes/Spike.visible = true
 	%Spikes/Warning.visible = false
 	%Spikes.get_child(0).disabled = false

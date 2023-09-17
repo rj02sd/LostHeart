@@ -6,8 +6,12 @@ var poisoned = false
 var heart_boss_ready = false
 var message_displayed = false
 
-
+var mins = 0
+var seconds = 0
+		
 func _process(delta):
+	
+	%Timer/time.text = PlayerData.player_time
 	
 	if PlayerData.username:
 		%Username.text = PlayerData.username
@@ -45,7 +49,51 @@ func _process(delta):
 			%HeartHealth.visible = false
 			_temp_display()
 			
+	if Input.is_action_just_pressed("pause"):
+		if get_tree().paused:
+			get_tree().paused = false
+		else:
+			get_tree().paused = true
+	
+	if Input.is_action_just_pressed("mute"):
+		AudioServer.set_bus_mute(0,true)
+			
+	if Input.is_action_just_pressed("restart"):
+		get_tree().reload_current_scene()
+	
+	if Input.is_action_just_pressed("Menu"):
+		%pause_menu.visible = true
+		get_tree().paused = true
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+			
 func _temp_display():
 	%HeartFelled.visible = true
 	await get_tree().create_timer(3,false).timeout
 	%HeartFelled.visible = false
+
+
+func _on_mute_pressed():
+	AudioServer.set_bus_mute(0,true)
+
+
+func _on_restart_pressed():
+	get_tree().reload_current_scene()
+
+
+func _on_pause_pressed():
+	get_tree().paused = true
+	%Pause.visible = false
+	%Play.visible = true
+	
+
+func _on_play_pressed():
+	get_tree().paused = false
+	%Pause.visible = true
+	%Play.visible = false
+	
+
+
+func _on_menu_pressed():
+	%pause_menu.visible = true
+	get_tree().paused = true
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)

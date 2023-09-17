@@ -25,6 +25,9 @@ func _on_controls_pressed():
 
 func _on_credits_pressed():
 	%credits.visible = true
+	MusicPlayer.volume_db = -INF
+	%credits_music.play()
+	
 
 
 func _on_tutorial_pressed():

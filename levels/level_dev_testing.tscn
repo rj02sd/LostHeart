@@ -12,23 +12,23 @@
 [ext_resource type="PackedScene" uid="uid://ccr6nmfhsnqyn" path="res://prefabs/enemies/pushbot.tscn" id="7_s2jj5"]
 [ext_resource type="PackedScene" uid="uid://b6pwmvylt55ok" path="res://prefabs/enemies/pushbot_controller.tscn" id="8_5sbqq"]
 [ext_resource type="Texture2D" uid="uid://bq5a8cq3tyywf" path="res://art/18861-radial_gradient.png" id="10_if1ns"]
-[ext_resource type="Texture2D" uid="uid://bnsi2ftbcnetu" path="res://art/bg/ParallaxBg_Godot_Spritesheet.sprites/Japanese_Background-1.tres" id="11_b8x3m"]
 [ext_resource type="PackedScene" uid="uid://ch2706oi2w651" path="res://prefabs/ground_parallax.tscn" id="11_vio8i"]
-[ext_resource type="Texture2D" uid="uid://dtqufqxo5kdvf" path="res://art/bg/ParallaxBg_Godot_Spritesheet.sprites/Japanese_Background-2.tres" id="12_trx3r"]
-[ext_resource type="Texture2D" uid="uid://nk32sx2o38jj" path="res://art/bg/ParallaxBg_Godot_Spritesheet.sprites/Japanese_Background-3.tres" id="13_ob56p"]
-[ext_resource type="Texture2D" uid="uid://ddqy22rns8a21" path="res://art/bg/ParallaxBg_Godot_Spritesheet.sprites/Japanese_Background-4.tres" id="14_jrro1"]
+[ext_resource type="Texture2D" uid="uid://botakmaaf3n3q" path="res://art/updated-bg/ParallaxBg_Godot_Spritesheet.sprites/Japanese_Background-1.tres" id="13_j868n"]
 [ext_resource type="PackedScene" uid="uid://6ojvufx12eij" path="res://scenes/wishing_well.tscn" id="14_m26dc"]
+[ext_resource type="Texture2D" uid="uid://b066x8dbt24ui" path="res://art/updated-bg/ParallaxBg_Godot_Spritesheet.sprites/Japanese_Background-2.tres" id="14_wuyy5"]
 [ext_resource type="Texture2D" uid="uid://cy3xpks6y1o33" path="res://art/Mountain.png" id="14_ytkol"]
 [ext_resource type="Texture2D" uid="uid://d00aubj2tay7j" path="res://ui_art/white_square.png" id="15_7v7t8"]
+[ext_resource type="Texture2D" uid="uid://bj40md7u1syp2" path="res://art/updated-bg/ParallaxBg_Godot_Spritesheet.sprites/Japanese_Background-3.tres" id="15_eevec"]
 [ext_resource type="PackedScene" uid="uid://w26oddm8keux" path="res://prefabs/trial_finish.tscn" id="15_sjgqu"]
-[ext_resource type="Texture2D" uid="uid://b3iurte2vugcb" path="res://art/bg/ParallaxBg_Godot_Spritesheet.sprites/Japanese_Background-5.tres" id="15_va70c"]
-[ext_resource type="Texture2D" uid="uid://c07ds7qb5xr50" path="res://art/bg/ParallaxBg_Godot_Spritesheet.sprites/Japanese_Background-6.tres" id="16_ilk2m"]
-[ext_resource type="Texture2D" uid="uid://340qytu1vem2" path="res://art/bg/ParallaxBg_Godot_Spritesheet.sprites/Japanese_Background-7.tres" id="17_b4wo6"]
-[ext_resource type="Texture2D" uid="uid://diwvaseuktt71" path="res://art/bg/ParallaxBg_Godot_Spritesheet.sprites/Japanese_Background-8.tres" id="18_kh6x1"]
-[ext_resource type="Texture2D" uid="uid://ddn8a1gaktnf5" path="res://art/bg/ParallaxBg_Godot_Spritesheet.sprites/Japanese_Background-9.tres" id="19_dyg2f"]
-[ext_resource type="Texture2D" uid="uid://br71ohxt030ek" path="res://art/bg/ParallaxBg_Godot_Spritesheet.sprites/Japanese_Background-10.tres" id="20_48vrk"]
+[ext_resource type="Texture2D" uid="uid://dlcxdj88i8ixe" path="res://art/updated-bg/ParallaxBg_Godot_Spritesheet.sprites/Japanese_Background-4.tres" id="16_v0t6k"]
+[ext_resource type="Texture2D" uid="uid://cniu7ri21phqm" path="res://art/updated-bg/ParallaxBg_Godot_Spritesheet.sprites/Japanese_Background-5.tres" id="17_acue7"]
+[ext_resource type="Texture2D" uid="uid://b0x6310ewgvh5" path="res://art/updated-bg/ParallaxBg_Godot_Spritesheet.sprites/Japanese_Background-6.tres" id="18_hc22v"]
+[ext_resource type="Texture2D" uid="uid://cegbrmwwc0wxr" path="res://art/updated-bg/ParallaxBg_Godot_Spritesheet.sprites/Japanese_Background-7.tres" id="19_fsoei"]
+[ext_resource type="Texture2D" uid="uid://c3rwvjsnmjgba" path="res://art/updated-bg/ParallaxBg_Godot_Spritesheet.sprites/Japanese_Background-9.tres" id="20_yos66"]
+[ext_resource type="Texture2D" uid="uid://dpkfh6mh0voth" path="res://art/updated-bg/ParallaxBg_Godot_Spritesheet.sprites/Japanese_Background-10.tres" id="21_p7pm1"]
 [ext_resource type="TileSet" uid="uid://d3cll6d0txwpl" path="res://ground_tilemap.tres" id="28_igiq2"]
 [ext_resource type="TileSet" uid="uid://bvl28opbkc5cl" path="res://trees.tres" id="29_7dqdg"]
+[ext_resource type="AudioStream" uid="uid://c1p65g8d6mybu" path="res://music/Ascension_GWJ_MainMenu_v1.mp3" id="29_p6aa6"]
 
 [node name="level_dev" type="Node2D"]
 script = ExtResource("1_hcimb")
@@ -147,7 +147,7 @@ texture_filter = 1
 texture_repeat = 2
 position = Vector2(-32, -1432)
 scale = Vector2(4, 4)
-texture = ExtResource("11_b8x3m")
+texture = ExtResource("13_j868n")
 centered = false
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="TrainingParallax"]
@@ -163,7 +163,7 @@ texture_filter = 1
 texture_repeat = 2
 position = Vector2(-32, -1432)
 scale = Vector2(4, 4)
-texture = ExtResource("12_trx3r")
+texture = ExtResource("14_wuyy5")
 centered = false
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="TrainingParallax"]
@@ -179,7 +179,7 @@ texture_filter = 1
 texture_repeat = 2
 position = Vector2(-32, -1432)
 scale = Vector2(4, 4)
-texture = ExtResource("13_ob56p")
+texture = ExtResource("15_eevec")
 centered = false
 
 [node name="ParallaxLayer4" type="ParallaxLayer" parent="TrainingParallax"]
@@ -195,7 +195,7 @@ texture_filter = 1
 texture_repeat = 2
 position = Vector2(-32, -1432)
 scale = Vector2(4, 4)
-texture = ExtResource("14_jrro1")
+texture = ExtResource("16_v0t6k")
 centered = false
 
 [node name="ParallaxLayer5" type="ParallaxLayer" parent="TrainingParallax"]
@@ -211,7 +211,7 @@ texture_filter = 1
 texture_repeat = 2
 position = Vector2(-32, -824)
 scale = Vector2(3, 3)
-texture = ExtResource("15_va70c")
+texture = ExtResource("17_acue7")
 centered = false
 
 [node name="ParallaxLayer6" type="ParallaxLayer" parent="TrainingParallax"]
@@ -227,7 +227,7 @@ texture_filter = 1
 texture_repeat = 2
 position = Vector2(-32, -824)
 scale = Vector2(3, 3)
-texture = ExtResource("16_ilk2m")
+texture = ExtResource("18_hc22v")
 centered = false
 
 [node name="ParallaxLayer7" type="ParallaxLayer" parent="TrainingParallax"]
@@ -243,7 +243,7 @@ texture_filter = 1
 texture_repeat = 2
 position = Vector2(-32, -824)
 scale = Vector2(3, 3)
-texture = ExtResource("17_b4wo6")
+texture = ExtResource("19_fsoei")
 centered = false
 
 [node name="ParallaxLayer8" type="ParallaxLayer" parent="TrainingParallax"]
@@ -259,7 +259,7 @@ texture_filter = 1
 texture_repeat = 2
 position = Vector2(-32, -824)
 scale = Vector2(3, 3)
-texture = ExtResource("18_kh6x1")
+texture = ExtResource("20_yos66")
 centered = false
 
 [node name="ParallaxLayer9" type="ParallaxLayer" parent="TrainingParallax"]
@@ -275,7 +275,7 @@ texture_filter = 1
 texture_repeat = 2
 position = Vector2(-32, -824)
 scale = Vector2(3, 3)
-texture = ExtResource("19_dyg2f")
+texture = ExtResource("20_yos66")
 centered = false
 
 [node name="ParallaxLayer10" type="ParallaxLayer" parent="TrainingParallax"]
@@ -291,11 +291,11 @@ texture_filter = 1
 texture_repeat = 2
 position = Vector2(-32, -824)
 scale = Vector2(3, 3)
-texture = ExtResource("20_48vrk")
+texture = ExtResource("21_p7pm1")
 centered = false
 
 [node name="Player" parent="." instance=ExtResource("4_cij3g")]
-position = Vector2(-344, 200)
+position = Vector2(-328, 208)
 floor_max_angle = 0.0
 
 [node name="PointLight2D" type="PointLight2D" parent="Player"]
@@ -306,6 +306,11 @@ color = Color(1, 0.862745, 0.513726, 1)
 energy = 3.0
 range_item_cull_mask = 2
 texture = ExtResource("10_if1ns")
+
+[node name="training_music" type="AudioStreamPlayer2D" parent="Player"]
+position = Vector2(328, -208)
+stream = ExtResource("29_p6aa6")
+autoplay = true
 
 [node name="interface" parent="." instance=ExtResource("6_28dor")]
 
@@ -400,6 +405,7 @@ texture = ExtResource("14_ytkol")
 polygon = PackedVector2Array(10112, -1536, 10112, -1792, 10176, -1792, 10176, -1536)
 
 [node name="Trial_Finish" parent="RightBounds" instance=ExtResource("15_sjgqu")]
+level_index = -1
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
 color = Color(0, 0, 0, 1)

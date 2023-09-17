@@ -22,14 +22,14 @@ texture = ExtResource("1_4jgme")
 
 [node name="Return" parent="." instance=ExtResource("3_hbsb1")]
 anchors_preset = -1
-anchor_left = 0.417
-anchor_top = 0.605
-anchor_right = 0.59
-anchor_bottom = 0.691
-offset_left = -8.384
-offset_top = 127.96
-offset_right = -7.67999
-offset_bottom = 122.232
+anchor_left = 0.41
+anchor_top = 0.802
+anchor_right = 0.583
+anchor_bottom = 0.889
+offset_left = -0.320038
+offset_top = 0.303955
+offset_right = 0.383972
+offset_bottom = -6.07202
 text = "RETURN"
 
 [node name="Title" type="Label" parent="."]
@@ -51,14 +51,13 @@ horizontal_alignment = 1
 [node name="Currency" type="Label" parent="."]
 unique_name_in_owner = true
 anchors_preset = -1
-anchor_left = 0.389
+anchor_left = 0.278
 anchor_top = 0.235
-anchor_right = 0.618
-anchor_bottom = 0.298
-offset_left = -128.128
+anchor_right = 0.5
+anchor_bottom = 0.296
+offset_left = -0.256042
 offset_top = -0.279984
-offset_right = -135.936
-offset_bottom = -0.103973
+offset_bottom = 1.19203
 theme_override_fonts/font = ExtResource("5_wvpv0")
 theme_override_font_sizes/font_size = 30
 text = "X RUNES"
@@ -75,14 +74,13 @@ color = Color(0, 0, 0, 0.356863)
 
 [node name="Cost" type="Label" parent="."]
 anchors_preset = -1
-anchor_left = 0.389
+anchor_left = 0.5
 anchor_top = 0.235
-anchor_right = 0.618
-anchor_bottom = 0.298
-offset_left = 127.872
+anchor_right = 0.722
+anchor_bottom = 0.296
 offset_top = -0.279984
-offset_right = 120.064
-offset_bottom = -0.103973
+offset_right = 0.25592
+offset_bottom = 1.19203
 theme_override_fonts/font = ExtResource("5_wvpv0")
 theme_override_font_sizes/font_size = 30
 text = "500"
@@ -97,36 +95,83 @@ anchor_bottom = 0.976
 offset_bottom = -0.0160027
 color = Color(0.847059, 0, 0, 0.356863)
 
-[node name="Stat" parent="." instance=ExtResource("6_u0yr7")]
-stat_name = "Stat 1"
-stat_color = Color(1, 0.298039, 0.345098, 0.784314)
+[node name="Stat8" parent="." instance=ExtResource("6_u0yr7")]
+anchor_left = 0.278
+anchor_top = 0.346
+anchor_right = 0.342
+anchor_bottom = 0.4
+offset_left = -0.256042
+offset_top = -0.208008
+offset_right = 0.0159912
+offset_bottom = -0.200012
+theme_override_font_sizes/font_size = 16
+text = "Health"
+horizontal_alignment = 1
+stat_name = "Health"
+stat_color = Color(1, 0.305882, 0.290196, 0.784314)
 
-[node name="Stat2" parent="." instance=ExtResource("6_u0yr7")]
-offset_top = 272.0
-offset_bottom = 307.0
-stat_name = "Stat 2"
+[node name="Stat7" parent="." instance=ExtResource("6_u0yr7")]
+anchor_left = 0.278
+anchor_top = 0.432
+anchor_right = 0.342
+anchor_bottom = 0.486
+offset_left = -0.256042
+offset_top = 0.0639954
+offset_right = 0.0159912
+offset_bottom = 0.071991
+theme_override_font_sizes/font_size = 16
+text = "Spirit"
+horizontal_alignment = 1
+stat_name = "Spirit"
 stat_index = 1
-stat_color = Color(0, 0.705882, 0.333333, 0.784314)
+stat_color = Color(0, 0.686275, 0.564706, 0.784314)
 
-[node name="Stat3" parent="." instance=ExtResource("6_u0yr7")]
-offset_top = 328.0
-offset_bottom = 363.0
-stat_name = "Stat 3"
+[node name="Stat6" parent="." instance=ExtResource("6_u0yr7")]
+anchor_left = 0.278
+anchor_top = 0.519
+anchor_right = 0.342
+anchor_bottom = 0.568
+offset_left = -0.256042
+offset_top = -0.312042
+offset_right = 0.0159912
+offset_bottom = 2.93597
+theme_override_font_sizes/font_size = 16
+text = "Resist"
+horizontal_alignment = 1
+stat_name = "Resist"
 stat_index = 2
-stat_color = Color(0.396078, 0.560784, 1, 0.784314)
+stat_color = Color(0, 0.709804, 0.243137, 0.784314)
 
 [node name="Stat4" parent="." instance=ExtResource("6_u0yr7")]
-offset_top = 384.0
-offset_bottom = 419.0
-stat_name = "Stat 4"
+anchor_left = 0.278
+anchor_top = 0.605
+anchor_right = 0.34
+anchor_bottom = 0.654
+offset_left = -0.256042
+offset_top = -0.0400085
+offset_right = 2.32001
+offset_bottom = 3.20798
+theme_override_font_sizes/font_size = 16
+text = "Speed"
+horizontal_alignment = 1
+stat_name = "Speed"
 stat_index = 3
 stat_color = Color(0.74902, 0.552941, 0, 0.784314)
 
 [node name="Stat5" parent="." instance=ExtResource("6_u0yr7")]
-offset_top = 440.0
-offset_bottom = 475.0
-stat_name = "Stat 5"
+anchor_left = 0.278
+anchor_top = 0.691
+anchor_right = 0.342
+anchor_bottom = 0.745
+offset_left = -0.256042
+offset_top = 0.231964
+offset_right = 0.0159912
+offset_bottom = 0.23996
+theme_override_font_sizes/font_size = 16
+text = "Damage"
+horizontal_alignment = 1
+stat_name = "Damage"
 stat_index = 4
-stat_color = Color(0.584314, 0.494118, 1, 0.784314)
+stat_color = Color(0.698039, 0.423529, 1, 0.784314)
 
 [connection signal="pressed" from="Return" to="." method="_on_return_pressed"]

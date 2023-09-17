@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://dj087m8bonw6y"]
+[gd_scene load_steps=7 format=3 uid="uid://dj087m8bonw6y"]
 
 [ext_resource type="Texture2D" uid="uid://d00aubj2tay7j" path="res://ui_art/white_square.png" id="1_mr52l"]
 [ext_resource type="Script" path="res://scripts/star.gd" id="1_ok3mk"]
 [ext_resource type="Texture2D" uid="uid://bq5a8cq3tyywf" path="res://art/18861-radial_gradient.png" id="3_rsx5y"]
 [ext_resource type="Script" path="res://scripts/dancing_light.gd" id="4_ljpyl"]
+[ext_resource type="AudioStream" uid="uid://cw4gn8lqkd7f" path="res://sfx/runes.wav" id="5_chv15"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dn7h8"]
 size = Vector2(64, 64)
@@ -49,5 +50,11 @@ energy = 3.0
 range_item_cull_mask = 32777
 texture = ExtResource("3_rsx5y")
 script = ExtResource("4_ljpyl")
+
+[node name="star" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("5_chv15")
+volume_db = -10.0
+pitch_scale = 2.0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

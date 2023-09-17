@@ -289,7 +289,8 @@ anchor_left = 0.12
 anchor_top = 0.08
 anchor_right = 0.88
 anchor_bottom = 0.907
-offset_right = -1.52588e-05
+offset_left = -8.0
+offset_right = 8.99998
 offset_bottom = -0.100006
 theme_override_colors/font_color = Color(0, 0.913725, 0.94902, 1)
 theme_override_fonts/font = ExtResource("5_j1f1y")
@@ -299,7 +300,7 @@ AMOUNT OF HEALTH
 AND RESISTANCE
 
 
-REDUCED ATTACK
+REDUCED MOVEMENT
 SPEED"
 horizontal_alignment = 1
 vertical_alignment = 1

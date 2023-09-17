@@ -1,9 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://cbjwxnmppamtl"]
+[gd_scene load_steps=10 format=3 uid="uid://cbjwxnmppamtl"]
 
 [ext_resource type="Script" path="res://scripts/well.gd" id="1_o0xq8"]
 [ext_resource type="Texture2D" uid="uid://dxbl7cqgrvkif" path="res://art/Torigates_small.png" id="2_l6ukq"]
 [ext_resource type="Texture2D" uid="uid://bq5a8cq3tyywf" path="res://art/18861-radial_gradient.png" id="3_i5fr6"]
 [ext_resource type="Script" path="res://scripts/dancing_light.gd" id="4_nyhuf"]
+[ext_resource type="FontFile" uid="uid://vv01ikl12mma" path="res://fonts/century-gothic/Century Gothic.ttf" id="5_nphyd"]
+[ext_resource type="Texture2D" uid="uid://b8tr5vo0kcepx" path="res://art/updated-bg/ParallaxBg_Godot_Spritesheet.sprites/Japanese_Background-12.tres" id="6_bkkhs"]
+[ext_resource type="AudioStream" uid="uid://ddpkt0ykap47o" path="res://sfx/runes_other.wav" id="7_hfil2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7okp3"]
 size = Vector2(512, 512)
@@ -88,6 +91,49 @@ scale = Vector2(0.46875, 0.515625)
 color = Color(1, 1, 0.611765, 1)
 range_item_cull_mask = 65537
 texture = ExtResource("3_i5fr6")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -48.0
+offset_top = -184.0
+offset_right = 51.0
+offset_bottom = -158.0
+theme_override_fonts/font = ExtResource("5_nphyd")
+text = "INTERACT (E)"
+
+[node name="JapaneseBackground-12" type="Sprite2D" parent="."]
+modulate = Color(0.717647, 0.607843, 0.2, 1)
+position = Vector2(-168, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_bkkhs")
+
+[node name="JapaneseBackground-16" type="Sprite2D" parent="."]
+modulate = Color(0.717647, 0.607843, 0.2, 1)
+position = Vector2(-168, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_bkkhs")
+
+[node name="JapaneseBackground-13" type="Sprite2D" parent="."]
+modulate = Color(0.717647, 0.607843, 0.2, 1)
+position = Vector2(120, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_bkkhs")
+
+[node name="JapaneseBackground-14" type="Sprite2D" parent="."]
+modulate = Color(0.717647, 0.607843, 0.2, 1)
+position = Vector2(192, 8)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_bkkhs")
+
+[node name="JapaneseBackground-15" type="Sprite2D" parent="."]
+modulate = Color(0.717647, 0.607843, 0.2, 1)
+position = Vector2(-248, 8)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_bkkhs")
+
+[node name="shrine" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("7_hfil2")
+volume_db = -1.0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

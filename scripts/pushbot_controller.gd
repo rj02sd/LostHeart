@@ -12,6 +12,7 @@ func _process(delta):
 		if get_tree().get_first_node_in_group("Pushbot"):
 			PlayerData.currency += currency * PlayerData.player_ref.player_stats.currency_multiplier
 			%Sprite2D.play("default")
+			%lever.play()
 			await get_tree().create_timer(1,false).timeout
 			%Sprite2D.stop()
 			get_tree().get_first_node_in_group("Pushbot").queue_free()

@@ -1,8 +1,14 @@
-[gd_scene load_steps=12 format=3 uid="uid://bhaj4bqtsgovd"]
+[gd_scene load_steps=18 format=3 uid="uid://bhaj4bqtsgovd"]
 
 [ext_resource type="Script" path="res://scripts/interface.gd" id="1_tp335"]
 [ext_resource type="FontFile" uid="uid://vv01ikl12mma" path="res://fonts/century-gothic/Century Gothic.ttf" id="2_5qos4"]
 [ext_resource type="FontFile" uid="uid://bekn0vgx22mbc" path="res://fonts/century-gothic/GOTHICB.TTF" id="3_x42mg"]
+[ext_resource type="Texture2D" uid="uid://cdpqdlkh4ovre" path="res://ui_art/Mute.png" id="4_bllxt"]
+[ext_resource type="Texture2D" uid="uid://c7iicmyqmiuhp" path="res://ui_art/Restart.png" id="5_ljjem"]
+[ext_resource type="Texture2D" uid="uid://sdvf4rnm6ocb" path="res://ui_art/Pause.png" id="6_811v5"]
+[ext_resource type="Texture2D" uid="uid://b28muhapik5tq" path="res://art/More.png" id="6_oqf8b"]
+[ext_resource type="Texture2D" uid="uid://dkiskd78dsspu" path="res://ui_art/Play.png" id="7_gjcfc"]
+[ext_resource type="PackedScene" uid="uid://7tcl54ibhdyd" path="res://user_interface/pause_menu.tscn" id="9_fw3oe"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1haci"]
 bg_color = Color(0.247059, 0, 0.0235294, 1)
@@ -29,6 +35,7 @@ bg_color = Color(0.231373, 0.00784314, 0.419608, 1)
 bg_color = Color(0.462745, 0.835294, 0.8, 1)
 
 [node name="interface" type="CanvasLayer" groups=["Interface"]]
+process_mode = 3
 script = ExtResource("1_tp335")
 
 [node name="Username" type="Label" parent="."]
@@ -191,14 +198,15 @@ vertical_alignment = 1
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchors_preset = -1
-anchor_left = 0.833
-anchor_top = 0.889
-anchor_right = 1.0
-anchor_bottom = 0.952
-offset_left = 0.383911
-offset_top = 0.927979
-offset_bottom = 0.104004
-color = Color(0, 0, 0, 1)
+anchor_left = 0.819
+anchor_top = 0.914
+anchor_right = 0.986
+anchor_bottom = 0.975
+offset_left = 0.511963
+offset_top = -0.272034
+offset_right = 0.128052
+offset_bottom = 0.200012
+color = Color(0, 0, 0, 0.509804)
 
 [node name="Currency" type="Label" parent="ColorRect"]
 unique_name_in_owner = true
@@ -208,9 +216,201 @@ anchor_top = 0.012
 anchor_right = 0.917
 anchor_bottom = 1.0
 offset_top = 1.52
-offset_right = -0.0640106
+offset_right = -0.0639343
 theme_override_fonts/font = ExtResource("2_5qos4")
 theme_override_font_sizes/font_size = 15
 text = "RUNES"
 horizontal_alignment = 2
 vertical_alignment = 1
+
+[node name="Timer" type="ColorRect" parent="."]
+unique_name_in_owner = true
+anchors_preset = -1
+anchor_left = 0.833
+anchor_top = -0.002
+anchor_right = 1.0
+anchor_bottom = 0.074
+offset_left = 0.38385
+offset_top = 1.296
+offset_bottom = -7.952
+color = Color(0, 0, 0, 0.427451)
+
+[node name="time" type="Label" parent="Timer"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -6.10352e-05
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_5qos4")
+theme_override_font_sizes/font_size = 30
+text = "XX:XX"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+offset_right = 168.0
+offset_bottom = 56.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_right = 160.0
+offset_bottom = 48.0
+color = Color(0.533333, 0.211765, 0.192157, 1)
+
+[node name="Mute" type="TextureButton" parent="."]
+process_mode = 3
+anchors_preset = -1
+anchor_right = 0.035
+anchor_bottom = 0.062
+offset_right = -0.32
+offset_bottom = -0.176003
+texture_normal = ExtResource("4_bllxt")
+texture_pressed = ExtResource("4_bllxt")
+texture_hover = ExtResource("4_bllxt")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label3" type="Label" parent="Mute"]
+texture_filter = 3
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.8
+anchor_top = 0.6
+anchor_right = 1.8
+anchor_bottom = 1.2
+theme_override_fonts/font = ExtResource("2_5qos4")
+text = "M"
+
+[node name="Restart" type="TextureButton" parent="."]
+process_mode = 3
+anchors_preset = -1
+anchor_left = 0.035
+anchor_right = 0.069
+anchor_bottom = 0.062
+offset_left = -0.32
+offset_right = 0.511993
+offset_bottom = -0.176003
+texture_normal = ExtResource("5_ljjem")
+texture_pressed = ExtResource("5_ljjem")
+texture_hover = ExtResource("5_ljjem")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label2" type="Label" parent="Restart"]
+texture_filter = 3
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.8
+anchor_top = 0.6
+anchor_right = 1.8
+anchor_bottom = 1.2
+theme_override_fonts/font = ExtResource("2_5qos4")
+text = "R"
+
+[node name="Menu" type="TextureButton" parent="."]
+process_mode = 3
+modulate = Color(0.576471, 1, 1, 1)
+anchors_preset = -1
+anchor_left = 0.111
+anchor_top = 0.012
+anchor_right = 0.132
+anchor_bottom = 0.049
+offset_left = 0.127991
+offset_top = 0.224
+offset_right = -0.0639954
+offset_bottom = 0.247999
+texture_normal = ExtResource("6_oqf8b")
+texture_pressed = ExtResource("6_oqf8b")
+texture_hover = ExtResource("6_oqf8b")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Menu"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.333
+anchor_top = 1.0
+anchor_right = 1.333
+anchor_bottom = 1.708
+offset_left = 0.0079999
+offset_right = 0.00799942
+offset_bottom = 0.00799942
+theme_override_font_sizes/font_size = 10
+text = "TAB"
+
+[node name="Pause" type="TextureButton" parent="."]
+unique_name_in_owner = true
+process_mode = 3
+anchors_preset = -1
+anchor_left = 0.069
+anchor_right = 0.104
+anchor_bottom = 0.062
+offset_left = 0.511993
+offset_right = 0.192001
+offset_bottom = -0.176003
+texture_normal = ExtResource("6_811v5")
+texture_pressed = ExtResource("6_811v5")
+texture_hover = ExtResource("6_811v5")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Pause"]
+texture_filter = 3
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.8
+anchor_top = 0.575
+anchor_right = 1.8
+anchor_bottom = 1.2
+offset_top = 0.999998
+theme_override_fonts/font = ExtResource("2_5qos4")
+text = "P"
+
+[node name="Play" type="TextureButton" parent="."]
+unique_name_in_owner = true
+process_mode = 3
+visible = false
+anchors_preset = -1
+anchor_left = 0.069
+anchor_right = 0.104
+anchor_bottom = 0.062
+offset_left = 0.511993
+offset_right = 0.192001
+offset_bottom = -0.176003
+texture_normal = ExtResource("7_gjcfc")
+texture_pressed = ExtResource("7_gjcfc")
+texture_hover = ExtResource("7_gjcfc")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label2" type="Label" parent="Play"]
+texture_filter = 3
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.8
+anchor_top = 0.6
+anchor_right = 1.8
+anchor_bottom = 1.2
+theme_override_fonts/font = ExtResource("2_5qos4")
+text = "P"
+
+[node name="pause_menu" parent="." instance=ExtResource("9_fw3oe")]
+unique_name_in_owner = true
+visible = false
+
+[node name="Label" type="Label" parent="."]
+offset_left = 1112.0
+offset_right = 1152.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+
+[connection signal="pressed" from="Mute" to="." method="_on_mute_pressed"]
+[connection signal="pressed" from="Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="Menu" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="Pause" to="." method="_on_pause_pressed"]
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]

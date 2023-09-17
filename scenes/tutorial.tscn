@@ -1,13 +1,21 @@
-[gd_scene load_steps=4 format=3 uid="uid://cs1n8ve01vbp"]
+[gd_scene load_steps=12 format=3 uid="uid://cs1n8ve01vbp"]
 
 [ext_resource type="Texture2D" uid="uid://d00aubj2tay7j" path="res://ui_art/white_square.png" id="1_22b7l"]
-[ext_resource type="FontFile" uid="uid://cx8c2qvap0bnb" path="res://fonts/century-gothic/GOTHICI.TTF" id="2_jhlyi"]
+[ext_resource type="FontFile" uid="uid://vv01ikl12mma" path="res://fonts/century-gothic/Century Gothic.ttf" id="2_45u03"]
+[ext_resource type="FontFile" uid="uid://bekn0vgx22mbc" path="res://fonts/century-gothic/GOTHICB.TTF" id="2_na02i"]
 [ext_resource type="PackedScene" uid="uid://cwwc0uviiic3g" path="res://prefabs/back.tscn" id="3_462o5"]
+[ext_resource type="PackedScene" uid="uid://dj087m8bonw6y" path="res://prefabs/star.tscn" id="5_7cswd"]
+[ext_resource type="Texture2D" uid="uid://dm6ocrk3x406e" path="res://art/char_anims/staff_slam_SS.png" id="6_matit"]
+[ext_resource type="PackedScene" uid="uid://cbjwxnmppamtl" path="res://prefabs/well.tscn" id="7_fvr2p"]
+[ext_resource type="Texture2D" uid="uid://d40k2pru13dq" path="res://art/samurai.png" id="8_2qenf"]
+[ext_resource type="Texture2D" uid="uid://ctbkarj50e77n" path="res://art/Plant.png" id="9_pfwj4"]
+[ext_resource type="Texture2D" uid="uid://clewsxmg6v25o" path="res://art/Hand.png" id="10_cuflg"]
+[ext_resource type="PackedScene" uid="uid://cfxk2unfgrkf" path="res://prefabs/projectiles/big_bullet.tscn" id="11_mrmot"]
 
 [node name="tutorial" type="CanvasLayer"]
 
 [node name="BG" type="TextureRect" parent="."]
-modulate = Color(0.596078, 0.647059, 0.235294, 1)
+modulate = Color(0.501961, 0.623529, 0.745098, 1)
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 0.997
@@ -15,29 +23,169 @@ offset_right = -3.0
 offset_bottom = -0.0560303
 texture = ExtResource("1_22b7l")
 
+[node name="Label" type="Label" parent="BG"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.042
+anchor_top = 0.356
+anchor_right = 0.334
+anchor_bottom = 0.706
+offset_left = -0.258003
+offset_top = 0.0240173
+offset_right = 3.23398
+offset_bottom = 5.92401
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_45u03")
+theme_override_font_sizes/font_size = 20
+text = "COLLECT GREAT RUNES
+5 IN 5 LEVELS
+EACH GIVES 1K RUNES
+
+USE RUNES IN SHRINES
+TO GET STRONGER
+
+CURE THE HEART OF THE MOUNTAIN
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="BG"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.327
+anchor_top = 0.211
+anchor_right = 0.784
+anchor_bottom = 0.409
+offset_left = 0.276978
+offset_top = -0.306
+offset_right = 0.18396
+offset_bottom = -0.213989
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_45u03")
+theme_override_font_sizes/font_size = 20
+text = "EACH SHRINE SERVES AS A CHECKPOINT,
+ UPON CROSSING, IT WILL AUTOMATICALLY SAVE YOUR
+PROGRESS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="BG"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.654
+anchor_top = 0.372
+anchor_right = 0.982
+anchor_bottom = 0.563
+offset_left = 0.553955
+offset_top = 7.68802
+offset_right = -7.31812
+offset_bottom = 0.302032
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_45u03")
+theme_override_font_sizes/font_size = 20
+text = "USE RMB + LMB TO COMBAT THE 
+DANGERS OF THE MOUNTAIN.
+NEW CHALLENGES AWAIT, THE FURTHER 
+YOU GO!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="BG"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.369
+anchor_top = 0.632
+anchor_right = 0.689
+anchor_bottom = 0.805
+offset_left = 0.0189819
+offset_top = -0.271973
+offset_right = 6.33899
+offset_bottom = 3.97003
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_45u03")
+theme_override_font_sizes/font_size = 20
+text = "MOST OF ALL, DON'T FORGET TO
+HAVE FUN AND LET US KNOW HOW 
+THE GAME TURNED OUT!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="BG"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.446
+anchor_right = 0.618
+anchor_bottom = 0.545
+offset_left = 1.5
+offset_top = -0.115967
+offset_right = -0.0820313
+offset_bottom = 1.93002
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_45u03")
+theme_override_font_sizes/font_size = 50
+text = "XX:XX"
+
 [node name="Title" type="Label" parent="."]
 anchors_preset = -1
-anchor_left = 0.21
-anchor_top = 0.154
+anchor_left = 0.222
+anchor_top = 0.074
 anchor_right = 0.759
-anchor_bottom = 0.293
-offset_left = 0.0799866
-offset_top = 0.207993
-offset_right = -0.368042
-offset_bottom = 0.135986
+anchor_bottom = 0.21
+offset_left = 0.255981
+offset_top = 0.0480003
+offset_right = 13.632
+offset_bottom = 1.92001
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_jhlyi")
+theme_override_fonts/font = ExtResource("2_na02i")
 theme_override_font_sizes/font_size = 70
 text = "TUTORIAL"
 horizontal_alignment = 1
 
 [node name="Back" parent="." instance=ExtResource("3_462o5")]
 anchors_preset = -1
-anchor_left = 0.396
-anchor_top = 0.617
-anchor_right = 0.569
-anchor_bottom = 0.694
-offset_left = -0.192017
-offset_top = 0.18396
-offset_right = 0.511963
-offset_bottom = 0.287994
+anchor_left = 0.428
+anchor_top = 0.809
+anchor_right = 0.597
+anchor_bottom = 0.889
+offset_left = -5.05603
+offset_top = 3.76801
+offset_right = 0.256042
+offset_bottom = 1.92798
+
+[node name="GreatRune" parent="." instance=ExtResource("5_7cswd")]
+position = Vector2(208, 168)
+
+[node name="Char" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(976, 456)
+scale = Vector2(5, 5)
+texture = ExtResource("6_matit")
+
+[node name="Well" parent="." instance=ExtResource("7_fvr2p")]
+z_index = 1
+position = Vector2(464, 314)
+scale = Vector2(0.3, 0.3)
+
+[node name="Samurai" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(872, 424)
+scale = Vector2(3, 3)
+texture = ExtResource("8_2qenf")
+
+[node name="Plant" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(864, 520)
+scale = Vector2(3, 3)
+texture = ExtResource("9_pfwj4")
+
+[node name="Hand" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1080, 432)
+scale = Vector2(5, 5)
+texture = ExtResource("10_cuflg")
+
+[node name="big_bullet" parent="." instance=ExtResource("11_mrmot")]
+position = Vector2(1072, 578)
+rotation = 0.785397
+constant_linear_velocity = Vector2(0, 0)

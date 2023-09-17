@@ -54,6 +54,7 @@ func _attack():
 		%WarningR.visible = true
 		await get_tree().create_timer(1.2,false).timeout
 		if health > 0:
+			%sword_sound.play()
 			%SwordL.visible = true
 			%SwordR.visible = true
 			%SwordR/SwordR/RSw.disabled = false

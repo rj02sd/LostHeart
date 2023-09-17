@@ -4,6 +4,7 @@
 [ext_resource type="Script" path="res://scripts/stat.gd" id="2_2p3md"]
 
 [node name="Stat" type="Label"]
+anchors_preset = -1
 offset_left = 312.0
 offset_top = 216.0
 offset_right = 386.0
@@ -11,15 +12,18 @@ offset_bottom = 251.0
 theme_override_fonts/font = ExtResource("1_l4qwu")
 theme_override_font_sizes/font_size = 25
 text = "STAT 1"
-horizontal_alignment = 2
 script = ExtResource("2_2p3md")
 
 [node name="Points" type="HBoxContainer" parent="."]
 unique_name_in_owner = true
-layout_mode = 0
-offset_left = 96.0
-offset_right = 456.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.297
+anchor_right = 6.162
+anchor_bottom = 1.143
+offset_left = 0.0219955
+offset_right = 0.0119934
+offset_bottom = -0.00500107
 
 [node name="point" type="ColorRect" parent="Points"]
 layout_mode = 2
@@ -72,19 +76,29 @@ size_flags_horizontal = 3
 color = Color(1, 1, 1, 0.498039)
 
 [node name="Add" type="Button" parent="."]
-layout_mode = 0
-offset_left = 472.0
-offset_top = 8.0
-offset_right = 490.0
-offset_bottom = 39.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 6.378
+anchor_top = 0.229
+anchor_right = 6.622
+anchor_bottom = 1.143
+offset_left = 0.0279846
+offset_top = -0.0150003
+offset_right = -0.0280151
+offset_bottom = -1.005
 text = "+"
 
 [node name="Subtract" type="Button" parent="."]
-layout_mode = 0
-offset_left = 496.0
-offset_top = 8.0
-offset_right = 514.0
-offset_bottom = 39.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 6.703
+anchor_top = 0.229
+anchor_right = 6.946
+anchor_bottom = 1.143
+offset_left = -0.0220337
+offset_top = -0.0150003
+offset_right = -0.00402832
+offset_bottom = -1.005
 text = "-"
 
 [connection signal="pressed" from="Add" to="." method="_on_add_pressed"]

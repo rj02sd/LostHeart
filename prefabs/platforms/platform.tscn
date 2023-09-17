@@ -1,10 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://g7nqrkb4tks"]
+[gd_scene load_steps=14 format=3 uid="uid://g7nqrkb4tks"]
 
 [ext_resource type="Script" path="res://scripts/platform.gd" id="1_kv74t"]
 [ext_resource type="Texture2D" uid="uid://c7fxfr5nxtdsk" path="res://art/Ground_Large.png" id="2_hgmkj"]
 [ext_resource type="PackedScene" uid="uid://dlopq8y5h61ex" path="res://prefabs/spike.tscn" id="3_ny2cl"]
 [ext_resource type="PackedScene" uid="uid://bf6l1iv1grmoa" path="res://prefabs/warning.tscn" id="4_srpvj"]
 [ext_resource type="Texture2D" uid="uid://bq5a8cq3tyywf" path="res://art/18861-radial_gradient.png" id="5_lc57l"]
+[ext_resource type="AudioStream" uid="uid://c4bfjs14axgqb" path="res://sfx/spikes.wav" id="6_wevvr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gby10"]
 size = Vector2(512, 64)
@@ -118,6 +119,11 @@ light_mask = 4
 position = Vector2(-256, -88)
 shape = SubResource("RectangleShape2D_ul2gr")
 disabled = true
+
+[node name="spikesAudio" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("6_wevvr")
+volume_db = -3.0
 
 [connection signal="body_entered" from="Illusion" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Illusion" to="." method="_on_area_2d_body_exited"]

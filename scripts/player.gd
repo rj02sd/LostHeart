@@ -6,7 +6,7 @@ extends CharacterBody2D
 	health = 100,
 	spirit = 100,
 	spirit_regen = 20,
-	speed = 300,
+	speed = 320,
 	jump_velocity = -650,
 	climb_speed = 100,
 	attack_damage_multiplier = 1,
@@ -15,7 +15,6 @@ extends CharacterBody2D
 	critical_damage_multiplier = 1,
 	currency_multiplier = 1,
 	vamp = 0,
-	attack_speed_multiplier = 1
 }
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -33,32 +32,55 @@ var bullet_currency = 50
 var on_platform = false
 var martyr_killed = false
 var heart_felled = false
+var class_stats_set = false
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
-	match PlayerData.class_selected:
-		"Soul Siphon":
-			player_stats.vamp += (PlayerData.levels_completed+1) * 10
-			player_stats.currency_multiplier += (PlayerData.levels_completed+1) * 1.5
-			player_stats.max_health -= 30
-			player_stats.health -= 30
-		"Slayer":
-			player_stats.critical_chance += (PlayerData.levels_completed+1) * 10
-			player_stats.attack_damage_multiplier += (PlayerData.levels_completed+1) * 5
-			player_stats.critical_damage_multiplier += (PlayerData.levels_completed+1) * 10
-			player_stats.max_spirit -= 40
-			player_stats.spirit -= 40
-			player_stats.spirit_regen -= 5
-		"Juggernaut":
-			player_stats.resistance += (PlayerData.levels_completed+1) * 10
-			player_stats.health += (PlayerData.levels_completed+1) * 20
-			player_stats.max_health += (PlayerData.levels_completed+1) * 20
-			player_stats.attack_speed_multiplier -= 0.4
-			player_stats.climb_speed -= 20
+	position = PlayerData.checkpoint
+	for i in range(PlayerData.level_upgrades.size()):
+		match i:
+			0:
+				player_stats.max_health += PlayerData.level_upgrades[0]*10
+				player_stats.health += PlayerData.level_upgrades[0]*10
+			1:
+				player_stats.max_spirit += PlayerData.level_upgrades[1]*10
+				player_stats.spirit += PlayerData.level_upgrades[1]*10
+				player_stats.spirit_regen += PlayerData.level_upgrades[1]
+			2:
+				player_stats.resistance += PlayerData.level_upgrades[2]*5
+				if player_stats.resistance >=85:
+					player_stats.resistance = 85
+			3:
+				player_stats.speed += PlayerData.level_upgrades[3]*20
+			4:
+				player_stats.attack_damage_multiplier += PlayerData.level_upgrades[4]*0.1
 	
 func _process(delta):
+	if PlayerData.class_selected and not class_stats_set:
+		match PlayerData.class_selected:
+			"Soul Siphon":
+				player_stats.vamp += (PlayerData.levels_completed+1) * 10
+				player_stats.currency_multiplier += (PlayerData.levels_completed+1) * 1.5
+				player_stats.max_health -= 30
+				player_stats.health -= 30
+			"Slayer":
+				player_stats.critical_chance += (PlayerData.levels_completed+1) * 10
+				player_stats.attack_damage_multiplier += (PlayerData.levels_completed+1) * 0.2
+				player_stats.critical_damage_multiplier += (PlayerData.levels_completed+1) * 0.2
+				player_stats.max_spirit -= 40
+				player_stats.spirit -= 40
+				player_stats.spirit_regen -= 5
+			"Juggernaut":
+				player_stats.resistance += (PlayerData.levels_completed+1) * 10
+				player_stats.health += (PlayerData.levels_completed+1) * 50
+				player_stats.max_health += (PlayerData.levels_completed+1) * 50
+				player_stats.speed -= 80
+				player_stats.climb_speed -= 40
+		class_stats_set = true
+			
 	if player_stats.health <=0 and not won:
 		%death_screen.visible = true
+		%death_sound.play()
 		PlayerData.in_game = false
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	
@@ -82,7 +104,8 @@ func _process(delta):
 		else:
 			%PlayerSprite.play("slash")
 		player_stats.spirit -= 20
-		_cooldown_primary(0.5/player_stats.attack_speed_multiplier)
+		%attack.play()
+		_cooldown_primary(0.5)
 			
 	if Input.is_action_just_pressed("alternate_attack") and not PlayerData.must_climb and not in_combat and alternate_ready and player_stats.spirit > 33:
 		player_stats.spirit -= 10+player_stats.spirit/3
@@ -92,7 +115,8 @@ func _process(delta):
 		velocity = Vector2.ZERO
 		%HandsSprite.visible = false
 		%PlayerSprite.play("staff_slam")
-		_cooldown_alternate(0.6/player_stats.attack_speed_multiplier)
+		%shield.play()
+		_cooldown_alternate(0.6)
 	
 func _physics_process(delta):
 	if not is_on_floor():
@@ -164,7 +188,7 @@ func _physics_process(delta):
 
 func _calculate_attack_strength(base,resist):
 	if randi_range(0,100) < player_stats.critical_chance:
-		base = base * (1+player_stats.critical_damage/100)**1.5
+		base = base * (1+player_stats.critical_damage_multiplier)**1.5
 	resist = round(1-resist/100)
 	base = base * resist * player_stats.attack_damage_multiplier
 	return base
@@ -172,7 +196,7 @@ func _calculate_attack_strength(base,resist):
 func _on_area_2d_body_entered(body):
 	if body.get_groups().size() > 0 and body.get_groups()[0] == "Enemy":
 		body.health -= _calculate_attack_strength(5,body.resistance)
-		player_stats.health += _calculate_attack_strength(5,body.resistance) * (player_stats.vamp/100)
+		player_stats.health += _calculate_attack_strength(5,body.resistance) * player_stats.vamp/100.0
 	if body.get_groups().size() > 0 and body.get_groups()[0] == "Bullet":
 		PlayerData.currency += bullet_currency * PlayerData.player_ref.player_stats.currency_multiplier
 		body.queue_free()
@@ -214,9 +238,9 @@ func _cooldown_alternate(time):
 	in_combat = true
 	alternate_ready = false
 	staff_slammed = true
-	gravity *= 5
+	gravity *= 3
 	await get_tree().create_timer(time,false).timeout
-	gravity /= 5
+	gravity /= 3
 	staff_slammed = false
 	in_combat = false
 	%PlayerSprite.play("idle")
@@ -236,6 +260,6 @@ func _on_area_2d_2_body_entered(body):
 func _on_area_2d_area_entered(area):
 	if area.get_groups().size() > 0 and area.get_groups()[0] == "Plant_Hitbox":
 		area.get_parent().health -= _calculate_attack_strength(5,area.get_parent().resistance)
-		player_stats.health +=  _calculate_attack_strength(5,area.get_parent().resistance) * (player_stats.vamp/100)
+		player_stats.health +=  _calculate_attack_strength(5,area.get_parent().resistance) * player_stats.vamp/100.0
 	if area.get_groups().size() > 0 and area.get_groups()[0] == "Vine":
 		area.visible = false

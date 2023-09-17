@@ -16,7 +16,7 @@
 
 [node name="level_select" type="CanvasLayer"]
 script = ExtResource("1_1sepy")
-levels = Array[PackedScene]([ExtResource("3_v2x40"), ExtResource("2_euddx"), ExtResource("4_6ql6a"), ExtResource("5_40w46"), ExtResource("6_6godw")])
+levels = Array[PackedScene]([ExtResource("2_euddx"), ExtResource("3_v2x40"), ExtResource("4_6ql6a"), ExtResource("5_40w46"), ExtResource("6_6godw")])
 
 [node name="BG" type="TextureRect" parent="."]
 modulate = Color(0.117647, 0.133333, 0.129412, 1)
@@ -363,7 +363,7 @@ offset_right = -837.247
 offset_bottom = -503.848
 color = Color(0.00784314, 0.00784314, 0.00784314, 0.152941)
 
-[connection signal="pressed" from="levels/LevelButton1" to="." method="_on_level_button_2_pressed"]
+[connection signal="pressed" from="levels/LevelButton1" to="." method="_on_level_button_1_pressed"]
 [connection signal="pressed" from="levels/LevelButton2" to="." method="_on_level_button_2_pressed"]
 [connection signal="pressed" from="levels/LevelButton3" to="." method="_on_level_button_3_pressed"]
 [connection signal="pressed" from="levels/LevelButton4" to="." method="_on_level_button_4_pressed"]

@@ -6,8 +6,8 @@
 
 [node name="spore" type="RigidBody2D" groups=["Spore"]]
 light_mask = 1024
-collision_layer = 257
-collision_mask = 257
+collision_layer = 4352
+collision_mask = 0
 gravity_scale = 0.0
 linear_velocity = Vector2(10, 10)
 script = ExtResource("1_vmq2y")

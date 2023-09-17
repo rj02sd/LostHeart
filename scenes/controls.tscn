@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bddt32ryei1m0"]
+[gd_scene load_steps=5 format=3 uid="uid://bddt32ryei1m0"]
 
 [ext_resource type="Texture2D" uid="uid://d00aubj2tay7j" path="res://ui_art/white_square.png" id="1_rbke4"]
-[ext_resource type="FontFile" uid="uid://cx8c2qvap0bnb" path="res://fonts/century-gothic/GOTHICI.TTF" id="2_2dw27"]
+[ext_resource type="FontFile" uid="uid://bekn0vgx22mbc" path="res://fonts/century-gothic/GOTHICB.TTF" id="2_sb8os"]
 [ext_resource type="PackedScene" uid="uid://cwwc0uviiic3g" path="res://prefabs/back.tscn" id="3_q2j0g"]
+[ext_resource type="FontFile" uid="uid://vv01ikl12mma" path="res://fonts/century-gothic/Century Gothic.ttf" id="4_g2kim"]
 
 [node name="controls" type="CanvasLayer"]
 
@@ -21,23 +22,80 @@ anchor_left = 0.21
 anchor_top = 0.154
 anchor_right = 0.759
 anchor_bottom = 0.293
-offset_left = 0.0799866
-offset_top = 0.207993
-offset_right = -0.368042
-offset_bottom = 0.135986
+offset_left = -0.919983
+offset_top = -53.792
+offset_right = -1.36804
+offset_bottom = -53.864
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_2dw27")
+theme_override_fonts/font = ExtResource("2_sb8os")
 theme_override_font_sizes/font_size = 70
 text = "CONTROLS"
 horizontal_alignment = 1
 
 [node name="Back" parent="." instance=ExtResource("3_q2j0g")]
 anchors_preset = -1
-anchor_left = 0.396
-anchor_top = 0.617
+anchor_left = 0.394
+anchor_top = 0.832
 anchor_right = 0.569
-anchor_bottom = 0.694
-offset_left = -0.192017
-offset_top = 0.18396
-offset_right = 0.511963
-offset_bottom = 0.287994
+anchor_bottom = 0.909
+offset_left = 0.111938
+offset_top = -0.135986
+offset_right = -1.48804
+offset_bottom = -0.0319824
+
+[node name="Label" type="Label" parent="."]
+offset_left = 142.0
+offset_top = 151.0
+offset_right = 556.0
+offset_bottom = 470.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_sb8os")
+theme_override_font_sizes/font_size = 20
+text = "A -> Move Left
+D -> Move Right
+W -> Climb Inclines, while pressing D
+S -> Move Down an Incline
+
+E-> Interact
+
+TAB -> Menu
+R -> Restart (There are checkpoints)
+M -> Mute
+P -> Pause/Play
+"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 603.0
+offset_top = 147.0
+offset_right = 1043.0
+offset_bottom = 466.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_sb8os")
+theme_override_font_sizes/font_size = 20
+text = "Signature Hero Staff Moveset
+
+Left Mouse Button -> Slash with healing sword
++ while Running -> Quick Slash
++ while Jumping -> Aerial Slash
+
+Right Mouse Button -> Shield of Light, Deflects"
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 602.0
+offset_top = 411.0
+offset_right = 1061.0
+offset_bottom = 451.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_g2kim")
+theme_override_font_sizes/font_size = 20
+text = "Check Tutorial Page for Visual Explanations"
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 601.0
+offset_top = 450.0
+offset_right = 1060.0
+offset_bottom = 490.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_g2kim")
+theme_override_font_sizes/font_size = 20
+text = "Mobile/Button + Flex Controls  - COMING SOON"

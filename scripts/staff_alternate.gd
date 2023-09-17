@@ -8,10 +8,10 @@ func _ready():
 
 func _process(delta):
 	
-	scale.x += 0.02
-	scale.y += 0.02
+	scale.x += 0.03
+	scale.y += 0.03
 	
-	if scale.x > 2:
+	if scale.x > 3:
 		queue_free()
 
 func _physics_process(delta):

@@ -1,8 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://b6pwmvylt55ok"]
+[gd_scene load_steps=10 format=3 uid="uid://b6pwmvylt55ok"]
 
 [ext_resource type="Script" path="res://scripts/pushbot_controller.gd" id="1_h20aj"]
 [ext_resource type="Texture2D" uid="uid://d0ywvj3ulf3bf" path="res://art/Lever_sprites.png" id="2_4ndud"]
 [ext_resource type="Texture2D" uid="uid://bq5a8cq3tyywf" path="res://art/18861-radial_gradient.png" id="3_qjti6"]
+[ext_resource type="FontFile" uid="uid://vv01ikl12mma" path="res://fonts/century-gothic/Century Gothic.ttf" id="4_rf5fy"]
+[ext_resource type="AudioStream" uid="uid://cogi04qcsshsc" path="res://sfx/lever.wav" id="5_c6sfa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ciod1"]
 size = Vector2(128, 96)
@@ -49,6 +51,18 @@ scale = Vector2(0.1875, 0.125)
 color = Color(0.705882, 0, 0.258824, 1)
 energy = 5.0
 texture = ExtResource("3_qjti6")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -80.0
+offset_top = 32.0
+offset_right = 19.0
+offset_bottom = 58.0
+theme_override_fonts/font = ExtResource("4_rf5fy")
+text = "INTERACT (E)"
+
+[node name="lever" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("5_c6sfa")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

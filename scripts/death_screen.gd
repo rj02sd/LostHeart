@@ -18,4 +18,4 @@ func _on_level_select_pressed():
 
 
 func _on_retry_level_pressed():
-	get_tree().change_scene_to_file("res://scenes/level_select.tscn")
+	get_tree().reload_current_scene()

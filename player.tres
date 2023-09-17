@@ -42,11 +42,11 @@ region = Rect2(384, 0, 64, 64)
 atlas = ExtResource("1_1mvk8")
 region = Rect2(448, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_gh3cn"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ym3c6"]
 atlas = ExtResource("2_f5kb4")
 region = Rect2(0, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_d5wu8"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_s13io"]
 atlas = ExtResource("2_f5kb4")
 region = Rect2(64, 0, 64, 64)
 
@@ -211,18 +211,18 @@ animations = [{
 }],
 "loop": true,
 "name": &"climbing",
-"speed": 4.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_gh3cn")
+"texture": SubResource("AtlasTexture_ym3c6")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_d5wu8")
+"texture": SubResource("AtlasTexture_s13io")
 }],
 "loop": true,
 "name": &"idle",
-"speed": 4.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -291,7 +291,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"moving_half",
-"speed": 10.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,

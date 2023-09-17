@@ -23,6 +23,22 @@ func _on_add_pressed():
 		if PlayerData.currency > 500:
 			PlayerData.currency -= 500
 			PlayerData.level_upgrades[stat_index] += 1
+			match stat_index:
+				0:
+					PlayerData.player_ref.player_stats.max_health += 10
+					PlayerData.player_ref.player_stats.health += 10
+				1:
+					PlayerData.player_ref.player_stats.max_spirit += 10
+					PlayerData.player_ref.player_stats.spirit += 10
+					PlayerData.player_ref.player_stats.spirit_regen += 1
+				2:
+					PlayerData.player_ref.player_stats.resistance += 5
+					if PlayerData.player_ref.player_stats.resistance >=85:
+						PlayerData.player_ref.player_stats.resistance = 85
+				3:
+					PlayerData.player_ref.player_stats.speed += 20
+				4:
+					PlayerData.player_ref.player_stats.attack_damage_multiplier += 0.1
 
 
 func _on_subtract_pressed():

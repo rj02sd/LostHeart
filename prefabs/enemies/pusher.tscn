@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://7bd7m7jfykc5"]
+[gd_scene load_steps=6 format=3 uid="uid://7bd7m7jfykc5"]
 
 [ext_resource type="Script" path="res://scripts/pusher.gd" id="1_sk1pp"]
 [ext_resource type="Texture2D" uid="uid://clewsxmg6v25o" path="res://art/Hand.png" id="2_lhthu"]
 [ext_resource type="Texture2D" uid="uid://bq5a8cq3tyywf" path="res://art/18861-radial_gradient.png" id="3_swelr"]
+[ext_resource type="AudioStream" uid="uid://30qchxtptmvu" path="res://sfx/hand.wav" id="4_0xxfk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_txsn8"]
 size = Vector2(56, 128)
@@ -34,3 +35,8 @@ scale = Vector2(0.25, 0.5625)
 color = Color(0.784314, 0.717647, 0.572549, 1)
 range_item_cull_mask = 256
 texture = ExtResource("3_swelr")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_0xxfk")
+pitch_scale = 0.5
+autoplay = true
