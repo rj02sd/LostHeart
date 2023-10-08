@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://ben3ewal3r0vk"]
 
 [ext_resource type="Script" path="res://scripts/menu.gd" id="1_ru7ju"]
-[ext_resource type="Texture2D" uid="uid://d00aubj2tay7j" path="res://ui_art/white_square.png" id="2_tuutq"]
+[ext_resource type="Texture2D" uid="uid://dkj4hwul25eij" path="res://art/LostHeart.jpg" id="2_58asp"]
 [ext_resource type="FontFile" uid="uid://bekn0vgx22mbc" path="res://fonts/century-gothic/GOTHICB.TTF" id="3_qiotv"]
 [ext_resource type="FontFile" uid="uid://vv01ikl12mma" path="res://fonts/century-gothic/Century Gothic.ttf" id="4_x0w77"]
 [ext_resource type="PackedScene" uid="uid://bddt32ryei1m0" path="res://scenes/controls.tscn" id="5_g7cx1"]
@@ -17,11 +17,15 @@ modulate = Color(0.682353, 0.878431, 0.878431, 1)
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 0.997
-offset_right = -3.0
-offset_bottom = -0.0560303
-texture = ExtResource("2_tuutq")
+offset_left = -10.0
+offset_top = -2.0
+offset_right = 10.0
+offset_bottom = 1.94403
+texture = ExtResource("2_58asp")
+expand_mode = 1
 
 [node name="Title" type="Label" parent="."]
+visible = false
 anchors_preset = -1
 anchor_left = 0.21
 anchor_top = 0.154
@@ -43,10 +47,10 @@ anchor_left = 0.403
 anchor_top = 0.395
 anchor_right = 0.576
 anchor_bottom = 0.472
-offset_left = -0.256042
-offset_top = 0.0399933
-offset_right = 0.447937
-offset_bottom = 0.143982
+offset_left = -65.256
+offset_top = 124.04
+offset_right = -64.552
+offset_bottom = 124.144
 theme_override_fonts/font = ExtResource("4_x0w77")
 theme_override_font_sizes/font_size = 20
 text = "PLAY"
@@ -57,10 +61,10 @@ anchor_left = 0.403
 anchor_top = 0.494
 anchor_right = 0.576
 anchor_bottom = 0.571
-offset_left = -0.256042
-offset_top = -0.112
-offset_right = 0.447937
-offset_bottom = -0.00802612
+offset_left = 3.74402
+offset_top = 133.888
+offset_right = 4.448
+offset_bottom = 133.992
 theme_override_fonts/font = ExtResource("4_x0w77")
 theme_override_font_sizes/font_size = 20
 text = "TUTORIAL"
@@ -71,10 +75,10 @@ anchor_left = 0.403
 anchor_top = 0.593
 anchor_right = 0.576
 anchor_bottom = 0.67
-offset_left = -0.256042
-offset_top = -0.264038
-offset_right = 0.447937
-offset_bottom = -0.160004
+offset_left = 409.744
+offset_top = 78.736
+offset_right = 410.448
+offset_bottom = 78.84
 theme_override_fonts/font = ExtResource("4_x0w77")
 theme_override_font_sizes/font_size = 20
 text = "CONTROLS"
@@ -85,10 +89,10 @@ anchor_left = 0.403
 anchor_top = 0.691
 anchor_right = 0.576
 anchor_bottom = 0.769
-offset_left = -0.256042
-offset_top = 0.231964
-offset_right = 0.447937
-offset_bottom = -0.312042
+offset_left = 471.744
+offset_top = -54.768
+offset_right = 472.448
+offset_bottom = -55.312
 theme_override_fonts/font = ExtResource("4_x0w77")
 theme_override_font_sizes/font_size = 20
 text = "CREDITS"

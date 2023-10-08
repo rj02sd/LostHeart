@@ -50,10 +50,10 @@ anchor_left = 0.285
 anchor_top = 0.395
 anchor_right = 0.458
 anchor_bottom = 0.481
-offset_left = -8.32004
-offset_top = 8.03999
-offset_right = 0.383972
-offset_bottom = 2.31198
+offset_left = 151.68
+offset_top = 0.0399933
+offset_right = 160.384
+offset_bottom = -5.68802
 text = "EASY ASCENT"
 
 [node name="ColorRect" type="ColorRect" parent="Easy"]
@@ -63,10 +63,9 @@ anchor_left = -1.0
 anchor_top = 1.44
 anchor_right = 1.0
 anchor_bottom = 5.92
-offset_left = -0.00012207
-offset_top = 8.39233e-05
-offset_right = 0.00012207
-offset_bottom = 6.00037
+offset_left = 96.0
+offset_right = 96.0002
+offset_bottom = 6.00027
 color = Color(0, 0, 0, 0.803922)
 
 [node name="Label" type="Label" parent="Easy/ColorRect"]
@@ -118,81 +117,4 @@ theme_override_font_sizes/font_size = 15
 text = "Play this if you prefer to relax and enjoy the  designed concept"
 autowrap_mode = 3
 
-[node name="Hard" parent="." instance=ExtResource("3_2tadm")]
-anchors_preset = -1
-anchor_left = 0.542
-anchor_top = 0.407
-anchor_right = 0.722
-anchor_bottom = 0.481
-offset_left = -0.384033
-offset_top = 0.264008
-offset_right = -7.7442
-offset_bottom = 2.31192
-disabled = true
-text = "DAUNTING PATH"
-
-[node name="ColorRect" type="ColorRect" parent="Hard"]
-modulate = Color(1, 1, 1, 0.627451)
-layout_mode = 1
-anchors_preset = -1
-anchor_top = 1.44
-anchor_right = 2.0
-anchor_bottom = 6.04
-offset_top = 8.39233e-05
-offset_bottom = 2.00034
-color = Color(0, 0, 0, 0.803922)
-
-[node name="Label" type="Label" parent="Hard/ColorRect"]
-modulate = Color(1, 1, 1, 0.627451)
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.04
-anchor_top = 0.07
-anchor_right = 0.96
-anchor_bottom = 0.243
-offset_top = -0.1
-offset_bottom = -4.89
-theme_override_fonts/font = ExtResource("5_katff")
-theme_override_font_sizes/font_size = 25
-text = "COMING SOON"
-horizontal_alignment = 2
-autowrap_mode = 2
-
-[node name="Label3" type="Label" parent="Hard/ColorRect"]
-modulate = Color(1, 1, 1, 0.627451)
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.06
-anchor_top = 0.243
-anchor_right = 0.96
-anchor_bottom = 0.696
-offset_left = 8.0
-offset_top = 0.109997
-offset_bottom = -0.0800018
-theme_override_fonts/font = ExtResource("5_katff")
-theme_override_font_sizes/font_size = 18
-text = "/// NO CHECKPOINTS
-/// HEALTH LOSS CARRIES OVER
-/// SHRINES PROVIDE FREE LEVEL UPS
-/// HIGHER ENEMY RESITANCES"
-horizontal_alignment = 2
-autowrap_mode = 2
-
-[node name="Label2" type="Label" parent="Hard/ColorRect"]
-modulate = Color(1, 1, 1, 0.627451)
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.06
-anchor_top = 0.73
-anchor_right = 0.94
-anchor_bottom = 0.974
-offset_top = 0.0999908
-offset_right = -3.05176e-05
-offset_bottom = 1.98
-theme_override_fonts/font = ExtResource("5_katff")
-theme_override_font_sizes/font_size = 15
-text = "Play this if you want to challenge yourself and loved your first playthrough"
-autowrap_mode = 3
-
 [connection signal="pressed" from="Easy" to="." method="_on_easy_pressed"]
-[connection signal="pressed" from="Hard" to="." method="_on_hard_pressed"]

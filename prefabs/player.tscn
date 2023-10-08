@@ -19,7 +19,6 @@ z_index = 2
 collision_layer = 53
 collision_mask = 28725
 floor_max_angle = 0.174533
-platform_on_leave = 1
 script = ExtResource("1_d7ri4")
 
 [node name="Camera2D" type="Camera2D" parent="."]

@@ -93,14 +93,14 @@ unique_name_in_owner = true
 [node name="LevelButton1" parent="levels" instance=ExtResource("3_b6wwh")]
 unique_name_in_owner = true
 anchors_preset = -1
-anchor_left = 0.229
+anchor_left = 0.049
 anchor_top = 0.617
-anchor_right = 0.403
-anchor_bottom = 0.694
-offset_left = -207.808
+anchor_right = 0.222
+anchor_bottom = 0.691
+offset_left = -0.447987
 offset_top = 0.184021
-offset_right = -208.256
-offset_bottom = 0.288025
+offset_right = 0.255966
+offset_bottom = 2.23199
 
 [node name="TextureRect" type="TextureRect" parent="levels/LevelButton1"]
 modulate = Color(1, 1, 1, 0.690196)

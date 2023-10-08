@@ -68,21 +68,19 @@ platform_direction = Vector2(0, -100)
 [node name="Platform6" parent="Platforms/A2" instance=ExtResource("20_ljn2x")]
 position = Vector2(3520, -992)
 type = 1
-platform_direction = Vector2(0, -200)
-speed_plat = 1.3
+platform_direction = Vector2(0, -400)
 
 [node name="Platform14" parent="Platforms/A2" instance=ExtResource("20_ljn2x")]
 position = Vector2(4160, -1056)
 type = 1
-platform_direction = Vector2(100, 0)
-speed_plat = 1.3
+platform_direction = Vector2(300, 0)
 
 [node name="Platform7" parent="Platforms/A2" instance=ExtResource("20_ljn2x")]
 position = Vector2(4224, -1504)
 platform_direction = Vector2(0, -100)
 
 [node name="Platform8" parent="Platforms/A2" instance=ExtResource("20_ljn2x")]
-position = Vector2(4736, -1312)
+position = Vector2(4736, -1248)
 type = 2
 platform_direction = Vector2(0, -100)
 spike_cooldown = 3

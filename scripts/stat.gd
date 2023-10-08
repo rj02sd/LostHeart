@@ -20,8 +20,8 @@ func _process(delta):
 
 func _on_add_pressed():
 	if PlayerData.level_upgrades[stat_index] < 10:
-		if PlayerData.currency > 500:
-			PlayerData.currency -= 500
+		if PlayerData.currency >= 1000:
+			PlayerData.currency -= 1000
 			PlayerData.level_upgrades[stat_index] += 1
 			match stat_index:
 				0:
@@ -43,5 +43,5 @@ func _on_add_pressed():
 
 func _on_subtract_pressed():
 	if PlayerData.level_upgrades[stat_index] > 1:
-		PlayerData.currency += 500
+		PlayerData.currency += 1000
 		PlayerData.level_upgrades[stat_index] -= 1

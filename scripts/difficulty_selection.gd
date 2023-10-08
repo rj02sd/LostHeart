@@ -13,9 +13,3 @@ func _on_easy_pressed():
 	PlayerData.difficulty = "Easy"
 	if next_scene:
 		get_tree().change_scene_to_packed(next_scene)
-
-
-func _on_hard_pressed():
-	PlayerData.difficulty = "Hard"
-	if next_scene:
-		get_tree().change_scene_to_packed(next_scene)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://g7nqrkb4tks"]
+[gd_scene load_steps=12 format=3 uid="uid://g7nqrkb4tks"]
 
 [ext_resource type="Script" path="res://scripts/platform.gd" id="1_kv74t"]
 [ext_resource type="Texture2D" uid="uid://c7fxfr5nxtdsk" path="res://art/Ground_Large.png" id="2_hgmkj"]
@@ -25,12 +25,6 @@ size = Vector2(512, 56)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8r1u0"]
 size = Vector2(460.8, 853.333)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_v3ca6"]
-size = Vector2(512, 8)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ul2gr"]
-size = Vector2(8, 72)
 
 [node name="Platform" type="StaticBody2D"]
 light_mask = 4
@@ -97,29 +91,6 @@ energy = 1.45
 range_item_cull_mask = 4
 texture = ExtResource("5_lc57l")
 
-[node name="PlayerSmoothing" type="Area2D" parent="."]
-unique_name_in_owner = true
-
-[node name="Top" type="CollisionShape2D" parent="PlayerSmoothing"]
-unique_name_in_owner = true
-light_mask = 4
-position = Vector2(0, -120)
-shape = SubResource("RectangleShape2D_v3ca6")
-
-[node name="SideL" type="CollisionShape2D" parent="PlayerSmoothing"]
-unique_name_in_owner = true
-light_mask = 4
-position = Vector2(256, -88)
-shape = SubResource("RectangleShape2D_ul2gr")
-disabled = true
-
-[node name="SideR" type="CollisionShape2D" parent="PlayerSmoothing"]
-unique_name_in_owner = true
-light_mask = 4
-position = Vector2(-256, -88)
-shape = SubResource("RectangleShape2D_ul2gr")
-disabled = true
-
 [node name="spikesAudio" type="AudioStreamPlayer2D" parent="."]
 unique_name_in_owner = true
 stream = ExtResource("6_wevvr")
@@ -128,5 +99,3 @@ volume_db = -3.0
 [connection signal="body_entered" from="Illusion" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Illusion" to="." method="_on_area_2d_body_exited"]
 [connection signal="body_entered" from="Spikes" to="." method="_on_spikes_body_entered"]
-[connection signal="body_entered" from="PlayerSmoothing" to="." method="_on_player_smoothing_body_entered"]
-[connection signal="body_exited" from="PlayerSmoothing" to="." method="_on_player_smoothing_body_exited"]

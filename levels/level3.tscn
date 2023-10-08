@@ -57,7 +57,7 @@ spike_cooldown = 2
 [node name="Platform5" parent="Platforms/A1" instance=ExtResource("20_ff8tv")]
 position = Vector2(352, -840)
 type = 1
-platform_direction = Vector2(100, 0)
+platform_direction = Vector2(300, 0)
 
 [node name="A2" type="Node2D" parent="Platforms"]
 
@@ -70,13 +70,11 @@ platform_direction = Vector2(0, 0)
 position = Vector2(1531, -1552)
 type = 1
 platform_direction = Vector2(0, -110)
-speed_plat = 1.25
 
 [node name="Platform8" parent="Platforms/A2" instance=ExtResource("20_ff8tv")]
 position = Vector2(1531, -1552)
 type = 1
-platform_direction = Vector2(0, -110)
-speed_plat = 1.25
+platform_direction = Vector2(0, -500)
 
 [node name="Platform10" parent="Platforms/A2" instance=ExtResource("20_ff8tv")]
 position = Vector2(891, -2280)
@@ -104,8 +102,7 @@ platform_direction = Vector2(0, 0)
 [node name="Platform" parent="Platforms/A3" instance=ExtResource("20_ff8tv")]
 position = Vector2(2944, -2560)
 type = 1
-platform_direction = Vector2(0, -100)
-speed_plat = 1.3
+platform_direction = Vector2(0, -600)
 
 [node name="Platform4" parent="Platforms/A3" instance=ExtResource("20_ff8tv")]
 position = Vector2(3336, -3168)
